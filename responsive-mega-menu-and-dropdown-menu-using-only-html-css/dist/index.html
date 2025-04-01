@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive Mega Menu and Dropdown Menu using only HTML &amp; CSS</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav>
+  <div class="wrapper">
+    <div class="logo"><a href="#">Convexo</a></div>
+    <input type="radio" name="slider" id="menu-btn">
+    <input type="radio" name="slider" id="close-btn">
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+      <li><a href="#">About</a></li>
+      <li>
+        <a href="#" class="desktop-item">Products</a>
+        <input type="checkbox" id="showDrop">
+        <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+        <ul class="drop-menu">
+          <li><a href="#">Crypto OTC Desk</a></li>
+          <li><a href="#">Remitances</a></li>
+          <li><a href="#">Payin and Payouts</a></li>
+          <li><a href="#">Card (soon)</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="desktop-item">Services</a>
+        <input type="checkbox" id="showMega">
+        <label for="showMega" class="mobile-item">Mega Menu</label>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
+            </div>
+            <div class="row">
+              <header>Asset Management</header>
+              <ul class="mega-links">
+                <li><a href="#">Liquidity Pools</a></li>
+                <li><a href="#">Crypto Portfolio</a></li>
+                <li><a href="#">Liquidity as a Service</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>RWA tokenization</header>
+              <ul class="mega-links">
+                <li><a href="#">Tokenized Governance</a></li>
+                <li><a href="#">Stablecoins</a></li>
+                <li><a href="#">RWA Tokenization</a></li>
+                <li><a href="#">WEB3 identity</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="kyc-page/kyc.html">Sign Up</a></li>
+    </ul>
+    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+  </div>
+</nav>
+
+<!-- partial -->
+
+</body>
+</html>

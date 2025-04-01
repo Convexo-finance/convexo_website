@@ -1,0 +1,380 @@
+/* Import the main stylesheet */
+@import url('../stylehome.css');
+
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Hero Section Styles */
+.otc-hero {
+    background: linear-gradient(135deg, #1B3157, #2B4C7E);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Extend beyond container */
+    margin-right: calc(-50vw + 50%); /* Extend beyond container */
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.otc-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, #93c5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.otc-hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.otc-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Section Container Styles */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Full-Width Section Styles */
+.full-width-section {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Extend beyond container */
+    margin-right: calc(-50vw + 50%); /* Extend beyond container */
+    padding: 60px 0; /* Add padding for spacing */
+    box-sizing: border-box;
+}
+
+/* Section Header Styles */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features Section Styles */
+#features {
+    background-color: #f0f4ff;
+}
+
+.features-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.features-list li {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Procedure Section Styles */
+#procedure {
+    background-color: white;
+}
+
+/* Quoting Section Styles */
+#quoting {
+    background-color: #e6f0ff; /* Light blue background for distinction */
+}
+
+.pricing-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.pricing-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #f0f0f0;
+}
+
+/* Process Steps Styles - Horizontal Layout with Wider Cards */
+.process-steps {
+    display: flex;
+    flex-direction: row;
+    gap: 25px; /* Increased gap between cards */
+    max-width: 1200px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px 25px; /* Increased padding for more space */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: none;
+    border-top: 5px solid var(--primary-color);
+    text-align: center;
+    width: 260px; /* Increased width from 220px to 260px */
+    flex: 0 0 auto;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px; /* Increased size of the circle */
+    height: 70px; /* Increased size of the circle */
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2rem; /* Slightly larger font size */
+    font-weight: 700;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Increased margin */
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure content uses full width */
+}
+
+.step-content h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem; /* Increased font size */
+    margin-bottom: 15px; /* Increased margin */
+    text-align: center;
+    width: 100%;
+}
+
+.step-content p {
+    color: #555;
+    line-height: 1.6; /* Increased line height */
+    font-size: 1rem; /* Increased font size */
+    width: 100%;
+}
+
+/* Contact Form Styles */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(27, 49, 87, 0.1);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments for Process Steps */
+@media (max-width: 1200px) {
+    .process-steps {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .process-steps {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px; /* Increased gap for better spacing when wrapped */
+    }
+    
+    .process-step {
+        width: calc(45% - 30px); /* Two steps per row with more width */
+        min-width: 280px; /* Increased minimum width */
+        max-width: 350px; /* Increased maximum width */
+    }
+}
+
+@media (max-width: 768px) {
+    .process-step {
+        width: 100%; /* Full width on mobile */
+        max-width: 400px; /* Increased maximum width for mobile */
+        padding: 30px; /* More padding on mobile */
+    }
+    
+    .step-content h3 {
+        font-size: 1.6rem; /* Slightly larger on mobile */
+    }
+    
+    .step-content p {
+        font-size: 1.05rem; /* Slightly larger on mobile */
+    }
+}
+
+/* Language switcher styles */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    }
+
+    .language-btn {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    
+    .language-btn:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .language-btn i {
+        margin-right: 6px;
+    }

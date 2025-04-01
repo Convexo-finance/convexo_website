@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Management - Convexo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylehome.css">
+    <link rel="stylesheet" href="asset-management.css">
+    <script src="../js/navbar-loader.js"></script>
+</head>
+<body>
+    <!-- The navbar will be loaded here -->
+    <header></header>
+    
+    <main>
+        <section id="hero" class="asset-hero">
+            <div class="hero-content">
+                <h1>Asset Management</h1>
+                <h2>Invest in blockchain, crypto, and beyond</h2>
+                <p>We enable investors to gain access to crypto, blockchain, and transformative technologies with Passive, Active, and Venture strategies.</p>
+            </div>
+        </section>
+
+        <section id="services-grid">
+            <div class="service-container">
+                <!-- Passive Funds Section -->
+                <div class="service-box" id="passive">
+                    <div class="service-content">
+                        <h3>Passive Funds</h3>
+                        <h4>Established Digital Assets</h4>
+                        <p>Our single asset and diversified funds provide exposure to the most established digital assets-and to emerging trends.</p>
+                        <ul class="service-features">
+                            <li>Single Asset Funds</li>
+                            <li>Diversified Portfolios</li>
+                            <li>Emerging Trends Access</li>
+                            <li>Index-based Strategies</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Explore Passive</a>
+                    </div>
+                </div>
+
+                <!-- Active Funds Section -->
+                <div class="service-box" id="active">
+                    <div class="service-content">
+                        <h3>Active Funds</h3>
+                        <h4>Expert-Managed Portfolios</h4>
+                        <p>Our active funds are managed by crypto experts with extensive experience navigating traditional markets.</p>
+                        <ul class="service-features">
+                            <li>Expert Management</li>
+                            <li>Dynamic Strategies</li>
+                            <li>Risk Management</li>
+                            <li>Market Analysis</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Explore Active</a>
+                    </div>
+                </div>
+
+                <!-- Ventures Section -->
+                <div class="service-box" id="ventures">
+                    <div class="service-content">
+                        <h3>Galaxy Ventures</h3>
+                        <h4>Stage-agnostic Investments</h4>
+                        <p>Stage-agnostic investments spans protocols, scaling solutions, DeFi, and web3 infrastructure.</p>
+                        <ul class="service-features">
+                            <li>Protocol Investments</li>
+                            <li>Scaling Solutions</li>
+                            <li>DeFi Projects</li>
+                            <li>Web3 Infrastructure</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Explore Ventures</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Contact Our Investment Team</h2>
+                <p>Interested in our investment solutions? Let's discuss your goals.</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select Investment Type</option>
+                            <option value="passive">Passive Funds</option>
+                            <option value="active">Active Funds</option>
+                            <option value="ventures">Ventures</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Convexo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

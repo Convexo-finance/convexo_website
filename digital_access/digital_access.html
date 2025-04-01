@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="digital_access.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="../js/navbar-loader.js"></script>
+</head>
+
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="language-btn" onclick="switchLanguage()">
+            <i class="fas fa-globe"></i>
+            <span id="current-lang">EN</span>
+        </button>
+    </div>
+
+    <header></header>
+    
+    <main>
+        <section id="hero" class="markets-hero">
+            <div class="hero-content">
+                <h1>Digital Access </h1>
+                <h2>Institutional-grade access to new era of internet</h2>
+                <p>We enable you advanced tooling and personal supervision to give you a secure and tailored experience to own the digital assets of the new internet.</p>
+            </div>
+        </section>
+
+        <!-- Enterpise and Professionals clients --> 
+        <section id="products-institutional" class="section-container institutional-section">
+            <div class="section-header">
+                <h2>Enterprises and Professionals clients</h2>
+                <p>Comprehensive onboarding and support solutions for enterprises and professionals to manage their digital assets.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>OTC Trading Rooms</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Private Room Chat</h4>
+                            <p>Private chat for trading instructions and notifications.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Volume Adjusted Pricing</h4>
+                            <p>Large volume digital asset transactions with competitive pricing and minimal market impact.</p>
+                        </div>
+                    </div>
+                    <a href="/calculator" class="product-link">Trade Now</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                    <h3>Institutional Web3 Profiles</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Web3 Profiles</h4>
+                            <p>Profiles with ENS domains to build your metaverse identity.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Enabling Physical Payment Points</h4>
+                            <p>Get easyto use physical payment points for your clients.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="service-link">Learn More</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Transparent Custody Solutions</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Supported Assets</h4>
+                            <p>Access to top 100 digital assets and tokens.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Multi-Signature Wallets</h4>
+                            <p>Enhanced multi-party security to protect your assets.</p>
+                        </div>
+                    </div>
+                    <a href="custody_solutions/custody_solutions.html" class="service-link">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Individuals --> 
+        <section id="products-individuals" class="section-container individual-section">
+            <div class="section-header">
+                <h2>Individuals</h2>
+                <p>Comprehensive onboarding and support solutions for retail clients to manage their digital assets.</p>
+            </div>
+            <div class="products-grid"> 
+                <!-- Digital Wallet -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Wallet</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Digital Wallet</h4>
+                            <p>Create your own digital wallet to manage your digital assets.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Buy and Sell</h4>
+                            <p>We support you to buy and sell digital assets from your wallet.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="product-link">Whitelist Now</a>
+                </div>
+
+                <!-- Digital Card (soon) -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Card (soon)</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Digital Card</h4>
+                            <p>Enjoy the onchain economy paying in your favorite stores.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Pay everywhere</h4>
+                            <p>We support you to access to the digital card to pay everywhere.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="product-link">Whitelist Now</a>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- Contact Section -->    
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Contact Our Team</h2>
+                <p>Get in touch with our institutional services team to learn more about our offerings.</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select Service</option>
+                            <option value="trading">Trading</option>
+                            <option value="investment-banking">Investment Banking</option>
+                            <option value="lending">Lending</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Convexo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Language switcher script -->
+    <script>
+        function switchLanguage() {
+            const currentPath = window.location.pathname;
+            
+            if (currentPath.includes('digital_access_es.html')) {
+                // If we're on Spanish page, switch to English
+                window.location.href = 'digital_access.html';
+            } else {
+                // If we're on English page, switch to Spanish
+                window.location.href = 'digital_access_es.html';
+            }
+        }
+        
+        // Set the correct language indicator on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            if (currentPath.includes('digital_access_es.html')) {
+                document.getElementById('current-lang').innerText = 'ES';
+            } else {
+                document.getElementById('current-lang').innerText = 'EN';
+            }
+        });
+    </script>
+</body>
+</html> 

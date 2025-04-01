@@ -1,0 +1,223 @@
+/* Import the main stylesheet */
+@import url('../stylehome.css');
+
+/* Hero Section Styles */
+.custody-hero {
+    background: linear-gradient(135deg, #1B3157, #2B4C7E);
+    color: white;
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.custody-hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.custody-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, #93c5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.custody-hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.custody-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Process Steps Styles */
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex-grow: 1;
+}
+
+.step-content h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Custody Partners Section Styles */
+.partners-section {
+    background-color: #f0f4ff; /* Light background for partners section */
+    padding: 60px 20px; /* Padding for spacing */
+}
+
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the partner logos */
+    gap: 40px; /* Space between logos */
+    margin-top: 40px; /* Space above the grid */
+}
+
+.partner-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the logo and text */
+    width: 180px; /* Fixed width for logos */
+}
+
+.partner-logo img {
+    width: 120px; /* Set width for logos */
+    height: 120px; /* Set height for logos */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space below the logo */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.partner-logo p {
+    color: var(--primary-color); /* Color for partner name */
+    font-weight: 600; /* Bold text */
+    text-align: center; /* Center text */
+}
+
+/* Tools Section Styles */
+.tools-section {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.tool-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.tool-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.tool-logo:hover img {
+    transform: scale(1.1);
+}
+
+.tool-logo p {
+    color: #555;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+}
+
+/* Procedure Section Styles */
+#procedure {
+    margin-top: 60px; /* Add margin to create space from the hero section */
+}
+
+/* Alternatively, you can add padding to the section itself */
+.section-container {
+    padding: 60px 20px; /* Ensure consistent padding */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .custody-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .custody-hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .process-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .partners-grid, .tools-grid {
+        gap: 20px;
+    }
+    
+    .partner-logo, .tool-logo {
+        width: 120px;
+    }
+    
+    .partner-logo img, .tool-logo img {
+        width: 80px;
+        height: 80px;
+    }
+}

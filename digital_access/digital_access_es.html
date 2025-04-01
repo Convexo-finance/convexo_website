@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="digital_access.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="../js/navbar-loader.js"></script>
+</head>
+
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="language-btn" onclick="switchLanguage()">
+            <i class="fas fa-globe"></i>
+            <span id="current-lang">ES</span>
+        </button>
+    </div>
+
+    <header></header>
+    
+    <main>
+        <section id="hero" class="markets-hero">
+            <div class="hero-content">
+                <h1>Acceso Digital</h1>
+                <h2>Acceso de grado institucional a la nueva era de internet</h2>
+                <p>Le proporcionamos herramientas avanzadas y supervisión personal para brindarle una experiencia segura y personalizada para poseer los activos digitales del nuevo internet.</p>
+            </div>
+        </section>
+
+        <!-- Clientes Empresariales y Profesionales --> 
+        <section id="products-institutional" class="section-container institutional-section">
+            <div class="section-header">
+                <h2>Empresas y Clientes Profesionales</h2>
+                <p>Soluciones integrales de incorporación y soporte para que empresas y profesionales gestionen sus activos digitales.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Salas de Trading OTC</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Chat de Sala Privada</h4>
+                            <p>Chat privado para instrucciones de trading y notificaciones.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Precios Ajustados por Volumen</h4>
+                            <p>Transacciones de activos digitales de gran volumen con precios competitivos y mínimo impacto en el mercado.</p>
+                        </div>
+                    </div>
+                    <a href="/calculator" class="product-link">Operar Ahora</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                    <h3>Perfiles Web3 Institucionales</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Perfiles Web3</h4>
+                            <p>Perfiles con dominios ENS para construir su identidad en el metaverso.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Habilitación de Puntos de Pago Físicos</h4>
+                            <p>Obtenga puntos de pago físicos fáciles de usar para sus clientes.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="service-link">Más Información</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Soluciones de Custodia Transparentes</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Activos Soportados</h4>
+                            <p>Acceso a los 100 principales activos digitales y tokens.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Carteras Multi-Firma</h4>
+                            <p>Seguridad multipartita mejorada para proteger sus activos.</p>
+                        </div>
+                    </div>
+                    <a href="custody_solutions/custody_solutions.html" class="service-link">Más Información</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Individuos --> 
+        <section id="products-individuals" class="section-container individual-section">
+            <div class="section-header">
+                <h2>Individuos</h2>
+                <p>Soluciones integrales de incorporación y soporte para clientes minoristas para gestionar sus activos digitales.</p>
+            </div>
+            <div class="products-grid"> 
+                <!-- Billetera Digital -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Billetera Digital</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Billetera Digital</h4>
+                            <p>Cree su propia billetera digital para gestionar sus activos digitales.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Comprar y Vender</h4>
+                            <p>Le ayudamos a comprar y vender activos digitales desde su billetera.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="product-link">Lista de Espera</a>
+                </div>
+
+                <!-- Tarjeta Digital (próximamente) -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Tarjeta Digital (próximamente)</h3>
+                    <div class="product-items">
+                        <div class="product-item">
+                            <h4>Tarjeta Digital</h4>
+                            <p>Disfrute de la economía en cadena pagando en sus tiendas favoritas.</p>
+                        </div>
+                        <div class="product-item">
+                            <h4>Pague en todas partes</h4>
+                            <p>Le ayudamos a acceder a la tarjeta digital para pagar en todas partes.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="product-link">Lista de Espera</a>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de Contacto -->    
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Contacte a Nuestro Equipo</h2>
+                <p>Póngase en contacto con nuestro equipo de servicios institucionales para obtener más información sobre nuestras ofertas.</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Su Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Su Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Seleccione Servicio</option>
+                            <option value="trading">Trading</option>
+                            <option value="investment-banking">Banca de Inversión</option>
+                            <option value="lending">Préstamos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Su Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Convexo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Language switcher script -->
+    <script>
+        function switchLanguage() {
+            const currentPath = window.location.pathname;
+            
+            if (currentPath.includes('digital_access_es.html')) {
+                // If we're on Spanish page, switch to English
+                window.location.href = 'digital_access.html';
+            } else {
+                // If we're on English page, switch to Spanish
+                window.location.href = 'digital_access_es.html';
+            }
+        }
+        
+        // Set the correct language indicator on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            if (currentPath.includes('digital_access_es.html')) {
+                document.getElementById('current-lang').innerText = 'ES';
+            } else {
+                document.getElementById('current-lang').innerText = 'EN';
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,182 @@
+body {
+    /* Add a soft gradient background */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+.calculator-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+.result-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.crypto-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #007bff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Enhanced BUY/SELL button styles */
+.btn-group {
+    display: flex !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.btn-group label.btn {
+    flex: 1 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    padding: 15px 0 !important;
+    border: none !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+    transform-origin: center;
+}
+
+.btn-group label.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Ensure buttons have a clear transition */
+.btn-group label.btn {
+    transition: all 0.3s ease !important;
+}
+
+/* Buy button default and selected states */
+.btn-outline-primary#buy {
+    background-color: rgba(40, 167, 69, 0.2) !important;
+    color: #6c757d !important;
+}
+
+.btn-check:checked + .btn-outline-primary#buy {
+    background-color: #28a745 !important;
+    color: white !important;
+}
+
+/* Sell button default and selected states */
+.btn-outline-primary#sell {
+    background-color: rgba(220, 53, 69, 0.2) !important;
+    color: #6c757d !important;
+}
+
+.btn-check:checked + .btn-outline-primary#sell {
+    background-color: #dc3545 !important;
+    color: white !important;
+}
+
+/* Add a pseudo-element for a more dynamic effect */
+.btn-group label.btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.btn-check:checked + .btn-outline-primary#buy::before {
+    background: linear-gradient(to right, #28a745, #218838);
+}
+
+.btn-check:checked + .btn-outline-primary#sell::before {
+    background: linear-gradient(to right, #dc3545, #c82333);
+}
+
+/* Make the Generate Quote button more prominent */
+#calculator-form button[type="submit"] {
+    background-color: #007bff !important;
+    color: white !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    padding: 15px 0 !important;
+    border: none !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+#calculator-form button[type="submit"]:hover {
+    background-color: #0069d9 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4) !important;
+}
+
+/* Add some spacing between sections */
+.card {
+    margin-bottom: 30px !important;
+}
+
+.card-header {
+    padding: 15px 20px !important;
+}
+
+/* Make the form elements more prominent */
+.form-label {
+    font-weight: 500 !important;
+    margin-bottom: 8px !important;
+}
+
+.form-select, .form-control {
+    padding: 12px !important;
+    border-radius: 6px !important;
+}
+
+/* Style the result section */
+#result {
+    background-color: #e7f3ff !important;
+    border: 1px solid #b3d7ff !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    margin-top: 30px !important;
+}
+
+#result .card-header {
+    background-color: #007bff !important;
+}
+
+/* Style the copy and send buttons */
+#copy-quote, #send-quote {
+    padding: 12px !important;
+    font-weight: 500 !important;
+    margin-top: 15px !important;
+}
+
+#send-quote {
+    background-color: #6c757d !important;
+    color: white !important;
+}
+
+#send-quote:hover {
+    background-color: #5a6268 !important;
+}

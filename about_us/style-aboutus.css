@@ -1,0 +1,165 @@
+/* Import the main stylesheet */
+@import url('../stylehome.css');
+
+/* About Us Page Specific Styles */
+.about-hero {
+    background: linear-gradient(135deg, #2B4C7E, #506F86);
+    color: white;
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.about-hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, #93c5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.about-hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Team section */
+.team-section {
+    padding: 4rem 2rem;
+    background-color: #F0F4F8;
+}
+
+.team-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #2B4C7E;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.team-member-info {
+    padding: 1.5rem;
+}
+
+.team-member-info h3 {
+    color: #2B4C7E;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member-info h4 {
+    color: #506F86;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.team-member-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Company values section */
+.values-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #F8FAFC, #F0F4F8);
+}
+
+.values-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #2B4C7E;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(43, 76, 126, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(80, 111, 134, 0.1);
+    text-align: center;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card h3 {
+    color: #2B4C7E;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .team-grid, .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-member, .value-card {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}

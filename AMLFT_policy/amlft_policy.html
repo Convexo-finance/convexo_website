@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMLFT Policy - Convexo</title>
+    <link rel="stylesheet" href="../stylehome.css">
+    <link rel="stylesheet" href="amlft_policy.css">
+    <script src="navbar-loader.js"></script>
+    <link rel="stylesheet" href="AMLFT_policy/amlft_policy.css">
+</head>
+
+<body>
+    <header>    </header>
+
+    <main>
+        <section id="hero" class="amlft-hero">
+            <div class="hero-content">
+                <h1>AMLFT Policy</h1>
+                <p>Convexo is committed to preventing and combating money laundering and terrorist financing. This policy outlines our procedures and measures to ensure compliance with relevant regulations.</p>
+            </div>
+        </section>  
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Convexo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading the navbar:', error)); 
+    </script>
+</body>
+</html>

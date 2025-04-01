@@ -1,0 +1,488 @@
+/* Import the main stylesheet */
+@import url('../stylehome.css');
+
+/* Language switcher styles */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.language-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.language-btn i {
+    margin-right: 6px;
+}
+
+/* Global Markets Page Specific Styles */
+/* These styles are already in stylehome.css but we're keeping them here for clarity */
+.markets-hero {
+    background: linear-gradient(135deg, #1B3157, #2B4C7E);
+    color: white;
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.markets-hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.markets-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, #93c5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.markets-hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.markets-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Custom styles specific to global-markets.html that aren't in stylehome.css */
+#trading .service-content h3,
+#investment-banking .service-content h3,
+#lending .service-content h3 {
+    border-bottom: 2px solid #1B3157;
+    padding-bottom: 0.5rem;
+}
+
+/* Custom CTA Button Colors for Global Markets */
+.markets-hero .cta-button {
+    background-color: #1B3157;
+}
+
+.markets-hero .cta-button:hover {
+    background-color: #2B4C7E;
+}
+
+/* Any additional styles specific to global-markets.html */
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the services items */
+}
+
+.service-card {
+    flex: 1 1 30%; /* Adjust the width as needed */
+    margin: 10px; /* Margin around each card */
+    padding: 20px; /* Padding inside the card */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.service-items {
+    display: flex;
+    flex-direction: column; /* Stack service items vertically */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.service-item {
+    margin-bottom: 15px; /* Space below each service item */
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.service-link:hover {
+    background-color: #0056b3;
+}
+
+/* Product Section Styles */
+#products {
+    background-color: #f0f4ff; /* Light blue background for Products */
+    padding: 60px 20px; /* Padding for spacing */
+    text-align: center; /* Centered text */
+    border-top: 5px solid #1B3157; /* Top border for emphasis */
+}
+
+#products h2 {
+    font-size: 2.5rem; /* Larger font size for the section title */
+    margin-bottom: 40px; /* Space below the title */
+    color: #1B3157; /* Dark color for the title */
+}
+
+.product-card {
+    background-color: white; /* White background for product cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px; /* Margin around each card */
+    padding: 20px; /* Padding inside the card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.product-card h3 {
+    font-size: 1.8rem; /* Font size for product titles */
+    margin-bottom: 15px; /* Space below the title */
+    color: #1B3157; /* Dark color for product titles */
+}
+
+.product-card p {
+    font-size: 1rem; /* Font size for product descriptions */
+    color: #555; /* Dark gray for text */
+    line-height: 1.5; /* Line height for readability */
+}
+
+.product-link {
+    display: inline-block; /* Block display for the link */
+    margin-top: 15px; /* Space above the link */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.product-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Services Section Styles */
+#services {
+    background-color: #ffffff; /* White background for Services */
+    padding: 60px 20px; /* Padding for spacing */
+    text-align: center; /* Centered text */
+    border-bottom: 5px solid #1B3157; /* Bottom border for emphasis */
+}
+
+#services h2 {
+    font-size: 2.5rem; /* Larger font size for the section title */
+    margin-bottom: 40px; /* Space below the title */
+    color: #1B3157; /* Dark color for the title */
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 350px;
+    text-align: left;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.service-items {
+    margin-bottom: 20px;
+}
+
+.service-item {
+    margin-bottom: 15px;
+}
+
+.service-item h4 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.service-link {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.service-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Global Styles */
+:root {
+    --primary-color: #1B3157;
+    --secondary-color: #2B4C7E;
+    --text-color: #333;
+    --background-color: #f4f7fa;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Section Container Styles */
+.section-container {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Products Grid */
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.product-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Services Grid */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 350px;
+    text-align: left;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.service-items {
+    margin-bottom: 20px;
+}
+
+.service-item {
+    margin-bottom: 15px;
+}
+
+.service-item h4 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.service-link {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.service-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Individuals Section Styles */
+.individual-section {
+    background-color: #f0f0f0; /* Light gray background for Individuals section */
+    padding: 60px 20px; /* Padding for spacing */
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #ffffff; /* White background for Contact section */
+    padding: 60px 20px; /* Padding for spacing */
+    text-align: center; /* Centered text */
+}
+
+#contact .contact-container {
+    max-width: 700px; /* Maximum width for the contact container */
+    margin: 0 auto; /* Center the container */
+    background-color: white; /* White background for the form */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Subtle shadow */
+    padding: 40px; /* Padding inside the container */
+}
+
+#contact h2 {
+    font-size: 2.5rem; /* Font size for the heading */
+    color: var(--primary-color); /* Primary color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#contact p {
+    color: #666; /* Dark gray for the paragraph text */
+    max-width: 600px; /* Maximum width for the paragraph */
+    margin: 0 auto 30px; /* Center the paragraph and add bottom margin */
+    line-height: 1.6; /* Line height for readability */
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(27, 49, 87, 0.1);
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #contact .contact-container {
+        padding: 30px 20px;
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+    }
+}

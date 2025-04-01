@@ -1,0 +1,79 @@
+/* Variables for dynamic colors */
+:root {
+    --primary-color: #2B4C7E;
+    --secondary-color: #506F86;
+    --background-light: #ffffff;
+    --text-primary: #333;
+    --text-secondary: #64748b;
+    --hover-bg: #f8fafc;
+}
+
+/* =========================
+   Global Styles for AMLFT Policy
+========================= */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background-light);
+    padding-top: 70px; /* To account for the fixed navbar */
+}
+
+/* Hero Section */
+.amlft-hero {
+    background: linear-gradient(135deg, #2B4C7E, #506F86);
+    color: white;
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.amlft-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.amlft-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer Styles */
+.footer-content {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .amlft-hero {
+        padding: 80px 20px;
+    }
+
+    .amlft-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .amlft-hero p {
+        font-size: 1rem;
+    }
+}

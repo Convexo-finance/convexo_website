@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTC Trading Rooms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylehome.css">
+    <link rel="stylesheet" href="OTC_trading_rooms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="../js/navbar-loader.js"></script>
+    
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="language-btn" onclick="switchLanguage()">
+            <i class="fas fa-globe"></i>
+            <span id="current-lang">EN</span>
+        </button>
+    </div>
+
+    <header></header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="otc-hero full-width-section">
+            <div class="hero-content">
+                <h1>OTC Trading Rooms</h1>
+                <h2>We use a token gating access to Private trading rooms with a dedicated support </h2>
+                <p>Execute large volume digital asset transactions with competitive pricing and minimal market impact.</p>
+            </div>
+        </section>
+
+        
+        
+        <!-- Features Section -->
+        <section id="features" class="full-width-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Features</h2>
+                    <p>Our OTC trading rooms offer a range of features designed for institutional and professional clients</p>
+                </div>
+                <ul class="features-list">
+                    <li>We use token gating to access toprivate trading rooms with dedicated support.</li>
+                    <li>Institutional-grade security and compliance using zero knowledge proofs.</li>
+                    <li>Minimal market impact execution and competitive pricing for large volume transactions.</li>
+                    <li>24/7 trading support through Telegram, WhatsApp, or Email.</li>
+                    <li>Multi-asset trading capabilities: USDC, USDT, BTC, ETH, SOL, XRP, ADA, DOGE.</li>
+                    <li>Multi-chain trading capabilities: Bitcoin, Ethereum Virtual Machine, Solana, Ripple, Cardano, Dogecoin.</li>
+                    <li>Multi-fiat trading capabilities: USD, EUR, HKD, COP.</li>
+                    <li>Multi-language support: English, Spanish, Portuguese, French.</li>
+                </ul>
+            </div>
+        </section>
+
+               <!-- Pricing content -->
+               <section id="pricing">
+                <h2>Live Crypto Prices</h2>
+                <div class="crypto-grid">
+                    <div class="crypto-card">
+                        <img src="https://assets.coingecko.com/coins/images/1/small/bitcoin.png" alt="Bitcoin">
+                        <h3>Bitcoin (BTC)</h3>
+                        <p class="price" data-crypto="BTC">Loading...</p>
+                        <div class="crypto-calculator">
+                            <div class="calculator-inputs">
+                                <input type="number" 
+                                        placeholder="Enter BTC amount" 
+                                        data-crypto="BTC" 
+                                        step="0.0001">
+                                <select class="currency-select">
+                                    <option value="USD">USD</option>
+                                    <option value="COP">COP</option>
+                                </select>
+                            </div>
+                            <div class="calculator-result">≈ $0.00</div>
+                        </div>
+                    </div>
+                    <div class="crypto-card">
+                        <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="Ethereum">
+                        <h3>Ethereum (ETH)</h3>
+                        <p class="price" data-crypto="ETH">Loading...</p>
+                        <div class="crypto-calculator">
+                            <div class="calculator-inputs">
+                                <input type="number" 
+                                        placeholder="Enter ETH amount" 
+                                        data-crypto="ETH" 
+                                        step="0.01">
+                                <select class="currency-select">
+                                    <option value="USD">USD</option>
+                                    <option value="COP">COP</option>
+                                </select>
+                            </div>
+                            <div class="calculator-result">≈ $0.00</div>
+                        </div>
+                    </div>
+                    <div class="crypto-card">
+                        <img src="https://assets.coingecko.com/coins/images/4128/small/solana.png" alt="Solana">
+                        <h3>Solana (SOL)</h3>
+                        <p class="price" data-crypto="SOL">Loading...</p>
+                        <div class="crypto-calculator">
+                            <div class="calculator-inputs">
+                                <input type="number" 
+                                        placeholder="Enter SOL amount" 
+                                        data-crypto="SOL" 
+                                        step="0.1">
+                                <select class="currency-select">
+                                    <option value="USD">USD</option>
+                                    <option value="COP">COP</option>
+                                </select>
+                            </div>
+                            <div class="calculator-result">≈ $0.00</div>
+                        </div>
+                    </div>
+                    <div class="crypto-card">
+                        <img src="https://assets.coingecko.com/coins/images/325/small/Tether.png" alt="Tether">
+                        <h3>Tether (USDT)</h3>
+                        <p class="price" data-crypto="USDT">Loading...</p>
+                        <div class="crypto-calculator">
+                            <div class="calculator-inputs">
+                                <input type="number" 
+                                        placeholder="Enter USDT amount" 
+                                        data-crypto="USDT" 
+                                        step="0.01">
+                                <select class="currency-select">
+                                    <option value="USD">USD</option>
+                                    <option value="COP">COP</option>
+                                </select>
+                            </div>
+                            <div class="calculator-result">≈ $0.00</div>
+                        </div>
+                    </div>
+                    <div class="crypto-card">
+                        <img src="https://assets.coingecko.com/coins/images/5/small/dogecoin.png" alt="Dogecoin">
+                        <h3>Dogecoin (DOGE)</h3>
+                        <p class="price" data-crypto="DOGE">Loading...</p>
+                        <div class="crypto-calculator">
+                            <div class="calculator-inputs">
+                                <input type="number" 
+                                        placeholder="Enter DOGE amount" 
+                                        data-crypto="DOGE" 
+                                        step="1">
+                                <select class="currency-select">
+                                    <option value="USD">USD</option>
+                                    <option value="COP">COP</option>
+                                </select>
+                            </div>
+                            <div class="calculator-result">≈ $0.00</div>
+                        </div>
+                    </div>
+                    <div class="crypto-card">
+                        <img src="https://assets.coingecko.com/coins/images/44/small/xrp-symbol-white-128.png" alt="XRP">
+                        <h3>XRP (XRP)</h3>
+                        <p class="price" data-crypto="XRP">Loading...</p>
+                        <div class="crypto-calculator">
+                            <div class="calculator-inputs">
+                                <input type="number" 
+                                        placeholder="Enter XRP amount" 
+                                        data-crypto="XRP" 
+                                        step="1">
+                                <select class="currency-select">
+                                    <option value="USD">USD</option>
+                                    <option value="COP">COP</option>
+                                </select>
+                            </div>
+                            <div class="calculator-result">≈ $0.00</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        <!-- Procedure Section --> 
+        <section id="procedure" class="full-width-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Our OTC Trading Process</h2>
+                    <p>A comprehensive and secure approach to OTC trading</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Compliance</h3>
+                            <p>Complete KYC/AML verification and risk assessment to ensure regulatory compliance and establish a secure trading relationship.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Agent Assignation and Onboarding</h3>
+                            <p>We assign a dedicated trading agent to your account and provide comprehensive onboarding to our OTC trading platform and services.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Channels of Communication</h3>
+                            <p>We establish secure and efficient communication channels tailored to your preferences, including Telegram, WhatsApp, or Email for trade execution and support.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Setup & Implementation</h3>
+                            <p>Secure setup of trading accounts, wallets, access controls, and monitoring systems to ensure safe and efficient trading operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quoting Section -->
+        <section id="quoting" class="full-width-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Quoting</h2>
+                    <p>Customized pricing structures tailored to your trading volume and requirements</p>
+                </div>
+                <div class="pricing-content">
+                    <p>Our OTC trading services offer competitive pricing with volume-based discounts. Contact our team for a personalized quote based on your specific needs and trading volume.</p>
+                    <a href="calculator/calculator.html" class="cta-button">Request Pricing</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="full-width-section">
+            <div class="section-container">
+                <div class="contact-container">
+                    <h2>Contact Our OTC Trading Team</h2>
+                    <p>Get in touch with our OTC specialists to learn more about our trading services and solutions.</p>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select OTC Trading Service</option>
+                                <option value="institutional">Institutional OTC Trading</option>
+                                <option value="personal">Professional OTC Trading</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+    <script src="../js/footer-loader.js"></script>
+    
+    <!-- Language switcher script -->
+    <script>
+        function switchLanguage() {
+            const currentPath = window.location.pathname;
+            
+            if (currentPath.includes('OTC_trading_rooms_es.html')) {
+                // If we're on Spanish page, switch to English
+                window.location.href = 'OTC_trading_rooms.html';
+            } else {
+                // If we're on English page, switch to Spanish
+                window.location.href = 'OTC_trading_rooms_es.html';
+            }
+        }
+        
+        // Set the correct language indicator on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            if (currentPath.includes('OTC_trading_rooms_es.html')) {
+                document.getElementById('current-lang').innerText = 'ES';
+            } else {
+                document.getElementById('current-lang').innerText = 'EN';
+            }
+        });
+    </script>
+</body>
+</html>
