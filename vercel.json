@@ -4,7 +4,8 @@
     "outputDirectory": ".",
     "rewrites": [
       { "source": "/", "destination": "/index.html" },
-      { "source": "/digital_access/otc_trading", "destination": "/OTC_trading_rooms/OTC_trading_rooms.html" },
-      { "source": "/digital_access", "destination": "/digital_access/digital_access.html" }
+      { "source": "/digital_access", "destination": "/digital_access/digital_access.html" },
+      { "source": "/digital_access_es", "destination": "/digital_access/digital_access_es.html" },
+      { "source": "/digital_access/otc_trading", "destination": "/OTC_trading_rooms/OTC_trading_rooms.html" }
     ]
 }
