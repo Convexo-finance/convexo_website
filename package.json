@@ -2,13 +2,8 @@
   "name": "convexo",
   "version": "1.0.0",
   "description": "",
-  "main": "navbar-loader.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "next start",
-    "dev": "next dev",
-    "build": "next build",
-    "vercel-build": "next build"
+    "build": "echo 'No build step needed'"
   },
   "keywords": [],
   "author": "",
