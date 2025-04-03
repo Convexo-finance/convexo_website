@@ -6,6 +6,15 @@
       { "source": "/", "destination": "/index.html" },
       { "source": "/digital_access", "destination": "/digital_access/digital_access.html" },
       { "source": "/digital_access_es", "destination": "/digital_access/digital_access_es.html" },
-      { "source": "/digital_access/otc_trading", "destination": "/OTC_trading_rooms/OTC_trading_rooms.html" }
+      { "source": "/otc_trading", "destination": "/OTC_trading_rooms/OTC_trading_rooms.html" },
+      { "source": "/digital_wallet", "destination": "/digital_wallet/digital_wallet.html" },
+      { "source": "/corporate_treasury", "destination": "/corporate_treasury/corporate_treasury.html" },
+      { "source": "/web3_pos", "destination": "/web3_pos/web3_pos.html" },
+      { "source": "/digital_card", "destination": "/digital_card/digital_card.html" },
+      { "source": "/payrrol", "destination": "/Payrrol/Payrrol.html" },
+      { "source": "/cross_border", "destination": "/cross_border/cross_border.html" },
+      { "source": "/privacy_policy", "destination": "/Privacy_Policy/Privacy_policy.html" },
+      { "source": "/terms_conditions", "destination": "/Terms_conditions/Terms_conditions.html" },
+      { "source": "/amlft_policy", "destination": "/AMLFT_policy/amlft_policy.html" }
     ]
 }
