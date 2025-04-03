@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../stylehome.css">
     <link rel="stylesheet" href="web3_pos.css">
-    <script src="navbar-loader.js"></script>
+    <script src="../navbar-loader.js"></script>
 </head>
 <body>
     <!-- The navbar will be loaded here -->
@@ -16,7 +16,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="pos-hero">
+        <section id="pos-hero" class="full-width-section">
             <div class="hero-content">
                 <h1>Web3 Point of Sale</h1>
                 <h2>Revolutionize Your Business Payments</h2>
@@ -24,6 +24,57 @@
                 <div class="hero-buttons">
                     <a href="#contact" class="hero-button primary">Get Started</a>
                     <a href="#features" class="hero-button secondary">Explore Features</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-mockup">
+                    <div class="terminal-header">
+                        <span class="terminal-dots"></span>
+                        <span class="terminal-dots"></span>
+                        <span class="terminal-dots"></span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="transaction-line success">
+                            <span class="transaction-icon"><i class="fas fa-check-circle"></i></span>
+                            <span class="transaction-amount">+$250.00 USDC</span>
+                            <span class="transaction-status">Completed</span>
+                        </div>
+                        <div class="transaction-line pending">
+                            <span class="transaction-icon"><i class="fas fa-clock"></i></span>
+                            <span class="transaction-amount">+$175.50 USDC</span>
+                            <span class="transaction-status">Processing</span>
+                        </div>
+                        <div class="transaction-line success">
+                            <span class="transaction-icon"><i class="fas fa-check-circle"></i></span>
+                            <span class="transaction-amount">+$89.99 USDC</span>
+                            <span class="transaction-status">Completed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="visual-ring r1"></div>
+                <div class="visual-ring r2"></div>
+                <div class="visual-ring r3"></div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="full-width-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">$50M+</div>
+                    <div class="stat-label">Processed Monthly</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3x</div>
+                    <div class="stat-label">Faster Settlements</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Lower Fees</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Active Merchants</div>
                 </div>
             </div>
         </section>
@@ -67,6 +118,22 @@
                         </div>
                         <h3>Lower Fees</h3>
                         <p>Eliminate expensive payment processor fees and save up to 3% on every transaction compared to traditional systems.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Integration</h3>
+                        <p>Seamlessly integrate with mobile devices for on-the-go payment processing and management.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Multi-Currency Support</h3>
+                        <p>Accept and manage multiple digital currencies while maintaining accounting in your preferred currency.</p>
                     </div>
                 </div>
             </div>
@@ -168,8 +235,62 @@
             </div>
         </section>
 
+        <!-- Integration Showcase Section -->
+        <section id="integrations" class="full-width-section">
+            <div class="section-container">
+                <div class="section-header centered">
+                    <h2>Seamless Integrations</h2>
+                    <p>Connect with the tools and platforms your business already uses</p>
+                </div>
+                
+                <div class="integration-showcase">
+                    <div class="integration-image">
+                        <img src="integration-dashboard.png" alt="POS Integration Dashboard" class="dashboard-img">
+                    </div>
+                    <div class="integration-features">
+                        <div class="integration-feature">
+                            <div class="feature-icon-small">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Simple API</h3>
+                                <p>Connect your existing systems with our straightforward RESTful API.</p>
+                            </div>
+                        </div>
+                        <div class="integration-feature">
+                            <div class="feature-icon-small">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>E-commerce Platforms</h3>
+                                <p>Ready-made plugins for Shopify, WooCommerce, Magento and more.</p>
+                            </div>
+                        </div>
+                        <div class="integration-feature">
+                            <div class="feature-icon-small">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Accounting Software</h3>
+                                <p>Automatic syncing with QuickBooks, Xero, and other accounting tools.</p>
+                            </div>
+                        </div>
+                        <div class="integration-feature">
+                            <div class="feature-icon-small">
+                                <i class="fas fa-tablet-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>POS Hardware</h3>
+                                <p>Compatible with major POS terminal providers and hardware systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- How It Works Section -->
-        <section id="how-it-works" class="full-width-section">
+        <section id="how-it-works" class="full-width-section alt-bg">
             <div class="section-container">
                 <div class="section-header centered">
                     <h2>How It Works</h2>
@@ -212,32 +333,106 @@
             </div>
         </section>
 
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="full-width-section">
+            <div class="section-container">
+                <div class="section-header centered">
+                    <h2>What Our Clients Say</h2>
+                    <p>Join businesses around the world that are transforming their payment experience</p>
+                </div>
+                
+                <div class="testimonials-container">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Implementing CONVEXO's Web3 PoS solution has completely transformed our payment processing. We've reduced fees by 60% and settlement times are practically instantaneous."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="testimonial-1.jpg" alt="Testimonial Author">
+                            </div>
+                            <div class="author-info">
+                                <h4>David Hernandez</h4>
+                                <p>CEO, Global Retail Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The setup process was incredibly smooth, and the customer support team guided us every step of the way. Our international customers especially love the borderless payment options."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="testimonial-2.jpg" alt="Testimonial Author">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sophia Chen</h4>
+                                <p>COO, E-Commerce Ventures</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"As a small business owner, I was hesitant about adopting crypto payments, but CONVEXO made it seamless. Their system handles the complexity while we enjoy the benefits."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="testimonial-3.jpg" alt="Testimonial Author">
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael Thompson</h4>
+                                <p>Founder, Artisan Marketplace</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="full-width-section alt-bg">
             <div class="section-container">
-                <div class="contact-container">
+                <div class="section-header centered">
                     <h2>Get Started Today</h2>
                     <p>Ready to revolutionize your payment system? Contact us to learn more about our Web3 Point of Sale solutions.</p>
+                </div>
+                
+                <div class="contact-container">
                     <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" placeholder="Enter your company name">
+                            </div>
+                            <div class="form-group">
+                                <label for="solution">Solution of Interest</label>
+                                <select id="solution" name="solution" required>
+                                    <option value="">Select a Solution</option>
+                                    <option value="ens-profiles">ENS Profiles</option>
+                                    <option value="accepting-usdc">Accepting USDC</option>
+                                    <option value="payment-checkout">Payment Checkout Website</option>
+                                    <option value="custom">Custom Solution</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="message">Tell us about your business needs</label>
+                            <textarea id="message" name="message" placeholder="Describe your requirements" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <select id="solution" name="solution" required>
-                                <option value="">Select a Solution</option>
-                                <option value="ens-profiles">ENS Profiles</option>
-                                <option value="accepting-usdc">Accepting USDC</option>
-                                <option value="payment-checkout">Payment Checkout Website</option>
-                                <option value="custom">Custom Solution</option>
-                            </select>
+                        <div class="form-submit">
+                            <button type="submit" class="submit-button">Request Information</button>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Tell us about your business needs" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Request Information</button>
                     </form>
                 </div>
             </div>
@@ -247,21 +442,112 @@
     <footer>
         <div class="footer-container">
             <div class="footer-left">
-                <a href="../index.html" class="nav-logo">Convexo</a>
-                <p>Your trusted partner in institutional-grade crypto trading and infrastructure solutions.</p>
+                <a href="../index.html" class="footer-logo">Convexo</a>
+                <p class="footer-description">Your trusted partner in institutional-grade crypto trading and infrastructure solutions. We empower next-generation institutions for the digital asset era.</p>
             </div>
             <div class="footer-right">
-                <h4>Quick Links</h4>
-                <div class="footer-links">
-                    <a href="../Privacy_Policy/Privacy_policy.html">Privacy Policy</a>
-                    <a href="../Terms_conditions/Terms_conditions.html">Terms and Conditions</a>
-                    <a href="../AMLFT_policy/AMLFT_policy.html">AMLFT Policy</a>
+                <div class="footer-column">
+                    <h4>Social & Community</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>More About</h4>
+                    <div class="footer-links">
+                        <a href="../Privacy_Policy/Privacy_policy.html">Privacy Policy</a>
+                        <a href="../Terms_conditions/Terms_conditions.html">Terms and Conditions</a>
+                        <a href="../AMLFT_policy/AMLFT_policy.html">AMLFT Policy</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <div class="footer-links">
+                        <a href="../otc_trading">Private Brokerage</a>
+                        <a href="../corporate_treasury/corporate_treasury.html">Corporate Treasury</a>
+                        <a href="web3_pos.html">Point of Sale</a>
+                        <a href="../digital_card/digital_card.html">Digital Card</a>
+                        <a href="#">Digital Wallet</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="#">Payroll</a>
+                        <a href="../cross_border/cross_border.html">Cross-border Payments</a>
+                        <a href="#">Digital Investments</a>
+                        <a href="#">Custody Solutions</a>
+                        <a href="#">RWA Tokenization</a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Convexo. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate elements when they enter viewport
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.feature-card, .product-card, .step, .testimonial, .stat-item, .integration-feature');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            
+            // Run on load
+            animateOnScroll();
+            
+            // Run on scroll
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Animated rings
+            const rings = document.querySelectorAll('.visual-ring');
+            let direction = 1;
+            
+            function animateRings() {
+                rings.forEach((ring, index) => {
+                    const rotation = parseFloat(ring.style.transform.replace('rotate(', '').replace('deg)', '') || 0);
+                    const speed = (3 - index) * 0.2; // Different speeds for each ring
+                    const newRotation = rotation + (speed * direction);
+                    
+                    ring.style.transform = `rotate(${newRotation}deg)`;
+                });
+                
+                // Change direction occasionally
+                if (Math.random() < 0.003) {
+                    direction *= -1;
+                }
+                
+                requestAnimationFrame(animateRings);
+            }
+            
+            animateRings();
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the navbar:', error)); 
+        });
+    </script>
 </body>
 </html>
 

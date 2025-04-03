@@ -12,13 +12,6 @@
     
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button class="language-btn" onclick="switchLanguage()">
-            <i class="fas fa-globe"></i>
-            <span id="current-lang">EN</span>
-        </button>
-    </div>
 
     <header></header>
     
@@ -257,32 +250,17 @@
         </section>
     </main>
 
-    <footer></footer>
-    <script src="../js/footer-loader.js"></script>
-    
-    <!-- Language switcher script -->
-    <script>
-        function switchLanguage() {
-            const currentPath = window.location.pathname;
-            
-            if (currentPath.includes('OTC_trading_rooms_es.html')) {
-                // If we're on Spanish page, switch to English
-                window.location.href = 'OTC_trading_rooms.html';
-            } else {
-                // If we're on English page, switch to Spanish
-                window.location.href = 'OTC_trading_rooms_es.html';
-            }
-        }
-        
-        // Set the correct language indicator on page load
+    <script>    
         document.addEventListener('DOMContentLoaded', function() {
-            const currentPath = window.location.pathname;
-            if (currentPath.includes('OTC_trading_rooms_es.html')) {
-                document.getElementById('current-lang').innerText = 'ES';
-            } else {
-                document.getElementById('current-lang').innerText = 'EN';
-            }
+            fetch('../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the navbar:', error)); 
         });
     </script>
+    
+
 </body>
 </html>

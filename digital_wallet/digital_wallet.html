@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Wallet | Convexo Finance</title>
+    <link rel="stylesheet" href="../stylehome.css">
+    <link rel="stylesheet" href="digital_wallet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/@privy-io/privy-browser@1.5.1/dist/privy.js" defer></script>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="wallet-hero">
+            <div class="hero-content">
+                <h1>Your Ultimate Crypto Wallet Experience</h1>
+                <p>Manage all your digital assets across multiple chains through a single, secure interface powered by Superchain interoperability technology.</p>
+                <div class="hero-buttons">
+                    <button id="login-button" class="hero-button primary">Connect Wallet</button>
+                    <a href="#features" class="hero-button secondary">Explore Features</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="wallet-dashboard">
+                    <div class="dashboard-header">
+                        <span class="dashboard-logo">CONVEXO</span>
+                        <span class="dashboard-user"><i class="fas fa-user-circle"></i></span>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="balance-card">
+                            <div class="balance-header">
+                                <h3>Total Balance</h3>
+                                <span class="chain-selector">
+                                    <span>All Networks</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
+                            <div class="balance-amount">$52,893.74</div>
+                            <div class="balance-change positive">+7.13% <span>($3,772.90)</span></div>
+                        </div>
+                        <div class="token-list">
+                            <div class="token-item">
+                                <div class="token-icon eth"></div>
+                                <div class="token-details">
+                                    <div class="token-name">Ethereum</div>
+                                    <div class="token-balance">12.40 ETH</div>
+                                </div>
+                                <div class="token-value">$49,738.49</div>
+                            </div>
+                            <div class="token-item">
+                                <div class="token-icon usdc"></div>
+                                <div class="token-details">
+                                    <div class="token-name">USDC</div>
+                                    <div class="token-balance">965.34 USDC</div>
+                                </div>
+                                <div class="token-value">$965.34</div>
+                            </div>
+                            <div class="token-item">
+                                <div class="token-icon dai"></div>
+                                <div class="token-details">
+                                    <div class="token-name">DAI</div>
+                                    <div class="token-balance">2,182.14 DAI</div>
+                                </div>
+                                <div class="token-value">$2,182.14</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-pattern"></div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Powerful Wallet Features</h2>
+                    <p>A comprehensive suite of tools to manage your crypto assets efficiently</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3>Aggregated Balance</h3>
+                        <p>View your combined balance across multiple chains and protocols in one unified dashboard.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Cross-Chain Swap</h3>
+                        <p>Swap tokens across different blockchains with 0-slippage and 1-block latency using Superchain interop.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <h3>Yield Vaults</h3>
+                        <p>Deposit your assets into Morpho Labs-powered vaults to earn optimized yield on your holdings.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Institutional Security</h3>
+                        <p>Enterprise-grade security with multi-signature authorization and secure key management.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Portfolio Analytics</h3>
+                        <p>Track performance with detailed analytics and reporting on all your digital assets.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Multi-Chain Support</h3>
+                        <p>Seamlessly interact with major blockchain networks through a single interface.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Swap Section -->
+        <section class="swap-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Cross-Chain Token Swap</h2>
+                    <p>Get the best execution across multiple chains with 0-slippage and 1-block latency</p>
+                </div>
+                <div class="swap-container">
+                    <div class="swap-content">
+                        <h3>Superchain Interop Swaps</h3>
+                        <p>Superchain interop enables secure, 0-slippage, 1-block latency token transfers. Instead of swapping across a single chain, you can swap across multiple chains to get the best price. The user has 6000 USDC wants to swap for ETH. Using Superchain interop to swap across multiple networks the user is able to get better execution on their swap.</p>
+                        <div class="swap-features">
+                            <div class="swap-feature">
+                                <i class="fas fa-bolt"></i>
+                                <span>Fast Settlement</span>
+                            </div>
+                            <div class="swap-feature">
+                                <i class="fas fa-lock"></i>
+                                <span>Secure Transactions</span>
+                            </div>
+                            <div class="swap-feature">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>Best Price Execution</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swap-visual">
+                        <div class="swap-card">
+                            <div class="swap-header">
+                                <h3>Swap</h3>
+                            </div>
+                            <div class="swap-form">
+                                <div class="swap-input">
+                                    <div class="swap-input-header">
+                                        <span>Sell</span>
+                                    </div>
+                                    <div class="swap-input-content">
+                                        <input type="text" value="6000" readonly>
+                                        <div class="token-selector">
+                                            <div class="token-icon usdc small"></div>
+                                            <span>USDC</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="swap-input-footer">
+                                        <span>$6000</span>
+                                    </div>
+                                </div>
+                                <div class="swap-divider">
+                                    <div class="swap-arrow">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                </div>
+                                <div class="swap-input">
+                                    <div class="swap-input-header">
+                                        <span>Buy</span>
+                                    </div>
+                                    <div class="swap-input-content">
+                                        <input type="text" value="2.25" readonly>
+                                        <div class="token-selector">
+                                            <div class="token-icon eth small"></div>
+                                            <span>ETH</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="swap-input-footer">
+                                        <span>$5990.99</span>
+                                    </div>
+                                </div>
+                                <button class="swap-button processing">
+                                    <div class="loading-indicator">
+                                        <div class="spinner"></div>
+                                    </div>
+                                    <span>Transaction processing</span>
+                                    <div class="estimated-time">
+                                        <span>Estimated time: less than 10 seconds</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vaults Section -->
+        <section class="vaults-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Morpho-Powered Yield Vaults</h2>
+                    <p>Optimize your returns with algorithmic yield strategies</p>
+                </div>
+                <div class="vaults-container">
+                    <div class="vaults-visual">
+                        <div class="vault-cards">
+                            <div class="vault-card">
+                                <div class="vault-header">
+                                    <div class="vault-icon">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzYyN0VFQSIvPjxnIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PHBhdGggZmlsbC1vcGFjaXR5PSIuNjAyIiBkPSJNMTYuNDk4IDR2OC44N2w3LjQ5NyAzLjM1eiIvPjxwYXRoIGQ9Ik0xNi40OTggNEw5IDE2LjIybDcuNDk4LTMuMzV6Ii8+PHBhdGggZmlsbC1vcGFjaXR5PSIuNjAyIiBkPSJNMTYuNDk4IDIxLjk2OHY2LjAyN0wyNCAxNy42MTZ6Ii8+PHBhdGggZD0iTTE2LjQ5OCAyNy45OTV2LTYuMDI4TDkgMTcuNjE2eiIvPjxwYXRoIGZpbGwtb3BhY2l0eT0iLjIiIGQ9Ik0xNi40OTggMjAuNTczbDcuNDk3LTQuMzUzLTcuNDk3LTMuMzQ4eiIvPjxwYXRoIGZpbGwtb3BhY2l0eT0iLjYwMiIgZD0iTTkgMTYuMjJsNy40OTggNC4zNTN2LTcuNzAxeiIvPjwvZz48L2c+PC9zdmc+" alt="ETH Vault">
+                                    </div>
+                                    <div class="vault-title">ETH Optimized Yield</div>
+                                    <div class="vault-apy">5.82% APY</div>
+                                </div>
+                                <div class="vault-stats">
+                                    <div class="vault-stat">
+                                        <span class="stat-label">TVL</span>
+                                        <span class="stat-value">$56.2M</span>
+                                    </div>
+                                    <div class="vault-stat">
+                                        <span class="stat-label">Strategy</span>
+                                        <span class="stat-value">Morpho ETH</span>
+                                    </div>
+                                </div>
+                                <button class="vault-button">Deposit ETH</button>
+                            </div>
+                            <div class="vault-card">
+                                <div class="vault-header">
+                                    <div class="vault-icon">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGcgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiMyNzc1Q0EiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTYgMjUuNWMtNS4yNDcgMC05LjUtNC4yNTMtOS41LTkuNVMxMC43NTMgNi41IDE2IDYuNXM5LjUgNC4yNTMgOS41IDkuNS00LjI1MyA5LjUtOS41IDkuNXptMy43NDItMTMuNjY3aC0yLjY1NkE1LjQ0OSA1LjQ0OSAwIDE2IDEwLjc0OWE1LjQ0OSA1LjQ0OSAwIDAtMS4wODYgMS4wODRoLTIuNjU2YTcuODkgNy44OSAwIDAxMi4zNzUtMi43N0E3Ljk0OCA3Ljk0OCAwIDE2IDhhNy45NDggNy45NDggMCAxLjM2NyAxLjA2NCA3Ljg5IDcuODkgMiAyLjM3NSAyLjc2OXptLTkuODQ4IDQuMTY3YzAgLjYuMDgyIDEuMTkzLjI0NCAxLjc1aDIuNjQ0YTEyLjAwNSAxMi4wMDUgMCAwMS0uMjI1LTIuMzMzYzAtLjguMDc1LTEuNTgzLjIyNS0yLjMzNEg5Ljg5NGE2LjEzMiA2LjEzMiAwIDAwLS4yNDQgMS43NXYxLjE2N3ptMi43MjcgMy41YTYuODY5IDYuODY5IDAxLjA4NiAxLjA4M0E1LjQ0OCA1LjQ0OCAwIDE2IDIxLjY2N2MuMzg0IDAgLjc1My0uMDU2IDEuMTAyLS4xNjdhNi44NyA2Ljg3IDAxLjA4Ni0xLjA4M2gyLjY5OWMtLjYzMyAxLjEtMS41NDYgMi4wMTUtMi42MiAyLjYzNUE3Ljk0OCA3Ljk0OCAwIDE2IDI0Yy0uNDcgMC0uOTI4LS4wNTktMS4zNjctLjE3M2E3LjkwMSA3LjkwMSAwIDAxLTIuNzEyLTIuMzI3SDkuODk0em0xMS4yMjgtMy41YzAtLjYtLjA4Mi0xLjE5My0uMjQ0LTEuNzVoLTIuNjE0Yy4xNS43NS4yMjUgMS41MzMuMjI1IDIuMzMzIDAgLjgtLjA3NSAxLjU4NC0uMjI1IDIuMzM0aDIuNjQ0Yy4xNjItLjU1Ny4yNDQtMS4xNS4yNDQtMS43NXYtMS4xNjd6bS0zLjMyNS0xLjc1aC00LjY0NGMtLjEzOC42NjctLjIwNyAxLjM2Ny0uMjA3IDIuMDgzIDAgLjcxNy4wNjkgMS40MTcuMjA3IDIuMDg0aDQuNjQ0Yy4xMzgtLjY2Ny4yMDctMS4zNjcuMjA3LTIuMDg0IDAtLjcxNi0uMDY5LTEuNDE2LS4yMDctMi4wODN6Ii8+PC9nPjwvc3ZnPg==" alt="USDC Vault">
+                                    </div>
+                                    <div class="vault-title">USDC Stable Yield</div>
+                                    <div class="vault-apy">6.12% APY</div>
+                                </div>
+                                <div class="vault-stats">
+                                    <div class="vault-stat">
+                                        <span class="stat-label">TVL</span>
+                                        <span class="stat-value">$87.5M</span>
+                                    </div>
+                                    <div class="vault-stat">
+                                        <span class="stat-label">Strategy</span>
+                                        <span class="stat-value">Morpho USDC</span>
+                                    </div>
+                                </div>
+                                <button class="vault-button">Deposit USDC</button>
+                            </div>
+                            <div class="vault-card">
+                                <div class="vault-header">
+                                    <div class="vault-icon">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGcgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiNGNUFDMzciLz48cGF0aCBmaWxsPSIjRkVGRUZEIiBkPSJNOS4yNzcgOGg2LjU1MmMzLjk4NSAwIDcuMDA2IDIuMTE2IDguMTMgNS4xOTRIMjZ2MS44NjFoLTEuNjExYy4wMzEuMjk0LjA0Ny41OTQuMDQ3Ljg5OHYuMDQ2YzAgLjM0Mi0uMDIuNjgtLjA2IDEuMDFIMjZ2MS44NmgtMi4wOEMyMi43NjcgMjEuOTA1IDE5Ljc3NyAyNCAxNS44MyAyNEg5LjI3N3YtNS4xMzFIN3YtMS44NmgyLjI3N3YtMS45NTRIN3YtMS44NmgyLjI3N1Y4em0xLjgzMSAxMC44Njl2My40NjJoNC43MmMyLjkxNCAwIDUuMDc4LTEuMzg3IDYuMDg1LTMuNDYySDExLjEwOHptMTEuMzY2LTEuODZIMTEuMTA4di0xLjk1NGgxMS4zN2MuMDQxLjMwNy4wNjMuNjIyLjA2My45NDR2LjA0NWMwIC4zMjktLjAyMy42NS0uMDY2Ljk2NHptLS41NzEtMy44MTRIMTEuMTA4djMuNDYyaDEwLjExN2MtLjk4My0yLjA1LTMuMTA3LTMuNDYyLTUuOTg0LTMuNDYyaC00LjMyOXoiLz48L2c+PC9zdmc+" alt="DAI Vault">
+                                    </div>
+                                    <div class="vault-title">DAI Stable Yield</div>
+                                    <div class="vault-apy">5.94% APY</div>
+                                </div>
+                                <div class="vault-stats">
+                                    <div class="vault-stat">
+                                        <span class="stat-label">TVL</span>
+                                        <span class="stat-value">$42.3M</span>
+                                    </div>
+                                    <div class="vault-stat">
+                                        <span class="stat-label">Strategy</span>
+                                        <span class="stat-value">Morpho DAI</span>
+                                    </div>
+                                </div>
+                                <button class="vault-button">Deposit DAI</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vaults-content">
+                        <h3>Optimized Yield Strategies</h3>
+                        <p>Our vaults use Morpho Labs' advanced protocol to intelligently allocate your assets across the best performing lending platforms, automatically finding the highest yields while maintaining institutional-grade security.</p>
+                        
+                        <div class="vaults-benefits">
+                            <div class="vault-benefit">
+                                <div class="benefit-icon"><i class="fas fa-percentage"></i></div>
+                                <div class="benefit-content">
+                                    <h4>Higher Returns</h4>
+                                    <p>Earn up to 30% higher APY compared to traditional lending platforms.</p>
+                                </div>
+                            </div>
+                            <div class="vault-benefit">
+                                <div class="benefit-icon"><i class="fas fa-robot"></i></div>
+                                <div class="benefit-content">
+                                    <h4>Automated Strategies</h4>
+                                    <p>Smart contracts automatically adjust positions for optimal yield.</p>
+                                </div>
+                            </div>
+                            <div class="vault-benefit">
+                                <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                                <div class="benefit-content">
+                                    <h4>Risk Management</h4>
+                                    <p>Advanced risk assessment and diversification across protocols.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="howworks-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How It Works</h2>
+                    <p>Simple steps to manage your digital assets with Convexo Digital Wallet</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Connect Your Wallet</h3>
+                            <p>Securely connect using Privy.io authentication for a seamless experience across devices.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>View Aggregated Balance</h3>
+                            <p>See your complete portfolio across multiple chains and protocols in one unified dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Swap Tokens Cross-Chain</h3>
+                            <p>Execute trades with the best rates across multiple networks using Superchain interoperability.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Deposit Into Vaults</h3>
+                            <p>Optimize yield by depositing assets into Morpho-powered vaults with algorithmic strategies.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Monitor Performance</h3>
+                            <p>Track your portfolio's performance with detailed analytics and real-time updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Experience the Future of Digital Asset Management?</h2>
+                <p>Join institutional clients worldwide who trust Convexo for their crypto portfolio management.</p>
+                <div class="cta-buttons">
+                    <button id="cta-login-button" class="cta-button primary">Launch Wallet</button>
+                    <a href="#" class="cta-button secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="../index.html" class="footer-logo">Convexo</a>
+                <p class="footer-description">Your trusted partner in institutional-grade crypto trading and infrastructure solutions. We empower next-generation institutions for the digital asset era.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-column">
+                    <h4>Social & Community</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>More About</h4>
+                    <div class="footer-links">
+                        <a href="../Privacy_Policy/Privacy_policy.html">Privacy Policy</a>
+                        <a href="../Terms_conditions/Terms_conditions.html">Terms and Conditions</a>
+                        <a href="../AMLFT_policy/amlft_policy.html">AMLFT Policy</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <div class="footer-links">
+                        <a href="../otc_trading">Private Brokerage</a>
+                        <a href="../corporate_treasury/corporate_treasury.html">Corporate Treasury</a>
+                        <a href="../web3_pos/web3_pos.html">Point of Sale</a>
+                        <a href="../digital_card/digital_card.html">Digital Card</a>
+                        <a href="../Payrrol/Payrrol.html">Payroll</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="../Payrrol/Payrrol.html">Payroll</a>
+                        <a href="../cross_border/cross_border.html">Cross-border Payments</a>
+                        <a href="#">Digital Investments</a>
+                        <a href="#">Custody Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CONVEXO FINANCE LIMITED. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load navbar
+            fetch('../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the navbar:', error));
+
+            // Initialize Privy
+            try {
+                const privy = new window.Privy({
+                    appId: 'your-privy-app-id', // Replace with your actual Privy app ID
+                    onSuccess: (user) => {
+                        console.log(`User authenticated: ${user.id}`);
+                        document.getElementById('login-button').textContent = 'Wallet Connected';
+                        document.getElementById('cta-login-button').textContent = 'Access Dashboard';
+                    },
+                    onError: (error) => {
+                        console.error('Privy authentication error:', error);
+                    }
+                });
+
+                // Login button functionality
+                document.getElementById('login-button').addEventListener('click', () => {
+                    privy.login();
+                });
+
+                document.getElementById('cta-login-button').addEventListener('click', () => {
+                    privy.login();
+                });
+            } catch (error) {
+                console.error('Error initializing Privy:', error);
+            }
+
+            // Force all elements to be visible initially (remove animation dependency)
+            document.querySelectorAll('.feature-card, .step, .vault-benefit').forEach(item => {
+                item.classList.add('animated');
+            });
+
+            // Set up animation for elements when they come into view
+            try {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animated');
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                document.querySelectorAll('.feature-card, .step, .vault-benefit').forEach(item => {
+                    // Make sure element is visible even if observer fails
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                    
+                    observer.observe(item);
+                });
+            } catch (error) {
+                console.error('Error setting up animations:', error);
+                // Fallback to make elements visible if observer fails
+                document.querySelectorAll('.feature-card, .step, .vault-benefit').forEach(item => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
