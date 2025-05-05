@@ -1,17 +1,30 @@
 {
   "name": "convexo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Convexo - Crypto and AI institutional-grade services",
   "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "build": "echo 'No build step needed'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "crypto",
+    "finance",
+    "blockchain",
+    "institutional"
+  ],
+  "author": "Convexo",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "helmet": "^8.1.0",
     "https": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

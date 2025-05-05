@@ -4,17 +4,28 @@
     "outputDirectory": ".",
     "rewrites": [
       { "source": "/", "destination": "/index.html" },
-      { "source": "/digital_access", "destination": "../digital_access/digital_access.html" },
-      { "source": "/digital_access_es", "destination": "../digital_access/digital_access_es.html" },
-      { "source": "/otc_trading", "destination": "../OTC_trading_rooms/OTC_trading_rooms.html" },
-      { "source": "/digital_wallet", "destination": "../digital_wallet/digital_wallet.html" },
-      { "source": "/corporate_treasury", "destination": "../corporate_treasury/corporate_treasury.html" },
-      { "source": "/web3_pos", "destination": "../web3_pos/web3_pos.html" },
-      { "source": "/digital_card", "destination": "../digital_card/digital_card.html" },
-      { "source": "/payrrol", "destination": "../Payrrol/Payrrol.html" },
-      { "source": "/cross_border", "destination": "../cross_border/cross_border.html" },
-      { "source": "/privacy_policy", "destination": "../Privacy_Policy/Privacy_policy.html" },
-      { "source": "/terms_conditions", "destination": "../Terms_conditions/Terms_conditions.html" },
-      { "source": "/amlft_policy", "destination": "/AMLFT_policy/amlft_policy.html" }
+      
+      { "source": "/digital_access", "destination": "/digital_access/digital_access.html" },
+      { "source": "/digital_access/corporate_treasury", "destination": "/digital_access/corporate_treasury/corporate_treasury.html" },
+      { "source": "/digital_access/digital_wallet", "destination": "/digital_access/digital_wallet/digital_wallet.html" },
+      { "source": "/digital_access/digital_card", "destination": "/digital_access/digital_card/digital_card.html" },
+      { "source": "/digital_access/point_of_sale", "destination": "/digital_access/point_of_sale/point_of_sale.html" },
+      { "source": "/digital_access/private_brokerage", "destination": "/digital_access/private_brokerage/private_brokerage.html" },
+      
+      { "source": "/digital_financial_services", "destination": "/digital_financial_services/digital_financial_services.html" },
+      { "source": "/digital_financial_services/payrrol", "destination": "/digital_financial_services/payrrol/payrrol.html" },
+      { "source": "/digital_financial_services/cross_border", "destination": "/digital_financial_services/cross_border/cross_border.html" },
+      { "source": "/digital_financial_services/custody_solutions", "destination": "/digital_financial_services/custody_solutions/custody_solutions.html" },
+      { "source": "/digital_financial_services/asset-management", "destination": "/digital_financial_services/asset-management/asset-management.html" },
+      { "source": "/digital_financial_services/rwa-tokenization", "destination": "/digital_financial_services/rwa-tokenization/rwa-tokenization.html" },
+      
+      { "source": "/privacy_policy", "destination": "/lega_docs/Privacy_Policy/Privacy_policy.html" },
+      { "source": "/terms_conditions", "destination": "/lega_docs/Terms_conditions/Terms_conditions.html" },
+      { "source": "/amlft_policy", "destination": "/lega_docs/AMLFT_policy/amlft_policy.html" },
+      
+      { "source": "/about_us", "destination": "/about_us/about_us.html" },
+      { "source": "/kyc", "destination": "/kyc-page/kyc.html" },
+      
+      { "source": "/(.*)", "destination": "/index.html" }
     ]
 }
