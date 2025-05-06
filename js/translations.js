@@ -384,15 +384,31 @@ function applyTranslations() {
   const lang = getUserLanguage();
   const path = window.location.pathname;
   
-  // Determine which page we're on and apply the appropriate translations
+  console.log('Applying translations for language:', lang, 'on path:', path);
+  
+  // First try page-specific translations
   if (path.includes('digital_access') || path === '/digital_access') {
     applyDigitalAccessTranslations(lang);
   } else if (path.includes('digital_financial_services') || path === '/digital_financial_services') {
     applyDigitalFinancialServicesTranslations(lang);
   } else if (path === '/' || path.includes('index')) {
     applyHomePageTranslations(lang);
+  } else if (path.includes('about_us')) {
+    // Apply about us translations
+    applyGenericTranslations(lang, 'aboutUs');
+  } else if (path.includes('kyc-page')) {
+    // Apply KYC page translations
+    applyGenericTranslations(lang, 'kyc');
+  } else if (path.includes('lega_docs')) {
+    // Apply legal docs translations
+    applyGenericTranslations(lang, 'legalDocs');
+  } else {
+    // Generic fallback for all other pages
+    applyGenericTranslations(lang);
   }
-  // Add more page conditions as needed
+  
+  // Always apply common elements translation (navbar, footer, etc.)
+  applyCommonTranslations(lang);
 }
 
 /**
@@ -553,6 +569,74 @@ function updateLanguageIndicators() {
       link.classList.remove('active');
     }
   });
+}
+
+/**
+ * Apply generic translations for any page using data-i18n attributes
+ * @param {string} lang - Language code
+ * @param {string} pageKey - Optional page key in translations object
+ */
+function applyGenericTranslations(lang, pageKey) {
+  // Handle data-i18n attributes from any translation section
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    
+    // Try page-specific section first if provided
+    if (pageKey && translations[pageKey] && translations[pageKey][lang] && 
+        translations[pageKey][lang][key]) {
+      el.textContent = translations[pageKey][lang][key];
+      return;
+    }
+    
+    // Try home page translations
+    if (translations.homePage && translations.homePage[lang] && 
+        translations.homePage[lang][key]) {
+      el.textContent = translations.homePage[lang][key];
+      return;
+    }
+    
+    // Try digital access translations
+    if (translations.digitalAccess && translations.digitalAccess[lang] && 
+        translations.digitalAccess[lang][key]) {
+      el.textContent = translations.digitalAccess[lang][key];
+      return;
+    }
+    
+    // Try digital financial services translations
+    if (translations.digitalFinancialServices && translations.digitalFinancialServices[lang] && 
+        translations.digitalFinancialServices[lang][key]) {
+      el.textContent = translations.digitalFinancialServices[lang][key];
+    }
+  });
+}
+
+/**
+ * Apply translations for common elements like navbar and footer
+ * @param {string} lang - Language code
+ */
+function applyCommonTranslations(lang) {
+  // Navbar translations
+  if (translations.navbar && translations.navbar[lang]) {
+    const navbarT = translations.navbar[lang];
+    
+    // Find and translate navbar links
+    const homeLink = document.querySelector('.navbar__link[href="/"]');
+    if (homeLink) homeLink.textContent = navbarT.home;
+    
+    const aboutLink = document.querySelector('.navbar__link[href="/about_us"]');
+    if (aboutLink) aboutLink.textContent = navbarT.about;
+    
+    const digitalAccessLink = document.querySelector('.navbar__link[href="/digital_access"]');
+    if (digitalAccessLink) digitalAccessLink.textContent = navbarT.digitalAccess;
+    
+    const digitalFinanceLink = document.querySelector('.navbar__link[href="/digital_financial_services"]');
+    if (digitalFinanceLink) digitalFinanceLink.textContent = navbarT.digitalFinance;
+    
+    const signUpButton = document.querySelector('.signup-btn');
+    if (signUpButton) signUpButton.textContent = navbarT.signUp;
+  }
+  
+  // Footer translations could be added here
 }
 
 // Initialize translations when the DOM is loaded
