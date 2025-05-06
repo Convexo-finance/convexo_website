@@ -1,0 +1,120 @@
+/* =========================
+   Layout
+========================= */
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section--dark {
+    background-color: var(--background-color);
+    color: var(--text-primary);
+}
+
+.section--darker {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+}
+
+.section--colored {
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
+}
+
+.section--gradient {
+    background: linear-gradient(to bottom, var(--secondary-color) 0%, var(--background-color) 100%);
+    color: var(--text-primary);
+}
+
+/* Section utilities */
+.full-width-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header.centered {
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: var(--font-size-3xl);
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.section-header.centered h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Grid layouts */
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-auto {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+    }
+} 

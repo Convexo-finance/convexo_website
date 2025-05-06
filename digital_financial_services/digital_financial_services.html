@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Financial Services - Convexo</title>
+    <link rel="icon" type="image/png" href="/logologo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="digital_financial_services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="../navbar-loader.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/navbar-loader.js"></script>
 </head>
 
 <body>
@@ -174,38 +175,15 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Convexo. All rights reserved.</p>
-        </div>
-    </footer>
+    <footer></footer>
 
     <!-- Load the footer -->
-    <script src="../footer-loader.js"></script>
+    <script src="/footer-loader.js"></script>
 
     <!-- Language switcher script -->
-    <script>
-        function switchLanguage() {
-            const currentPath = window.location.pathname;
-            
-            if (currentPath.includes('digital_financial_services_es.html')) {
-                // If we're on Spanish page, switch to English
-                window.location.href = 'digital_financial_services.html';
-            } else {
-                // If we're on English page, switch to Spanish
-                window.location.href = 'digital_financial_services_es.html';
-            }
-        }
-        
-        // Set the correct language indicator on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPath = window.location.pathname;
-            if (currentPath.includes('digital_financial_services_es.html')) {
-                document.getElementById('current-lang').innerText = 'ES';
-            } else {
-                document.getElementById('current-lang').innerText = 'EN';
-            }
-        });
-    </script>
+    <script src="/js/translations.js"></script>
+    <script src="/script.js"></script>
+    <script src="/footer-loader.js"></script>
+    <script src="/navbar-loader.js"></script>
 </body>
 </html> 

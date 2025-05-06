@@ -1,71 +1,71 @@
-<nav>
-    <div class="wrapper">
-      <div class="logo"><a href="/"> <img src="/logo_convexo.png" alt="Convexo" style="width: 250px; height: 250px;"></a></div>
-        <ul class="nav-links">
+<nav class="navbar">
+    <div class="navbar__wrapper">
+      <div class="navbar__logo"><a href="/"> <img src="/logo_convexo.png" alt="Convexo" class="navbar__logo-image"></a></div>
+      <ul class="navbar__links">
       
-        <li><a href="/">Home</a></li>
-        <li><a href="/about_us">About</a></li>
-        <li class="has-dropdown">
-          <a href="/digital_access" class="desktop-item">Digital Access</a>
-            <div class="mega-box">
-              <div class="content">
-                <div class="row">
-                  <header>Enterprise</header>
-                  <ul class="mega-links">
-                    <li><a href="/digital_access/private_brokerage">Private Brokerage</a></li>
-                    <li><a href="/digital_access/corporate_treasury">Corporate Treasury</a></li>
-                    <li><a href="/digital_access/point_of_sale">Point of Sale</a></li>
+        <li class="navbar__item"><a href="/" class="navbar__link">Home</a></li>
+        <li class="navbar__item"><a href="/about_us" class="navbar__link">About</a></li>
+        <li class="navbar__item has-dropdown">
+          <a href="/digital_access" class="navbar__link desktop-item">Digital Access</a>
+            <div class="mega-menu">
+              <div class="mega-menu__content">
+                <div class="mega-menu__row">
+                  <header class="mega-menu__header">Enterprise</header>
+                  <ul class="mega-menu__links">
+                    <li class="mega-menu__item"><a href="/digital_access/private_brokerage" class="mega-menu__link">Private Brokerage</a></li>
+                    <li class="mega-menu__item"><a href="/digital_access/corporate_treasury" class="mega-menu__link">Corporate Treasury</a></li>
+                    <li class="mega-menu__item"><a href="/digital_access/point_of_sale" class="mega-menu__link">Point of Sale</a></li>
                   </ul>
                 </div>
-                <div class="row">
-                  <header>Personas</header>
-                  <ul class="mega-links">
-                    <li><a href="/digital_access/digital_wallet">Digital Wallet</a></li>
-                    <li><a href="/digital_access/digital_card">Digital Card (soon)</a></li>
+                <div class="mega-menu__row">
+                  <header class="mega-menu__header">Personas</header>
+                  <ul class="mega-menu__links">
+                    <li class="mega-menu__item"><a href="/digital_access/digital_wallet" class="mega-menu__link">Digital Wallet</a></li>
+                    <li class="mega-menu__item"><a href="/digital_access/digital_card" class="mega-menu__link">Digital Card (soon)</a></li>
                   </ul>
                 </div>
               </div>
             </div>
         </li>
 
-        <li class="has-dropdown">
-          <a href="/digital_financial_services" class="desktop-item">Digital Finance</a>
-          <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <header>Enterprise & VIP</header>
-                <ul class="mega-links">
-                  <li><a href="/digital_financial_services/payrrol">Payroll</a></li>
-                  <li><a href="/digital_financial_services/cross_border">Cross-border Payments</a></li>
-                  <li><a href="/digital_financial_services/asset-management">Asset Management</a></li>
-                  <li><a href="/digital_financial_services/custody_solutions">Custody Solutions</a></li>
-                  <li><a href="/digital_financial_services/rwa-tokenization">RWA Tokenization</a></li>
+        <li class="navbar__item has-dropdown">
+          <a href="/digital_financial_services" class="navbar__link desktop-item">Digital Finance</a>
+          <div class="mega-menu">
+            <div class="mega-menu__content">
+              <div class="mega-menu__row">
+                <header class="mega-menu__header">Enterprise & VIP</header>
+                <ul class="mega-menu__links">
+                  <li class="mega-menu__item"><a href="/digital_financial_services/payrrol" class="mega-menu__link">Payroll</a></li>
+                  <li class="mega-menu__item"><a href="/digital_financial_services/cross_border" class="mega-menu__link">Cross-border Payments</a></li>
+                  <li class="mega-menu__item"><a href="/digital_financial_services/asset-management" class="mega-menu__link">Asset Management</a></li>
+                  <li class="mega-menu__item"><a href="/digital_financial_services/custody_solutions" class="mega-menu__link">Custody Solutions</a></li>
+                  <li class="mega-menu__item"><a href="/digital_financial_services/rwa-tokenization" class="mega-menu__link">RWA Tokenization</a></li>
                 </ul>
               </div>
-              <div class="row">
-                <header>Personas</header>
-                <ul class="mega-links">
-                  <li><a href="/digital_financial_services/stablecoins">Stablecoins</a></li>
-                  <li><a href="/digital_financial_services/staking_yield">Staking & Yield</a></li>
-                  <li><a href="/digital_financial_services/on_ramp_off_ramp">On-ramp & Off-ramp</a></li>
+              <div class="mega-menu__row">
+                <header class="mega-menu__header">Personas</header>
+                <ul class="mega-menu__links">
+                  <li class="mega-menu__item"><a href="/digital_financial_services/stablecoins" class="mega-menu__link">Stablecoins</a></li>
+                  <li class="mega-menu__item"><a href="/digital_financial_services/staking_yield" class="mega-menu__link">Staking & Yield</a></li>
+                  <li class="mega-menu__item"><a href="/digital_financial_services/on_ramp_off_ramp" class="mega-menu__link">On-ramp & Off-ramp</a></li>
                 </ul>
               </div>
             </div>
           </div>
         </li>
-        <li><a href="https://form.typeform.com/to/R7OwSKPX" class="signup-btn highlight">Sign Up</a></li>
-        <li class="language-switcher">
+        <li class="navbar__item"><a href="https://form.typeform.com/to/R7OwSKPX" class="signup-btn highlight">Sign Up</a></li>
+        <li class="navbar__item language-switcher">
             <button class="language-btn" onclick="toggleLanguageDropdown()">
                 <span class="flag-emoji">🇺🇸</span>
                 <span id="current-lang">EN</span>
                 <span class="arrow">▾</span>
             </button>
             <div class="language-dropdown" id="languageDropdown">
-                <a href="/" class="active">
+                <a href="javascript:void(0)" onclick="setUserLanguage('en');" class="active">
                     <span class="flag-emoji">🇺🇸</span>
                     <span>English</span>
                 </a>
-                <a href="/es">
+                <a href="javascript:void(0)" onclick="setUserLanguage('es');">
                     <span class="flag-emoji">🇪🇸</span>
                     <span>Español</span>
                 </a>

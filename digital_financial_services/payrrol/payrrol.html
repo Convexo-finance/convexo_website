@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll Solutions | CONVEXO FINANCE LIMITED</title>
-    <link rel="stylesheet" href="../stylehome.css">
-    <link rel="stylesheet" href="Payrrol.css">
-    <script src="../js/navbar-loader.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/navbar-loader.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/js/translations.js"></script>
+    <script src="/script.js"></script>
+    <script src="/footer-loader.js"></script>
+    <script src="/navbar-loader.js"></script>
 </head>
 <body>
     <header></header>
@@ -571,59 +574,9 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load the navbar
-            fetch('../navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('header').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading the navbar:', error));
-
-            // Animate elements when they enter viewport
-            const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.feature-card, .benefit-item, .step, .testimonial, .stat-item, .savings-feature, .identity-feature');
-                
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.2;
-                    
-                    if (elementPosition < screenPosition) {
-                        element.classList.add('animated');
-                    }
-                });
-            };
-            
-            // Run on load
-            animateOnScroll();
-            
-            // Run on scroll
-            window.addEventListener('scroll', animateOnScroll);
-            
-            // Animated rings
-            const rings = document.querySelectorAll('.visual-ring');
-            let direction = 1;
-            
-            function animateRings() {
-                rings.forEach((ring, index) => {
-                    const rotation = parseFloat(ring.style.transform.replace('rotate(', '').replace('deg)', '') || 0);
-                    const speed = (3 - index) * 0.2; // Different speeds for each ring
-                    const newRotation = rotation + (speed * direction);
-                    
-                    ring.style.transform = `rotate(${newRotation}deg)`;
-                });
-                
-                // Change direction occasionally
-                if (Math.random() < 0.003) {
-                    direction *= -1;
-                }
-                
-                requestAnimationFrame(animateRings);
-            }
-            
-            animateRings();
-        });
-    </script>
+    <script src="/js/translations.js"></script>
+    <script src="/script.js"></script>
+    <script src="/footer-loader.js"></script>
+    <script src="/navbar-loader.js"></script>
 </body>
 </html>

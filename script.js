@@ -238,14 +238,14 @@ document.cookie = "nombre=valor; Secure; HttpOnly; SameSite=Strict";
 
 function toggleLanguageDropdown() {
     const dropdown = document.getElementById('languageDropdown');
-    dropdown.classList.toggle('show');
+    dropdown.classList.toggle('active');
 }
 
 // Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
     const dropdown = document.getElementById('languageDropdown');
     const btn = event.target.closest('.language-btn');
-    if (!btn && dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
+    if (!btn && dropdown.classList.contains('active')) {
+        dropdown.classList.remove('active');
     }
 });

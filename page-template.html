@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE_TITLE - Convexo</title>
+    <link rel="icon" type="image/png" href="/logologo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Page-specific CSS - Change this path for each page -->
+    <link rel="stylesheet" href="PAGE_CSS_PATH">
+    
+    <!-- Global Scripts -->
+    <script src="/navbar-loader.js"></script>
+</head>
+<body>
+    <!-- Header will be loaded by navbar-loader.js -->
+    <header></header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="markets-hero">
+            <div class="hero-content">
+                <h1>PAGE_TITLE</h1>
+                <h2>PAGE_SUBTITLE</h2>
+                <p>PAGE_DESCRIPTION</p>
+            </div>
+        </section>
+        
+        <!-- Main Content Sections Go Here -->
+        
+        <!-- Contact Section -->    
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Contact Our Team</h2>
+                <p>Get in touch with our experts to discuss how our services can benefit your organization.</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select Service</option>
+                            <!-- Update options based on the page -->
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded by footer-loader.js -->
+    <footer></footer>
+    
+    <!-- Global Scripts -->
+    <script src="/footer-loader.js"></script>
+    
+    <!-- Page-specific scripts -->
+    <script>
+        // Add page-specific JavaScript here
+    </script>
+</body>
+</html> 

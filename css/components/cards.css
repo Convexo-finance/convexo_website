@@ -1,0 +1,239 @@
+/* =========================
+   Card Styles
+========================= */
+
+/* Base Card */
+.card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 249, 239, 0.1);
+    border-radius: var(--border-radius-xl);
+    padding: 30px;
+    transition: var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 249, 239, 0.2);
+}
+
+/* Card Header */
+.card__header {
+    margin-bottom: 20px;
+}
+
+.card__title {
+    font-size: var(--font-size-large);
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Card Content */
+.card__content {
+    color: rgba(255, 249, 239, 0.8);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Card Footer */
+.card__footer {
+    margin-top: 20px;
+}
+
+/* Card with icon */
+.card-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-icon__wrapper {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.card-icon__icon {
+    font-size: var(--font-size-xl);
+    color: var(--accent-color);
+}
+
+/* Product Card (from stylehome.css) */
+.product-card {
+    background: #000;
+    border: 1px solid rgba(255, 249, 239, 0.1);
+    border-radius: var(--border-radius-xl);
+    padding: 30px;
+    transition: var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 249, 239, 0.2);
+}
+
+.product-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-icon i {
+    font-size: var(--font-size-xl);
+    color: var(--accent-color);
+}
+
+.product-card h3 {
+    font-size: var(--font-size-xl);
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.product-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    margin-top: auto;
+    transition: var(--transition-base);
+    border: 1px solid rgba(255, 249, 239, 0.2);
+    text-align: center;
+}
+
+.product-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+/* Service Card (from stylehome.css) */
+.service-card {
+    background: #000;
+    border: 1px solid rgba(255, 249, 239, 0.1);
+    border-radius: var(--border-radius-xl);
+    padding: 30px;
+    transition: var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 249, 239, 0.2);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service-icon i {
+    font-size: var(--font-size-xl);
+    color: var(--accent-color);
+}
+
+.service-card h3 {
+    font-size: var(--font-size-xl);
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    margin-top: auto;
+    transition: var(--transition-base);
+    border: 1px solid rgba(255, 249, 239, 0.2);
+    text-align: center;
+}
+
+.service-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+/* Feature/Service Item */
+.service-item {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 249, 239, 0.1);
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-item h4 {
+    color: var(--accent-color);
+    font-size: var(--font-size-medium);
+    margin-bottom: 8px;
+}
+
+.service-item p {
+    color: rgba(255, 249, 239, 0.7);
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+}
+
+/* Product/Service Labels */
+.product-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    border-radius: 20px;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-label.enterprise {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--accent-color);
+    border: 1px solid rgba(255, 249, 239, 0.2);
+}
+
+.product-label.individual {
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    color: var(--accent-color);
+    border: 1px solid rgba(255, 249, 239, 0.2);
+} 

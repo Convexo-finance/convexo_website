@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTC Trading Rooms | Convexo Finance</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../stylehome.css">
-    <link rel="stylesheet" href="OTC_trading_rooms.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/private_brokerage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    <script src="/navbar-loader.js"></script></head>
 <body>
     <header></header>
     
@@ -323,105 +323,8 @@
     <footer></footer>
 
     <script src="../footer-loader.js"></script>
-    <script>    
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load navbar
-            fetch('../navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('header').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading the navbar:', error));
-                
-            // Fetch crypto prices
-            fetchCryptoPrices();
-            
-            // Setup calculator functionality
-            setupCalculators();
-        });
-        
-        async function fetchCryptoPrices() {
-            const priceElements = document.querySelectorAll('.price');
-            const coinIds = ['bitcoin', 'ethereum', 'solana', 'tether', 'dogecoin', 'ripple'];
-            const coinSymbols = ['BTC', 'ETH', 'SOL', 'USDT', 'DOGE', 'XRP'];
-            
-            try {
-                const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coinIds.join(',')}&vs_currencies=usd`);
-                const data = await response.json();
-                
-                priceElements.forEach((element) => {
-                    const symbol = element.getAttribute('data-crypto');
-                    const index = coinSymbols.indexOf(symbol);
-                    if (index !== -1) {
-                        const price = data[coinIds[index]].usd;
-                        element.textContent = new Intl.NumberFormat('en-US', {
-                            style: 'currency',
-                            currency: 'USD'
-                        }).format(price);
-                    }
-                });
-            } catch (error) {
-                console.error('Error fetching crypto prices:', error);
-                priceElements.forEach((element) => {
-                    element.textContent = 'Price unavailable';
-                });
-            }
-        }
-        
-        function setupCalculators() {
-            const inputs = document.querySelectorAll('.crypto-calculator input');
-            const selects = document.querySelectorAll('.currency-select');
-            
-            inputs.forEach((input, index) => {
-                const result = input.closest('.crypto-calculator').querySelector('.calculator-result');
-                const select = input.closest('.calculator-inputs').querySelector('.currency-select');
-                
-                input.addEventListener('input', async function() {
-                    updateCalculation(input, select, result);
-                });
-                
-                select.addEventListener('change', function() {
-                    updateCalculation(input, select, result);
-                });
-            });
-        }
-        
-        async function updateCalculation(input, select, result) {
-            try {
-                const amount = parseFloat(input.value) || 0;
-                const crypto = input.getAttribute('data-crypto');
-                const currency = select.value.toLowerCase();
-                
-                if (amount > 0) {
-                    const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${getCoinId(crypto)}&vs_currencies=${currency}`);
-                    const data = await response.json();
-                    const price = data[getCoinId(crypto)][currency];
-                    const total = amount * price;
-                    
-                    result.textContent = new Intl.NumberFormat('en-US', {
-                        style: 'currency',
-                        currency: currency.toUpperCase()
-                    }).format(total);
-                } else {
-                    result.textContent = '≈ $0.00';
-                }
-            } catch (error) {
-                console.error('Error updating calculation:', error);
-                result.textContent = 'Calculation error';
-            }
-        }
-        
-        function getCoinId(symbol) {
-            const mapping = {
-                'BTC': 'bitcoin',
-                'ETH': 'ethereum',
-                'SOL': 'solana',
-                'USDT': 'tether',
-                'DOGE': 'dogecoin',
-                'XRP': 'ripple'
-            };
-            return mapping[symbol] || symbol.toLowerCase();
-        }
-    </script>
+    <script src="/js/translations.js"></script>
+    <script src="/script.js"></script>
+    <script src="/footer-loader.js"></script>
 </body>
 </html>

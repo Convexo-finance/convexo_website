@@ -1,0 +1,270 @@
+/* =========================
+   Cross Border Payments Page Styles
+========================= */
+
+/* Hero section */
+.cross-border-hero {
+    background: linear-gradient(135deg, var(--secondary-color), #00264D);
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* World map background */
+.world-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path-to-world-map.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Transfer demo section */
+.transfer-demo {
+    background-color: var(--background-color);
+    padding: 80px 0;
+    position: relative;
+}
+
+.transfer-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.transfer-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 249, 239, 0.1);
+    border-radius: var(--border-radius-xl);
+    padding: 30px;
+    width: 400px;
+    box-shadow: var(--shadow-lg);
+}
+
+.transfer-form {
+    margin-top: 20px;
+}
+
+.transfer-field {
+    margin-bottom: 20px;
+}
+
+.transfer-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: var(--font-size-small);
+}
+
+.transfer-input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 249, 239, 0.2);
+    border-radius: var(--border-radius-md);
+    color: var(--accent-color);
+    font-size: var(--font-size-base);
+}
+
+.transfer-selector {
+    display: flex;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius-md);
+    padding: 5px;
+}
+
+.transfer-option {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-base);
+    font-size: var(--font-size-small);
+    color: var(--accent-color);
+}
+
+.transfer-option.active {
+    background: var(--primary-color);
+}
+
+.transfer-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 24px;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Features section */
+.cb-features {
+    background-color: var(--medium-bg);
+    padding: 80px 0;
+}
+
+.cb-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cb-feature {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 249, 239, 0.1);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    transition: var(--transition-base);
+}
+
+.cb-feature:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 249, 239, 0.2);
+    box-shadow: var(--shadow-lg);
+}
+
+.cb-feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-size: var(--font-size-xl);
+}
+
+.cb-feature h3 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    font-size: var(--font-size-large);
+}
+
+/* Comparison table */
+.comparison-section {
+    background-color: var(--dark-bg);
+    padding: 80px 0;
+}
+
+.comparison-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+}
+
+.comparison-table th {
+    background: var(--secondary-color);
+    padding: 15px 20px;
+    text-align: left;
+    color: var(--accent-color);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 249, 239, 0.1);
+}
+
+.comparison-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 249, 239, 0.05);
+    color: rgba(255, 249, 239, 0.8);
+}
+
+.comparison-table tbody tr {
+    background: rgba(255, 255, 255, 0.03);
+    transition: var(--transition-base);
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.comparison-table tbody tr:nth-child(even):hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.check-icon {
+    color: #28a745;
+}
+
+.x-icon {
+    color: #dc3545;
+}
+
+/* Call to Action section */
+.cb-cta {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .cb-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .transfer-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .transfer-arrow {
+        top: calc(50% - 25px);
+        transform: rotate(90deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cross-border-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .transfer-card {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cb-features-grid {
+        grid-template-columns: 1fr;
+    }
+} 

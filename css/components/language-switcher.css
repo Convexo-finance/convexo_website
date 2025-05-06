@@ -1,0 +1,66 @@
+/* =========================
+   Language Switcher
+========================= */
+
+.language-switcher {
+    position: relative;
+    margin-left: 15px;
+}
+
+.language-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 249, 239, 0.12);
+    border: 1px solid rgba(255, 249, 239, 0.2);
+    border-radius: var(--border-radius-md);
+    padding: 6px 12px;
+    color: var(--accent-color);
+    font-size: var(--font-size-small);
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--secondary-color);
+    border: 1px solid rgba(255, 249, 239, 0.1);
+    border-radius: var(--border-radius-md);
+    padding: 5px;
+    margin-top: 5px;
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-lg);
+    z-index: var(--z-index-dropdown);
+}
+
+.language-dropdown.active,
+.language-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition-base);
+    border-radius: var(--border-radius-sm);
+}
+
+.language-dropdown a:hover {
+    background-color: rgba(255, 249, 239, 0.1);
+}
+
+.language-dropdown a.active {
+    background-color: rgba(255, 249, 239, 0.15);
+} 

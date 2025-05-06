@@ -1,0 +1,83 @@
+/* =========================
+   Typography
+========================= */
+
+body {
+    font-family: var(--font-family-secondary);
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.5em 0;
+    line-height: 1.2;
+    font-weight: 700;
+    font-family: var(--font-family-primary);
+}
+
+h1 {
+    font-size: var(--font-size-4xl);
+}
+
+h2 {
+    font-size: var(--font-size-3xl);
+}
+
+h3 {
+    font-size: var(--font-size-2xl);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+
+h5 {
+    font-size: var(--font-size-large);
+}
+
+h6 {
+    font-size: var(--font-size-medium);
+}
+
+p {
+    margin: 0 0 1rem 0;
+    font-size: var(--font-size-base);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+a:hover {
+    color: var(--accent-color);
+    opacity: 0.9;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #fff, #4169E1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive typography */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: calc(var(--font-size-3xl) * 0.9);
+    }
+    
+    h2 {
+        font-size: calc(var(--font-size-2xl) * 0.9);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: calc(var(--font-size-2xl) * 0.95);
+    }
+    
+    h2 {
+        font-size: calc(var(--font-size-xl) * 0.95);
+    }
+} 

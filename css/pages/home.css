@@ -1,0 +1,40 @@
+/* =========================
+   Home Page Specific Styles
+========================= */
+
+/* Digital Access Section */
+#digital-access {
+    position: relative;
+    background: var(--medium-bg);
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Services Section */
+#services {
+    position: relative;
+    background: var(--secondary-color);
+    overflow: hidden;
+    padding: 5rem 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+} 
