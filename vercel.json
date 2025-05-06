@@ -11,7 +11,8 @@
       { "source": "/digital_access/digital_card", "destination": "/digital_access/digital_card/digital_card.html" },
       { "source": "/digital_access/point_of_sale", "destination": "/digital_access/point_of_sale/point_of_sale.html" },
       { "source": "/digital_access/private_brokerage", "destination": "/digital_access/private_brokerage/private_brokerage.html" },
-      
+      { "source": "/digital_access/private_brokerage/calculator", "destination": "/digital_access/private_brokerage/calculator/calculator.html" },
+    
       { "source": "/digital_financial_services", "destination": "/digital_financial_services/digital_financial_services.html" },
       { "source": "/digital_financial_services/payrrol", "destination": "/digital_financial_services/payrrol/payrrol.html" },
       { "source": "/digital_financial_services/cross_border", "destination": "/digital_financial_services/cross_border/cross_border.html" },

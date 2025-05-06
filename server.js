@@ -38,6 +38,10 @@ app.get('/digital_access/private_brokerage', (req, res) => {
   res.sendFile(path.join(__dirname, 'digital_access/private_brokerage/private_brokerage.html'));
 });
 
+app.get('/digital_access/private_brokerage/calculator', (req, res) => {
+  res.sendFile(path.join(__dirname, 'digital_access/private_brokerage/calculator/calculator.html'));
+});
+
 // Digital Financial Services section and sub-pages
 app.get('/digital_financial_services', (req, res) => {
   res.sendFile(path.join(__dirname, 'digital_financial_services/digital_financial_services.html'));
