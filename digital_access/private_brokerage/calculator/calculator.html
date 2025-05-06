@@ -17,6 +17,72 @@
     <script src="/navbar-loader.js"></script>
     <script src="/js/translations.js"></script>
     <script src="/footer-loader.js"></script>
+    
+    <!-- Custom Styles for Contact Information -->
+    <style>
+        /* Contact Information Card Styles */
+        .contact-info-card {
+            border-left: 4px solid #3498db !important;
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.2) !important;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-7px) !important;
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.3) !important;
+        }
+        
+        .contact-info-card .card-header {
+            background: linear-gradient(45deg, #3498db, #2980b9) !important;
+        }
+        
+        .contact-input {
+            border-left: 3px solid #3498db !important;
+            padding-left: 15px !important;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-input:focus {
+            border-left: 5px solid #3498db !important;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.3) !important;
+        }
+        
+        .contact-icon-container {
+            background: rgba(52, 152, 219, 0.2) !important;
+            color: #3498db !important;
+            border-color: rgba(52, 152, 219, 0.3) !important;
+            transition: all 0.3s ease;
+        }
+        
+        .telegram-icon {
+            background: rgba(0, 136, 204, 0.2) !important;
+            color: #0088cc !important;
+            border-color: rgba(0, 136, 204, 0.3) !important;
+        }
+        
+        .contact-info-result-card {
+            border-left: 4px solid #3498db !important;
+        }
+        
+        .contact-info-result-card .card-header {
+            background: linear-gradient(45deg, #3498db, #2980b9) !important;
+        }
+        
+        .text-primary {
+            color: #3498db !important;
+        }
+        
+        /* Show the section more prominently */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+        }
+        
+        .contact-info-card {
+            animation: pulse 2s infinite;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,7 +106,52 @@
                         <label class="btn" for="sell" id="sellLabel">SELL</label>
                     </div>
                 </div>
-                
+
+                <!-- CONTACT INFORMATION SECTION -->
+                                 <!-- CONTACT INFORMATION SECTION -->
+                <div class="card mb-4 contact-info-card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-address-card me-2"></i>CONTACT INFORMATION</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control contact-input" id="email" placeholder="Your email address">
+                                        <span class="input-group-text contact-icon-container"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <div class="form-text">Enter your email to receive the quote directly</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="cellphone" class="form-label">Cellphone</label>
+                                    <div class="input-group">
+                                        <input type="tel" class="form-control contact-input" id="cellphone" placeholder="Your phone number">
+                                        <span class="input-group-text contact-icon-container"><i class="fas fa-phone"></i></span>
+                                    </div>
+                                    <div class="form-text">For follow-up communication if needed</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="telegram" class="form-label">Telegram Handle</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control contact-input" id="telegram" placeholder="Your Telegram username">
+                                        <span class="input-group-text contact-icon-container telegram-icon"><i class="fab fa-telegram-plane"></i></span>
+                                    </div>
+                                    <div class="form-text">For secure and instant communication</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- DIGITAL ASSET SECTION -->
                 <div class="card mb-4">
                     <div class="card-header bg-primary text-white">
@@ -212,7 +323,7 @@
                                 </div>
                                 
                                 <div class="mb-3">
-                                    <label for="owner_id" class="form-label">ID Bank Account Owner</label>
+                                    <label for="owner_id" class="form-label">Identification Account Owner</label>
                                     <input type="text" class="form-control" id="owner_id" required>
                                 </div>
                                 
@@ -233,6 +344,7 @@
                         </div>
                     </div>
                 </div>
+            
                 
                 <div class="action-buttons">
                     <button type="button" id="clear-all" class="btn btn-outline-danger">
@@ -290,6 +402,24 @@
                                 <p><strong>Account Number:</strong> <span id="result-account-number"></span></p>
                                 <p><strong>Account Type:</strong> <span id="result-account-type"></span></p>
                                 <p><strong>Date of Generation:</strong> <span id="generation-date"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CONTACT INFORMATION SECTION IN RESULT -->
+                <div class="card mb-3 contact-info-result-card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-address-card me-2"></i>CONTACT INFORMATION</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong><i class="fas fa-envelope me-2 text-primary"></i>Email:</strong> <span id="result-email"></span></p>
+                                <p><strong><i class="fab fa-telegram-plane me-2 text-primary"></i>Telegram:</strong> <span id="result-telegram"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong><i class="fas fa-phone me-2 text-primary"></i>Cellphone:</strong> <span id="result-cellphone"></span></p>
                             </div>
                         </div>
                     </div>
@@ -805,6 +935,16 @@
                 document.getElementById('result-account-number').textContent = accountNumber;
                 document.getElementById('result-account-type').textContent = accountTypeName;
                 
+                // Get contact information (optional)
+                const email = document.getElementById('email').value || 'Not provided';
+                const cellphone = document.getElementById('cellphone').value || 'Not provided';
+                const telegram = document.getElementById('telegram').value || 'Not provided';
+                
+                // Update contact information in results
+                document.getElementById('result-email').textContent = email;
+                document.getElementById('result-cellphone').textContent = cellphone;
+                document.getElementById('result-telegram').textContent = telegram;
+                
                 // Set generation date
                 const now = new Date();
                 document.getElementById('generation-date').textContent = now.toLocaleString();
@@ -859,9 +999,16 @@
             document.getElementById('send-quote').addEventListener('click', function() {
                 const quoteText = generateTextQuote();
                 const subject = 'Convexo OTC Trading Quote';
+                const userEmail = document.getElementById('email').value;
                 
-                // Open email client
-                window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(quoteText)}`;
+                // Use otc@convexo.xyz as the recipient email
+                const toEmail = 'otc@convexo.xyz';
+                
+                // Include user's email in CC if provided
+                const ccParam = userEmail ? `&cc=${encodeURIComponent(userEmail)}` : '';
+                
+                // Open email client with pre-populated fields
+                window.location.href = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}${ccParam}&body=${encodeURIComponent(quoteText)}`;
             });
             
             // Generate text version of quote
@@ -882,6 +1029,11 @@
                 const accountNumber = document.getElementById('result-account-number').textContent;
                 const accountType = document.getElementById('result-account-type').textContent;
                 const date = document.getElementById('generation-date').textContent;
+                
+                // Get contact information
+                const email = document.getElementById('result-email').textContent;
+                const cellphone = document.getElementById('result-cellphone').textContent;
+                const telegram = document.getElementById('result-telegram').textContent;
                 
                 const rateExplanation = operation.toUpperCase() === 'BUY'
                     ? 'Market spot price'
@@ -906,6 +1058,11 @@ Account Owner: ${accountOwner}
 Owner ID: ${ownerId}
 Account Number: ${accountNumber}
 Account Type: ${accountType}
+
+CONTACT INFORMATION
+Email: ${email}
+Cellphone: ${cellphone}
+Telegram: ${telegram}
 
 Date of Generation: ${date}
 Quote Valid For: 15 minutes from generation time
