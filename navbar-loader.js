@@ -89,7 +89,8 @@ function setupNavigation() {
  * Setup language dropdown toggle functionality
  */
 function setupLanguageDropdown() {
-    const toggleButton = document.querySelector('.language-btn');
+    // First look for ID, then fallback to class
+    const toggleButton = document.getElementById('language-toggle-btn') || document.querySelector('.language-btn');
     const dropdown = document.getElementById('languageDropdown');
     
     if (toggleButton && dropdown) {
@@ -110,32 +111,61 @@ function setupLanguageDropdown() {
         });
         
         // Set up language switching
-        const languageLinks = dropdown.querySelectorAll('a');
-        languageLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Get language code from the link
-                let lang = 'en';
-                if (this.getAttribute('href').includes('es')) {
-                    lang = 'es';
-                }
-                
-                // Save language preference
-                localStorage.setItem('convexo_language', lang);
-                
-                // Apply translations
-                if (typeof applyTranslations === 'function') {
-                    applyTranslations();
-                }
-                
-                // Update language indicators
-                updateLanguageIndicators();
-                
-                // Close dropdown
-                dropdown.classList.remove('active');
+        const languageLinks = dropdown.querySelectorAll('a.language-option');
+        
+        if (languageLinks.length > 0) {
+            // If we have language-option classes, use the new method
+            languageLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get language from data-lang attribute
+                    const lang = this.getAttribute('data-lang') || 'en';
+                    
+                    // Save language preference
+                    localStorage.setItem('convexo_language', lang);
+                    
+                    // Apply translations
+                    if (typeof applyTranslations === 'function') {
+                        applyTranslations();
+                    }
+                    
+                    // Update language indicators
+                    updateLanguageIndicators();
+                    
+                    // Close dropdown
+                    dropdown.classList.remove('active');
+                });
             });
-        });
+        } else {
+            // Fallback to old method
+            const oldLanguageLinks = dropdown.querySelectorAll('a');
+            oldLanguageLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get language code from the link
+                    let lang = 'en';
+                    if (this.getAttribute('href').includes('es')) {
+                        lang = 'es';
+                    }
+                    
+                    // Save language preference
+                    localStorage.setItem('convexo_language', lang);
+                    
+                    // Apply translations
+                    if (typeof applyTranslations === 'function') {
+                        applyTranslations();
+                    }
+                    
+                    // Update language indicators
+                    updateLanguageIndicators();
+                    
+                    // Close dropdown
+                    dropdown.classList.remove('active');
+                });
+            });
+        }
         
         // Update indicators based on current language
         updateLanguageIndicators();
@@ -153,8 +183,8 @@ function updateLanguageIndicators() {
         el.textContent = lang.toUpperCase();
     });
     
-    // Update flag emojis
-    const flags = document.querySelectorAll('.flag-emoji');
+    // Update flag emojis in the button (not in the dropdown options)
+    const flags = document.querySelectorAll('.language-btn .flag-emoji');
     flags.forEach(flag => {
         if (lang === 'en') {
             flag.textContent = '🇺🇸';
@@ -163,16 +193,29 @@ function updateLanguageIndicators() {
         }
     });
     
-    // Mark active language in dropdown
-    const languageLinks = document.querySelectorAll('.language-dropdown a');
-    languageLinks.forEach(link => {
-        if ((lang === 'en' && link.getAttribute('href') === '/') || 
-            (lang === 'es' && link.getAttribute('href') === '/es')) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
+    // Mark active language in dropdown - check for new structure first
+    const newLanguageLinks = document.querySelectorAll('.language-option');
+    if (newLanguageLinks.length > 0) {
+        newLanguageLinks.forEach(link => {
+            const linkLang = link.getAttribute('data-lang');
+            if (linkLang === lang) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    } else {
+        // Fallback to old structure
+        const oldLanguageLinks = document.querySelectorAll('.language-dropdown a');
+        oldLanguageLinks.forEach(link => {
+            if ((lang === 'en' && link.getAttribute('href') === '/') || 
+                (lang === 'es' && link.getAttribute('href') === '/es')) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
 }
 
 /**

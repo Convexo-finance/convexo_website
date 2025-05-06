@@ -1,6 +1,7 @@
 /**
  * Translations for Convexo website
  * This file contains all translatable text in different languages
+ * and handles language switching functionality
  */
 
 const translations = {
@@ -332,7 +333,7 @@ const translations = {
         }
       }
     }
-  },
+  }
   
   // Add more page translations here...
 };
@@ -375,6 +376,10 @@ function setUserLanguage(lang) {
   
   // Refresh language indicators
   updateLanguageIndicators();
+  
+  // Close dropdown menu
+  const dropdown = document.getElementById('languageDropdown');
+  if (dropdown) dropdown.classList.remove('active');
 }
 
 /**
@@ -550,7 +555,7 @@ function updateLanguageIndicators() {
   });
   
   // Update flag emojis if needed
-  const flagElements = document.querySelectorAll('.flag-emoji');
+  const flagElements = document.querySelectorAll('.language-btn .flag-emoji');
   flagElements.forEach(el => {
     if (lang === 'en') {
       el.textContent = '🇺🇸';
@@ -560,10 +565,10 @@ function updateLanguageIndicators() {
   });
   
   // Update active class on language links
-  const languageLinks = document.querySelectorAll('.language-dropdown a');
+  const languageLinks = document.querySelectorAll('.language-option');
   languageLinks.forEach(link => {
-    if ((lang === 'en' && link.getAttribute('onclick').includes("'en'")) || 
-        (lang === 'es' && link.getAttribute('onclick').includes("'es'"))) {
+    const linkLang = link.getAttribute('data-lang');
+    if (linkLang === lang) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -639,26 +644,35 @@ function applyCommonTranslations(lang) {
   // Footer translations could be added here
 }
 
-// Initialize translations when the DOM is loaded
+// Simple language toggle functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Apply translations before the page is fully visible
+  // Apply translations when page loads
   applyTranslations();
   
-  // Set up language switcher in the navbar
-  setupLanguageSwitcher();
-});
-
-/**
- * Set up the language switcher functionality
- */
-function setupLanguageSwitcher() {
-  // We're now using direct onclick attributes in the navbar.html
-  // This function remains for backward compatibility
-  
-  // Update language indicators based on current setting
-  updateLanguageIndicators();
-  
-  // Initialize with the current language
-  const currentLang = getUserLanguage();
-  setUserLanguage(currentLang);
-} 
+  // Set up language toggle click handler
+  document.addEventListener('click', function(e) {
+    // Toggle dropdown when language button is clicked
+    if (e.target.closest('.language-btn')) {
+      const dropdown = document.getElementById('languageDropdown');
+      if (dropdown) {
+        dropdown.classList.toggle('active');
+        e.stopPropagation();
+      }
+    }
+    // Handle language selection
+    else if (e.target.closest('.language-option')) {
+      const link = e.target.closest('.language-option');
+      const lang = link.getAttribute('data-lang') || 'en';
+      setUserLanguage(lang);
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    // Close dropdown when clicking elsewhere
+    else {
+      const dropdown = document.getElementById('languageDropdown');
+      if (dropdown && dropdown.classList.contains('active')) {
+        dropdown.classList.remove('active');
+      }
+    }
+  });
+}); 

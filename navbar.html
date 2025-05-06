@@ -55,17 +55,17 @@
         </li>
         <li class="navbar__item"><a href="https://form.typeform.com/to/R7OwSKPX" class="signup-btn highlight">Sign Up</a></li>
         <li class="navbar__item language-switcher">
-            <button class="language-btn" onclick="toggleLanguageDropdown()">
+            <button class="language-btn">
                 <span class="flag-emoji">🇺🇸</span>
                 <span id="current-lang">EN</span>
                 <span class="arrow">▾</span>
             </button>
             <div class="language-dropdown" id="languageDropdown">
-                <a href="javascript:void(0)" onclick="setUserLanguage('en');" class="active">
+                <a href="javascript:void(0)" data-lang="en" class="language-option active">
                     <span class="flag-emoji">🇺🇸</span>
                     <span>English</span>
                 </a>
-                <a href="javascript:void(0)" onclick="setUserLanguage('es');">
+                <a href="javascript:void(0)" data-lang="es" class="language-option">
                     <span class="flag-emoji">🇪🇸</span>
                     <span>Español</span>
                 </a>
