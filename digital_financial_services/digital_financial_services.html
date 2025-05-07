@@ -65,7 +65,7 @@
                             <p>Focus on consistent performance with controlled volatility.</p>
                         </div>
                     </div>
-                    <a href="/digital_financial_services/asset-management" class="service-link">Learn More</a>
+                    <a href="/digital_financial_services/asset_management" class="service-link">Learn More</a>
                 </div>
                 
                 <!-- RWA Tokenization -->
@@ -84,7 +84,26 @@
                             <p>Access new markets and improve asset liquidity.</p>
                         </div>
                     </div>
-                    <a href="/digital_financial_services/rwa-tokenization" class="service-link">Learn More</a>
+                    <a href="/digital_financial_services/rwa_tokenization" class="service-link">Learn More</a>
+                </div>
+                
+                <!-- Stablecoins -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Stablecoins</h3>
+                    <div class="service-items">
+                        <div class="service-item">
+                            <h4>Colombian Peso Stablecoins</h4>
+                            <p>Fully backed stablecoins pegged to Colombian Peso.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Price Parity Mechanism</h4>
+                            <p>Perfect 1:1 parity with the Colombian Peso (COP).</p>
+                        </div>
+                    </div>
+                    <a href="/digital_financial_services/stablecoins" class="service-link">Learn More</a>
                 </div>
             </div>
         </section>
@@ -112,7 +131,7 @@
                             <p>Ensuring all payments meet regulatory requirements.</p>
                         </div>
                     </div>
-                    <a href="/digital_financial_services/payrrol" class="service-link">Learn More</a>
+                    <a href="/digital_financial_services/payroll" class="service-link">Learn More</a>
                 </div>
                 
                 <!-- Cross Border Payments -->
@@ -138,30 +157,36 @@
 
         <!-- Contact Section -->    
         <section id="contact">
-            <div class="contact-container">
-                <h2>Contact Our Financial Services Team</h2>
-                <p>Get in touch with our experts to discuss how our digital financial services can benefit your organization.</p>
-                <form id="contact-form">
+            <div class="standard-contact-container">
+                <h2 class="standard-contact-title" data-i18n="contactTitle">Contact Our Financial Services Team</h2>
+                <p class="standard-contact-description" data-i18n="contactDescription">Get in touch with our experts to discuss how our digital financial services can benefit your organization.</p>
+                
+                <form id="standard-contact-form" class="standard-contact-form" data-form-type="contact">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" data-i18n-placeholder="contactNamePlaceholder" required>
                     </div>
+                    
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" data-i18n-placeholder="contactEmailPlaceholder" required>
                     </div>
+                    
                     <div class="form-group">
                         <select id="service" name="service" required>
-                            <option value="">Select Service</option>
-                            <option value="custody">Custody Solutions</option>
-                            <option value="asset-management">Asset Management</option>
-                            <option value="tokenization">RWA Tokenization</option>
-                            <option value="payroll">Payroll Solutions</option>
-                            <option value="cross-border">Cross-Border Payments</option>
+                            <option value="" data-i18n="contactSelectService">Select Service</option>
+                            <option value="custody" data-i18n="contactServiceCustody">Custody Solutions</option>
+                            <option value="asset-management" data-i18n="contactServiceAssetManagement">Asset Management</option>
+                            <option value="tokenization" data-i18n="contactServiceTokenization">RWA Tokenization</option>
+                            <option value="stablecoins" data-i18n="contactServiceStablecoins">Stablecoins</option>
+                            <option value="payroll" data-i18n="contactServicePayroll">Payroll Solutions</option>
+                            <option value="cross-border" data-i18n="contactServiceCrossBorder">Cross-Border Payments</option>
                         </select>
                     </div>
+                    
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" placeholder="Your Message" data-i18n-placeholder="contactMessagePlaceholder" required></textarea>
                     </div>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    
+                    <button type="submit" class="standard-submit-button" data-i18n="contactSubmitButton">Send Message</button>
                 </form>
             </div>
         </section>
@@ -173,11 +198,9 @@
     <script src="/footer-loader.js"></script>
 
     <!-- Language switcher script -->
-    <script src="/js/translations.js"></script>
+    <script src="/js/enhanced-translations.js"></script>
     <script src="/js/language-toggle.js"></script>
     
     <script src="/script.js"></script>
-    <script src="/footer-loader.js"></script>
-    <script src="/navbar-loader.js"></script>
 </body>
 </html> 

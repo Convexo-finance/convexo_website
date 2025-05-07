@@ -47,7 +47,7 @@ app.get('/digital_financial_services', (req, res) => {
   res.sendFile(path.join(__dirname, 'digital_financial_services/digital_financial_services.html'));
 });
 
-app.get('/digital_financial_services/payrrol', (req, res) => {
+app.get('/digital_financial_services/payroll', (req, res) => {
   res.sendFile(path.join(__dirname, 'digital_financial_services/payrrol/payrrol.html'));
 });
 
@@ -59,12 +59,20 @@ app.get('/digital_financial_services/custody_solutions', (req, res) => {
   res.sendFile(path.join(__dirname, 'digital_financial_services/custody_solutions/custody_solutions.html'));
 });
 
-app.get('/digital_financial_services/asset-management', (req, res) => {
+app.get('/digital_financial_services/asset_management', (req, res) => {
   res.sendFile(path.join(__dirname, 'digital_financial_services/asset-management/asset-management.html'));
 });
 
-app.get('/digital_financial_services/rwa-tokenization', (req, res) => {
+app.get('/digital_financial_services/rwa_tokenization', (req, res) => {
   res.sendFile(path.join(__dirname, 'digital_financial_services/rwa-tokenization/rwa-tokenization.html'));
+});
+
+app.get('/digital_financial_services/stablecoins', (req, res) => {
+  res.sendFile(path.join(__dirname, 'digital_financial_services/Stablecoins/stablecoins.html'));
+});
+
+app.get('/digital_financial_services/liquidity_provision', (req, res) => {
+  res.sendFile(path.join(__dirname, 'digital_financial_services/Stablecoins/liquidity-provision.html'));
 });
 
 // Legal pages

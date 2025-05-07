@@ -14,11 +14,13 @@
       { "source": "/digital_access/private_brokerage/calculator", "destination": "/digital_access/private_brokerage/calculator/calculator.html" },
     
       { "source": "/digital_financial_services", "destination": "/digital_financial_services/digital_financial_services.html" },
-      { "source": "/digital_financial_services/payrrol", "destination": "/digital_financial_services/payrrol/payrrol.html" },
+      { "source": "/digital_financial_services/payroll", "destination": "/digital_financial_services/payrrol/payrrol.html" },
       { "source": "/digital_financial_services/cross_border", "destination": "/digital_financial_services/cross_border/cross_border.html" },
       { "source": "/digital_financial_services/custody_solutions", "destination": "/digital_financial_services/custody_solutions/custody_solutions.html" },
-      { "source": "/digital_financial_services/asset-management", "destination": "/digital_financial_services/asset-management/asset-management.html" },
-      { "source": "/digital_financial_services/rwa-tokenization", "destination": "/digital_financial_services/rwa-tokenization/rwa-tokenization.html" },
+      { "source": "/digital_financial_services/asset_management", "destination": "/digital_financial_services/asset-management/asset-management.html" },
+      { "source": "/digital_financial_services/rwa_tokenization", "destination": "/digital_financial_services/rwa-tokenization/rwa-tokenization.html" },
+      { "source": "/digital_financial_services/stablecoins", "destination": "/digital_financial_services/Stablecoins/stablecoins.html" },
+      { "source": "/digital_financial_services/liquidity_provision", "destination": "/digital_financial_services/Stablecoins/liquidity-provision.html" },
       
       { "source": "/privacy_policy", "destination": "/lega_docs/Privacy_Policy/Privacy_policy.html" },
       { "source": "/terms_conditions", "destination": "/lega_docs/Terms_conditions/Terms_conditions.html" },
