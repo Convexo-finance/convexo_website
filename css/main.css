@@ -19,7 +19,9 @@
 @import 'components/cards.css';
 @import 'components/hero.css';
 @import 'components/language-switcher.css';
+@import 'components/language-switcher-enhanced.css';
 @import 'components/contact.css';
+@import 'components/standard-contact.css';
 @import 'components/stats.css';
 
 /* Pages */
@@ -46,6 +48,8 @@
 @import 'pages/digital-financial-services/custody-solutions.css';
 @import 'pages/digital-financial-services/payroll.css';
 @import 'pages/digital-financial-services/rwa-tokenization.css';
+@import 'pages/digital-financial-services/stablecoins.css';
+@import 'pages/digital-financial-services/liquidity-provision.css';
 
 /* This is the main CSS file that imports all modular CSS components.
    Add more component or page imports as needed. */ 

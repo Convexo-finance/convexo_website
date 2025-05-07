@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="lpTitle">Liquidity Provision - Convexo</title>
+    <link rel="icon" type="image/png" href="/logologo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Global Scripts -->
+    <script src="/navbar-loader.js"></script>
+    <!-- Include stablecoins translations before enhanced translation system -->
+    <script src="/js/stablecoins-translations.js"></script>
+    <script src="/js/enhanced-translation.js"></script>
+</head>
+<body>
+    <!-- Header will be loaded by navbar-loader.js -->
+    <header></header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="lp-hero">
+            <div class="hero-content">
+                <h1>COPe & bCOP Liquidity Provision</h1>
+                <h2>Strategic Stablecoin Liquidity Infrastructure</h2>
+                <p>Our robust liquidity provision infrastructure connects Colombian Peso stablecoins with global stablecoin ecosystems through advanced DeFi protocols for maximal stability and utility.</p>
+            </div>
+        </section>
+        
+        <!-- Stablecoin Ecosystem Section -->
+        <section class="stablecoin-details">
+            <div class="container">
+                <div class="section-header centered">
+                    <h2>Our Stablecoin Ecosystem</h2>
+                    <p>Strategic stablecoin solutions for the Colombian Peso in digital markets</p>
+                </div>
+                
+                <div class="ecosystem-highlight">
+                    <div class="highlight-content">
+                        <div class="highlight-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="highlight-text">
+                            <h3>100% COP Fiat Backed</h3>
+                            <p>All stablecoin liquidity is backed by Colombian Peso fiat reserves, providing complete stability and transparency</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Exchange Rate Display -->
+                <div class="exchange-rate-container">
+                    <div class="exchange-rate-box">
+                        <div class="rate-header">
+                            <h3>USD/COP Real-Time Rate</h3>
+                            <div class="rate-source">Source: Bloomberg API</div>
+                        </div>
+                        <div class="rate-value">
+                            <span class="current-rate" id="usdcop-rate">4,163.25</span>
+                            <span class="rate-change positive" id="rate-change">+0.15%</span>
+                        </div>
+                        <div class="rate-updated">Last Updated: <span id="rate-timestamp">Jun 12, 2024 15:23 COT</span></div>
+                    </div>
+                    <div class="exchange-rate-box overnight">
+                        <div class="rate-header">
+                            <h3>Overnight Rate</h3>
+                            <div class="rate-source">Banco de la República</div>
+                        </div>
+                        <div class="rate-value">
+                            <span class="current-rate" id="overnight-rate">10.25%</span>
+                            <span class="overnight-indicator">IBR</span>
+                        </div>
+                        <div class="liquidity-info">
+                            <div class="liquidity-metric">
+                                <span class="metric-label">Market Depth:</span>
+                                <span class="metric-value" id="market-depth">$2.8M</span>
+                            </div>
+                            <div class="liquidity-metric">
+                                <span class="metric-label">24h Swap Volume:</span>
+                                <span class="metric-value" id="swap-volume">$480K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stablecoin-tabs">
+                    <div class="tabs-header">
+                        <button class="tab-button active" data-tab="cope">COPe Stablecoin</button>
+                        <button class="tab-button" data-tab="bcop">bCOP Algorithmic Stablecoin</button>
+                    </div>
+                    
+                    <div class="tab-content" id="cope-tab">
+                        <div class="stablecoin-info">
+                            <div>
+                                <h3>COPe Stablecoin</h3>
+                                <p>Fully-collateralized Colombian Peso stablecoin with mixed RWA backing</p>
+                            </div>
+                            <div class="stablecoin-icon">
+                                COPe
+                            </div>
+                        </div>
+                        
+                        <div class="stablecoin-metrics">
+                            <div class="metric-card">
+                                <h4>Market Cap</h4>
+                                <p>$5.2M</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>24h Volume</h4>
+                                <p>$680K</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>Circulating Supply</h4>
+                                <p>28.5M COPe</p>
+                            </div>
+                        </div>
+                        
+                        <div class="collateral-breakdown">
+                            <h3>Collateral Composition</h3>
+                            <p>COPe is backed by a diverse mix of real-world assets and digital collateral, all backed by Colombian Peso (COP) fiat:</p>
+                            <ul>
+                                <li><strong>Bank Deposits (40%)</strong>: Secured in regulated Colombian financial institutions</li>
+                                <li><strong>Treasury Bills (30%)</strong>: Short-term government securities</li>
+                                <li><strong>USDC & DAI (20%)</strong>: Digital stablecoin reserves with COP fiat backing</li>
+                                <li><strong>Corporate Bonds (10%)</strong>: Investment-grade bonds from established companies</li>
+                            </ul>
+                            <p>All collateral is audited monthly by trusted third-party auditors with public attestations, ensuring complete backing by Colombian Peso fiat.</p>
+                        </div>
+                        
+                        <div class="backing-highlight">
+                            <div class="backing-icon"><i class="fas fa-chart-pie"></i></div>
+                            <div class="backing-text">
+                                <h3>100% Colombian Peso Backing</h3>
+                                <p>Every COPe token is fully backed by Colombian Peso assets, maintaining perfect 1:1 peg stability at all times</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Price Parity Mechanism -->
+                        <div class="parity-mechanism">
+                            <h3>USD/COP Price Parity Mechanism</h3>
+                            <p>COPe maintains perfect price parity with real-time USD/COP market rates:</p>
+                            <ul class="parity-list">
+                                <li>
+                                    <span class="parity-icon"><i class="fas fa-sync-alt"></i></span>
+                                    <span class="parity-text"><strong>Real-Time Rate Integration:</strong> Bloomberg API provides continuous USD/COP market rate updates</span>
+                                </li>
+                                <li>
+                                    <span class="parity-icon"><i class="fas fa-balance-scale"></i></span>
+                                    <span class="parity-text"><strong>Oracle-Based Price Feeds:</strong> Chainlink price oracles ensure on-chain rate accuracy</span>
+                                </li>
+                                <li>
+                                    <span class="parity-icon"><i class="fas fa-clock"></i></span>
+                                    <span class="parity-text"><strong>Overnight Rate Adjustment:</strong> COPe reflects Colombian IBR overnight rates for accurate pricing</span>
+                                </li>
+                                <li>
+                                    <span class="parity-icon"><i class="fas fa-hand-holding-usd"></i></span>
+                                    <span class="parity-text"><strong>Arbitrage Incentives:</strong> Market makers maintain USD/COP parity through cross-border arbitrage</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="metric-chart"></div>
+                    </div>
+                    
+                    <div class="tab-content" id="bcop-tab" style="display: none;">
+                        <div class="stablecoin-info">
+                            <div>
+                                <h3>bCOP Algorithmic Stablecoin</h3>
+                                <p>Algorithmic stablecoin pegged to COP with advanced stability mechanisms</p>
+                            </div>
+                            <div class="stablecoin-icon">
+                                bCOP
+                            </div>
+                        </div>
+                        
+                        <div class="stablecoin-metrics">
+                            <div class="metric-card">
+                                <h4>Market Cap</h4>
+                                <p>$3.6M</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>24h Volume</h4>
+                                <p>$420K</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>Collateralization Ratio</h4>
+                                <p>175%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="algorithm-details">
+                            <h3>Stability Mechanism</h3>
+                            <p>bCOP maintains its peg through an algorithmic controller with multiple stabilization mechanisms:</p>
+                            <ul>
+                                <li><strong>Over-collateralization</strong>: Maintains a minimum 150% collateralization ratio</li>
+                                <li><strong>Elastic Supply</strong>: Algorithmically adjusts supply based on market conditions</li>
+                                <li><strong>Arbitrage Incentives</strong>: Profit opportunities encourage traders to maintain the peg</li>
+                                <li><strong>Stability Reserve</strong>: Protocol-owned liquidity used to defend the peg during volatility</li>
+                                <li><strong>MakerDAO Partnership</strong>: Integrates with MakerDAO's stability system</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="backing-highlight algorithmic">
+                            <div class="backing-icon"><i class="fas fa-code-branch"></i></div>
+                            <div class="backing-text">
+                                <h3>COP-Pegged Algorithmic Stability</h3>
+                                <p>bCOP uses cutting-edge algorithmic stability mechanisms while maintaining full COP fiat backing for maximum security</p>
+                            </div>
+                        </div>
+                        
+                        <div class="metric-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Integration Protocols Section -->
+        <section class="protocol-section">
+            <div class="container">
+                <div class="section-header centered">
+                    <h2>Integration Protocols</h2>
+                    <p>Our stablecoins are strategically integrated with leading DeFi protocols for enhanced liquidity and utility</p>
+                </div>
+                
+                <div class="protocol-grid">
+                    <div class="protocol-card">
+                        <div class="protocol-icon">
+                            <i class="fas fa-exchange-alt fa-3x" style="color: #FC047C;"></i>
+                        </div>
+                        <h3>Uniswap</h3>
+                        <p>Automated market maker protocol enabling permissionless token swaps with concentrated liquidity positions for COPe and bCOP pairs.</p>
+                        <ul>
+                            <li>COPe/USDC pool with deep liquidity</li>
+                            <li>bCOP/COPe stabilization pairing</li>
+                            <li>Concentrated liquidity positions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="protocol-card">
+                        <div class="protocol-icon">
+                            <i class="fas fa-water fa-3x" style="color: #0074E4;"></i>
+                        </div>
+                        <h3>Curve Finance</h3>
+                        <p>Specialized stablecoin exchange with low slippage and efficient trades, providing COP stablecoin pool integration.</p>
+                        <ul>
+                            <li>COPe/USDC/DAI Tripool</li>
+                            <li>Low slippage exchange</li>
+                            <li>Efficient curve algorithm</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="protocol-card">
+                        <div class="protocol-icon">
+                            <i class="fas fa-wind fa-3x" style="color: #2775CA;"></i>
+                        </div>
+                        <h3>Aerodrome</h3>
+                        <p>Ecosystem-focused DEX providing COPe pairing with Base-native stablecoins and tokens for superior liquidity.</p>
+                        <ul>
+                            <li>COPe/USDbC Base pool</li>
+                            <li>Incentivized liquidity rewards</li>
+                            <li>Gas-efficient trades</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="protocol-card">
+                        <div class="protocol-icon">
+                            <i class="fas fa-cube fa-3x" style="color: #1AAB9B;"></i>
+                        </div>
+                        <h3>MakerDAO</h3>
+                        <p>Decentralized credit platform providing stability infrastructure for bCOP algorithmic mechanism and multi-collateral vaults.</p>
+                        <ul>
+                            <li>bCOP stability mechanism</li>
+                            <li>COPe as collateral type</li>
+                            <li>Governance integration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="protocol-card">
+                        <div class="protocol-icon">
+                            <i class="fas fa-ghost fa-3x" style="color: #B6509E;"></i>
+                        </div>
+                        <h3>Aave</h3>
+                        <p>Leading lending protocol with COPe as a listed asset, enabling borrowing and lending in Colombian Pesos on the blockchain.</p>
+                        <ul>
+                            <li>COPe money markets</li>
+                            <li>GHO integration</li>
+                            <li>Collateralized lending</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="protocol-card">
+                        <div class="protocol-icon">
+                            <i class="fas fa-chess-queen fa-3x" style="color: #00A3FF;"></i>
+                        </div>
+                        <h3>Ethena</h3>
+                        <p>Strategic partnership for USDe-COPe pairs and integrated yield strategies for enhanced returns and stablecoin utility.</p>
+                        <ul>
+                            <li>USDe-COPe pairing</li>
+                            <li>Yield strategy integration</li>
+                            <li>Cross-border settlement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pairing Section -->
+        <section class="pairing-section">
+            <div class="container">
+                <div class="section-header centered">
+                    <h2>Stablecoin Pairings</h2>
+                    <p>Strategic liquidity pairings across DeFi protocols for optimal exchange efficiency</p>
+                </div>
+                
+                <table class="pairing-table">
+                    <thead>
+                        <tr>
+                            <th>Pairing</th>
+                            <th>Protocol</th>
+                            <th>Liquidity</th>
+                            <th>Incentives</th>
+                            <th>Stability Mechanism</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="pair-icon">
+                                    <span>COPe-USDC</span>
+                                </div>
+                            </td>
+                            <td>Uniswap v3</td>
+                            <td>$20K</td>
+                            <td>2% APR + Fee Sharing</td>
+                            <td>Concentrated Liquidity</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pair-icon">
+                                    <span>COPe-DAI</span>
+                                </div>
+                            </td>
+                            <td>Curve Finance</td>
+                            <td>$20K</td>
+                            <td>1.8% APR</td>
+                            <td>Curve StableSwap</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pair-icon">
+                                    <span>COPe-EURC</span>
+                                </div>
+                            </td>
+                            <td>Uniswap v3</td>
+                            <td>$20K</td>
+                            <td>1.5% APR</td>
+                            <td>Concentrated Liquidity</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pair-icon">
+                                    <span>bCOP-COPe</span>
+                                </div>
+                            </td>
+                            <td>Uniswap v3</td>
+                            <td>$20K</td>
+                            <td>3.2% APR</td>
+                            <td>Protocol Owned Liquidity</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pair-icon">
+                                    <span>COPe-USDe</span>
+                                </div>
+                            </td>
+                            <td>Ethena Pools</td>
+                            <td>$20K</td>
+                            <td>2.5% APR + sUSDe</td>
+                            <td>Yield Strategy Integration</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pair-icon">
+                                    <span>COPe-USDbC</span>
+                                </div>
+                            </td>
+                            <td>Aerodrome</td>
+                            <td>$20K</td>
+                            <td>2.8% APR</td>
+                            <td>Base Ecosystem Integration</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pair-icon">
+                                    <span>COPe-GHO</span>
+                                </div>
+                            </td>
+                            <td>Aave</td>
+                            <td>$20K</td>
+                            <td>1.7% APR</td>
+                            <td>Lending Pool Stabilization</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pair-icon">
+                                    <span>COPe-USDC-DAI</span>
+                                </div>
+                            </td>
+                            <td>Curve Tri-pool</td>
+                            <td>$20K</td>
+                            <td>2.4% APR + CRV</td>
+                            <td>Tri-pool StableSwap</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Peg Mechanism Section -->
+        <section class="mechanism-section">
+            <div class="container">
+                <div class="section-header centered">
+                    <h2>Peg Stabilization Mechanism</h2>
+                    <p>Advanced multi-layer mechanisms ensuring consistent COP peg maintenance</p>
+                </div>
+                
+                <div class="mechanism-steps">
+                    <div class="mechanism-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Collateralized Reserve System</h3>
+                            <p>COPe maintains a full-reserve backing with a diverse mix of assets, independently verified through regular attestations. All COPe tokens are fully backed by a combination of bank deposits, Treasury bills, digital stablecoins (USDC, DAI), and high-grade corporate bonds to maintain the 1:1 COP peg.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mechanism-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Algorithmic Stabilization for bCOP</h3>
+                            <p>The bCOP token utilizes a MakerDAO-inspired algorithmic stability mechanism that maintains an overcollateralized position (min 150%) while implementing elastic supply adjustments based on market conditions. The protocol automatically expands or contracts the supply of bCOP based on its price relative to the COP peg.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mechanism-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Strategic Liquidity Positioning</h3>
+                            <p>Concentrated liquidity positions on AMMs like Uniswap v3 allow for efficient capital deployment around the peg price. Curve's StableSwap algorithm provides deep liquidity with minimal slippage for stablecoin-to-stablecoin exchanges, maintaining tight spreads even during market volatility.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mechanism-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Protocol-Owned Liquidity</h3>
+                            <p>The protocol maintains significant treasury-owned liquidity positions in key trading pairs to defend the peg during market stress. This protocol-owned liquidity (POL) ensures depth in critical trading pairs and can be deployed strategically to maintain price stability during volatility.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mechanism-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Arbitrage Incentives</h3>
+                            <p>Economic incentives for arbitrageurs to profit from temporary deviations from the peg, naturally bringing the price back to equilibrium. This market-driven mechanism leverages external profit-seeking behavior to maintain stability through arbitrage opportunities across different DEXs and CEXs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->    
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Partner with Our Liquidity Infrastructure</h2>
+                <p>Connect with our team to explore strategic liquidity partnerships or integration opportunities for your platform.</p>
+                <a href="https://form.typeform.com/to/R7OwSKPX" class="contact-button">Contact Our LP Team</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded by footer-loader.js -->
+    <footer></footer>
+    
+    <script src="/footer-loader.js"></script>
+    
+    <!-- Page-specific scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab functionality for stablecoin details
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Hide all tab contents
+                    tabContents.forEach(content => content.style.display = 'none');
+                    
+                    // Show the selected tab content
+                    const tabId = button.getAttribute('data-tab') + '-tab';
+                    document.getElementById(tabId).style.display = 'block';
+                });
+            });
+            
+            // Simulate real-time exchange rate updates
+            function updateExchangeRate() {
+                const baseRate = 4163.25;
+                const randomChange = (Math.random() * 2 - 1) * 5; // Random change between -5 and +5
+                const newRate = baseRate + randomChange;
+                const formattedRate = newRate.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                
+                const percentChange = (randomChange / baseRate * 100).toFixed(2);
+                const isPositive = randomChange >= 0;
+                
+                document.getElementById('usdcop-rate').textContent = formattedRate;
+                
+                const rateChangeElement = document.getElementById('rate-change');
+                rateChangeElement.textContent = `${isPositive ? '+' : ''}${percentChange}%`;
+                rateChangeElement.className = `rate-change ${isPositive ? 'positive' : 'negative'}`;
+                
+                // Update timestamp
+                const now = new Date();
+                const options = { 
+                    month: 'short', 
+                    day: 'numeric', 
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                };
+                document.getElementById('rate-timestamp').textContent = now.toLocaleDateString('en-US', options) + ' COT';
+            }
+            
+            // Initial update and set interval for simulation
+            updateExchangeRate();
+            setInterval(updateExchangeRate, 30000); // Update every 30 seconds
+            
+            // Apply translations if available
+            if (typeof applyEnhancedTranslations === 'function') {
+                applyEnhancedTranslations();
+            } else if (typeof applyTranslations === 'function') {
+                applyTranslations();
+            }
+        });
+    </script>
+</body>
+</html> 

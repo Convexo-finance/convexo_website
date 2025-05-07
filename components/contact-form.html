@@ -1,0 +1,34 @@
+<!-- Standard Contact Form Component -->
+<section id="contact" class="standard-contact-section">
+    <div class="standard-contact-container">
+        <h2 class="standard-contact-title" data-i18n="contactTitle">Contact Our Team</h2>
+        <p class="standard-contact-description" data-i18n="contactDescription">Get in touch with our team to learn more about our services and how we can help you.</p>
+        
+        <form id="standard-contact-form" class="standard-contact-form" data-form-type="contact">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Your Name" data-i18n-placeholder="contactNamePlaceholder" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Your Email" data-i18n-placeholder="contactEmailPlaceholder" required>
+            </div>
+            
+            <div class="form-group">
+                <select id="service" name="service" required>
+                    <option value="" data-i18n="contactSelectService">Select Service</option>
+                    <!-- These options can be customized per page through JavaScript -->
+                    <option value="trading" data-i18n="contactServiceTrading">Trading</option>
+                    <option value="stablecoins" data-i18n="contactServiceStablecoins">Stablecoins</option>
+                    <option value="digital-access" data-i18n="contactServiceDigitalAccess">Digital Access</option>
+                    <option value="financial-services" data-i18n="contactServiceFinancialServices">Financial Services</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <textarea id="message" name="message" placeholder="Your Message" data-i18n-placeholder="contactMessagePlaceholder" required></textarea>
+            </div>
+            
+            <button type="submit" class="standard-submit-button" data-i18n="contactSubmitButton">Send Message</button>
+        </form>
+    </div>
+</section> 
