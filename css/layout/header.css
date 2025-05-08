@@ -264,6 +264,11 @@
     background: none;
     border: none;
     padding: 10px;
+    color: var(--accent-color);
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-index-fixed);
 }
 
 /* Responsive Styles */
@@ -273,7 +278,10 @@
     }
     
     .mobile-menu-toggle {
-        display: block;
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
     }
     
     .navbar__links {
@@ -285,9 +293,21 @@
         right: -100%;
         background: var(--secondary-color);
         display: block;
-        padding: 50px 10px;
+        padding: 70px 20px 50px;
         transition: right 0.3s ease;
         z-index: var(--z-index-modal);
+        overflow-y: auto;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar__links:before {
+        content: "×";
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 30px;
+        color: var(--accent-color);
+        cursor: pointer;
     }
 
     .navbar__links.active {
@@ -296,6 +316,16 @@
 
     .navbar__item {
         margin: 15px 0;
+    }
+    
+    .navbar__link {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+    
+    .has-dropdown .navbar__link:after {
+        content: "▾";
+        margin-left: 8px;
     }
 
     .dropdown-menu, 
@@ -312,11 +342,15 @@
         margin: 0;
         box-shadow: none;
         border: none;
+        background: rgba(255, 249, 239, 0.05);
+        border-radius: 8px;
     }
 
     .navbar__item.active .dropdown-menu,
     .navbar__item.active .mega-menu {
         max-height: 1000px;
+        padding: 10px;
+        margin-top: 10px;
     }
 
     .mega-menu__content {
@@ -331,5 +365,48 @@
 
     .mega-menu__row:last-child {
         border-bottom: none;
+    }
+    
+    .mega-menu__header {
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+    
+    .signup-btn {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .language-switcher {
+        margin-left: 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .language-dropdown {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    
+    .language-dropdown.active {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar__wrapper {
+        padding: 0 15px;
+    }
+    
+    .navbar__logo-image {
+        width: 150px;
+    }
+    
+    .navbar__links {
+        width: 100%;
+        max-width: 100%;
     }
 } 

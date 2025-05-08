@@ -34,7 +34,7 @@
                 <h2 data-i18n="heroTitle"> Join to the next-generation institutions 
                     embracing the digital asset era</h2>
                 <div class="hero-buttons">
-                    <a href="https://form.typeform.com/to/R7OwSKPX" class="hero-button primary" data-i18n="heroBtn">Contact Us</a>
+                    <a href="#contact" class="hero-button primary" data-i18n="heroBtn">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -284,7 +284,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/digital_financial_services/payrrol" class="service-link enterprise-button">Learn More</a>
+                        <a href="/digital_financial_services/payroll" class="service-link enterprise-button">Learn More</a>
                     </div>
 
                     <!-- Cross-border Payments -->
@@ -344,7 +344,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/digital_financial_services/asset-management" class="service-link enterprise-button">Explore Services</a>
+                        <a href="/digital_financial_services/asset_management" class="service-link enterprise-button">Explore Services</a>
                     </div>
 
                     <!-- Custody Solutions -->
@@ -405,7 +405,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="/digital_financial_services/rwa-tokenization" class="service-link enterprise-button">Tokenize Now</a>
+                <a href="/digital_financial_services/rwa_tokenization" class="service-link enterprise-button">Tokenize Now</a>
             </div>
             <!-- RWA Tokenization -->
             <div class="service-card">
@@ -436,6 +436,36 @@
             </div>
             <a href="/digital_financial_services/stablecoins" class="service-link enterprise-button">Learn More</a>
             </div>
+            
+            <!-- Liquidity Provision -->
+            <div class="service-card">
+            <div class="product-label enterprise">Personas</div>
+            <div class="service-icon">
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h3>Liquidity Provision</h3>
+            <div class="service-items">
+                <div class="service-item">
+                    <div class="service-item-content">
+                        <h4>Strategic LP Infrastructure</h4>
+                        <p>Advanced liquidity provision for Colombian Peso stablecoins.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-item-content">
+                        <h4>Protocol Integration</h4>
+                        <p>Integration with leading DeFi protocols for enhanced liquidity.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-item-content">
+                        <h4>Peg Stabilization</h4>
+                        <p>Multi-layer mechanisms ensuring consistent COP peg maintenance.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="/digital_financial_services/Stablecoins/liquidity-provision.html" class="service-link enterprise-button">View Details</a>
+            </div>
         </section>
 
         <!-- Después de la sección Services - Divisor mejorado -->
@@ -444,11 +474,53 @@
         </div>
 
         <!-- Contact Section -->
-        <section id="contact">
-            <div class="contact-container">
-                <h2 class="contact-title" data-i18n="contactTitle">Connect with our team.</h2>
-                <p class="contact-description" data-i18n="contactDesc">Get a response from us in 48 hours.</p>
-                <a href="https://form.typeform.com/to/R7OwSKPX" class="contact-button" data-i18n="contactBtn">Contact Us</a>
+        <section id="contact" class="standard-contact-section">
+            <div class="standard-contact-container">
+                <h2 class="standard-contact-title" data-i18n="contactTitle">Connect with our team</h2>
+                <p class="standard-contact-description" data-i18n="contactDesc">Get in touch with our experts to learn how we can help you navigate the digital asset ecosystem.</p>
+                
+                <form id="standard-contact-form" class="standard-contact-form" data-form-type="contact">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" data-i18n-placeholder="contactNamePlaceholder" required>
+                        <div class="validation-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" data-i18n-placeholder="contactEmailPlaceholder" required>
+                        <div class="validation-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="" data-i18n="contactSelectService">Select Service</option>
+                            <option value="digital-access" data-i18n="contactServiceDigitalAccess">Digital Access</option>
+                            <option value="digital-financial-services" data-i18n="contactServiceFinancialServices">Digital Financial Services</option>
+                            <option value="custody" data-i18n="contactServiceCustody">Custody Solutions</option>
+                            <option value="asset-management" data-i18n="contactServiceAssetManagement">Asset Management</option>
+                            <option value="tokenization" data-i18n="contactServiceTokenization">RWA Tokenization</option>
+                            <option value="stablecoins" data-i18n="contactServiceStablecoins">Stablecoins</option>
+                            <option value="payroll" data-i18n="contactServicePayroll">Payroll Solutions</option>
+                            <option value="cross-border" data-i18n="contactServiceCrossBorder">Cross-Border Payments</option>
+                        </select>
+                        <div class="validation-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" data-i18n-placeholder="contactMessagePlaceholder" required></textarea>
+                        <div class="validation-message"></div>
+                    </div>
+                    
+                    <div class="form-feedback">
+                        <div class="form-success-message" data-i18n="contactSuccessMessage">
+                            Your message has been sent successfully. We'll get back to you within 48 hours.
+                        </div>
+                        <div class="form-error-message" data-i18n="contactErrorMessage">
+                            There was an error sending your message. Please try again.
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="standard-submit-button" data-i18n="contactSubmitButton">Send Message</button>
+                </form>
             </div>
         </section>
 
@@ -458,9 +530,7 @@
     <footer></footer>
 
     <script src="/js/translations.js"></script>
-    
     <script src="/script.js"></script>
     <script src="/footer-loader.js"></script>
-
 </body>
 </html>

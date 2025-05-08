@@ -121,11 +121,69 @@ function initHomePage() {
 
 // Initialize contact form on any page
 function initContactForm() {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+    const standardContactForm = document.getElementById('standard-contact-form');
+    if (standardContactForm) {
+        // Form validation
+        standardContactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             console.log('Contact form submitted');
+            
+            if (validateForm(standardContactForm)) {
+                // Simulate form submission
+                const submitButton = standardContactForm.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+                
+                // Simulate API call
+                setTimeout(function() {
+                    // Show success message
+                    const successMessage = standardContactForm.querySelector('.form-success-message');
+                    if (successMessage) {
+                        successMessage.style.display = 'block';
+                    }
+                    
+                    // Reset form
+                    standardContactForm.reset();
+                    
+                    // Reset button
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(function() {
+                        if (successMessage) {
+                            successMessage.style.display = 'none';
+                        }
+                    }, 5000);
+                }, 1500);
+            }
+        });
+        
+        // Input validation on blur
+        const inputs = standardContactForm.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                validateInput(this);
+            });
+            
+            input.addEventListener('input', function() {
+                // Clear validation messages on input
+                const validationMessage = this.parentElement.querySelector('.validation-message');
+                if (validationMessage) {
+                    validationMessage.textContent = '';
+                    validationMessage.classList.remove('show');
+                }
+                this.classList.remove('invalid');
+            });
+        });
+    }
+    
+    // Initialize legacy contact form if it exists
+    const legacyContactForm = document.getElementById('contact-form');
+    if (legacyContactForm) {
+        legacyContactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Legacy contact form submitted');
             // Add your form submission logic here
         });
     }
@@ -173,6 +231,57 @@ function initContactForm() {
             }
         });
     }
+}
+
+// Validation functions
+function validateForm(form) {
+    let isValid = true;
+    const inputs = form.querySelectorAll('input, textarea, select');
+    
+    inputs.forEach(input => {
+        if (!validateInput(input)) {
+            isValid = false;
+        }
+    });
+    
+    return isValid;
+}
+
+function validateInput(input) {
+    const validationMessage = input.parentElement.querySelector('.validation-message');
+    let isValid = true;
+    
+    // Check if empty
+    if (input.required && !input.value.trim()) {
+        if (validationMessage) {
+            validationMessage.textContent = 'This field is required';
+            validationMessage.classList.add('show');
+        }
+        input.classList.add('invalid');
+        isValid = false;
+    } 
+    // Email validation
+    else if (input.type === 'email' && input.value.trim()) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(input.value)) {
+            if (validationMessage) {
+                validationMessage.textContent = 'Please enter a valid email address';
+                validationMessage.classList.add('show');
+            }
+            input.classList.add('invalid');
+            isValid = false;
+        }
+    }
+    // If valid, remove invalid class
+    else {
+        input.classList.remove('invalid');
+        if (validationMessage) {
+            validationMessage.textContent = '';
+            validationMessage.classList.remove('show');
+        }
+    }
+    
+    return isValid;
 }
 
 // Initialize mobile menu

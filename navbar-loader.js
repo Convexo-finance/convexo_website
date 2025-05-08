@@ -58,28 +58,54 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function setupNavigation() {
     const wrapper = document.querySelector('.navbar__wrapper');
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.navbar__links');
     
-    // Toggle menu when wrapper is clicked
-    if (wrapper) {
-        wrapper.addEventListener('click', function(e) {
-            if (e.target === this || e.target.classList.contains('navbar__logo') || 
-                e.target === this.querySelector('.navbar__logo a') || 
-                e.target === this.querySelector('.navbar__logo-image')) {
-                return; // Don't toggle if clicking on the logo
+    // Toggle mobile menu when menu button is clicked
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+        });
+    }
+    
+    // Close menu when clicking the X or outside the menu
+    if (navLinks) {
+        // Close when clicking the X (pseudo-element)
+        navLinks.addEventListener('click', function(e) {
+            const rect = navLinks.getBoundingClientRect();
+            // Check if click is near the top-right corner (where the X is)
+            if (e.clientX > rect.right - 50 && e.clientY < rect.top + 50) {
+                navLinks.classList.remove('active');
             }
-            this.classList.toggle('active');
         });
         
-        // Close menu when clicking the X or outside menu
-        const navLinks = document.querySelector('.navbar__links');
-        if (navLinks) {
-            navLinks.addEventListener('click', function(e) {
-                if (e.target === this || (e.clientX < 50 && e.clientY < 50)) {
-                    wrapper.classList.remove('active');
+        // Handle dropdown toggles on mobile
+        const dropdownItems = document.querySelectorAll('.navbar__item.has-dropdown');
+        if (window.innerWidth <= 970) {
+            dropdownItems.forEach(item => {
+                const link = item.querySelector('.navbar__link');
+                if (link) {
+                    link.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 970) {
+                            e.preventDefault();
+                            // Toggle active class on parent item
+                            item.classList.toggle('active');
+                        }
+                    });
                 }
             });
         }
     }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (navLinks && navLinks.classList.contains('active')) {
+            if (!navLinks.contains(e.target) && e.target !== mobileMenuToggle) {
+                navLinks.classList.remove('active');
+            }
+        }
+    });
     
     // Language dropdown functionality
     setupLanguageDropdown();
