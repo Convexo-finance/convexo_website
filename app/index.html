@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convexo App</title>
+    <link rel="icon" type="image/png" href="/logologo.png">
+    <meta http-equiv="refresh" content="0;url=/login.html">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e0138, #081F5C);
+            font-family: 'Inter', sans-serif;
+            color: #FFF9EF;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .loading-container {
+            padding: 2rem;
+        }
+        
+        h1 {
+            margin-bottom: 1rem;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            margin: 2rem auto;
+            border: 4px solid rgba(255, 249, 239, 0.2);
+            border-top-color: #FFF9EF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <h1>Convexo App</h1>
+        <p>Redirecting to the application portal...</p>
+        <div class="spinner"></div>
+    </div>
+</body>
+</html> 

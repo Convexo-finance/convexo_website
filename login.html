@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convexo - Login</title>
+    <link rel="icon" type="image/png" href="/logologo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/navbar-loader.js"></script>
+    <script src="/js/translations.js"></script>
+    <script src="/js/language-toggle.js"></script>
+    <script src="/footer-loader.js"></script>
+</head>
+<body>
+    <!-- Header will be loaded by navbar-loader.js -->
+    <header></header>
+
+    <main>
+        <section id="login-section">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <h2>Access Your Convexo Account</h2>
+                        <p>Connect securely with your digital wallet or create a new one</p>
+                    </div>
+                    
+                    <div class="login-methods">
+                        <div id="privy-login"></div>
+                        
+                        <div class="separator">
+                            <span>or continue with</span>
+                        </div>
+                        
+                        <div class="wallet-options">
+                            <button class="wallet-button metamask">
+                                <img src="/images/metamask-logo.svg" alt="MetaMask">
+                                MetaMask
+                            </button>
+                            <button class="wallet-button walletconnect">
+                                <img src="/images/walletconnect-logo.svg" alt="WalletConnect">
+                                WalletConnect
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="login-footer">
+                        <p>Don't have a wallet? <button id="create-wallet-btn" class="text-link">Create one now</button></p>
+                        <p class="privacy-notice">By connecting, you agree to our <a href="/legal/terms">Terms of Service</a> and <a href="/legal/privacy">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded by footer-loader.js -->
+    <footer></footer>
+
+    <!-- Privy SDK -->
+    <script src="https://unpkg.com/@privy-io/sdk"></script>
+    <!-- Login Logic -->
+    <script src="/js/login.js"></script>
+    <!-- Ethers.js -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    <!-- WalletConnect -->
+    <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+</body>
+</html> 

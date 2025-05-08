@@ -5,6 +5,18 @@
     "rewrites": [
       { "source": "/", "destination": "/index.html" },
       
+      { "source": "/app", "destination": "/app/index.html" },
+      { "source": "/app/dashboard", "destination": "/app/dashboard.html" },
+      { "source": "/app/login", "destination": "/app/login.html" },
+      { "source": "/app/wallet", "destination": "/app/wallet.html" },
+      { "source": "/app/transactions", "destination": "/app/transactions.html" },
+      { "source": "/app/services/payments", "destination": "/app/services/payments.html" },
+      { "source": "/app/services/investments", "destination": "/app/services/investments.html" },
+      { "source": "/app/services/staking", "destination": "/app/services/staking.html" },
+      { "source": "/app/profile", "destination": "/app/profile.html" },
+      { "source": "/app/settings", "destination": "/app/settings.html" },
+      { "source": "/app/support", "destination": "/app/support.html" },
+      
       { "source": "/digital_access", "destination": "/digital_access/digital_access.html" },
       { "source": "/digital_access/corporate_treasury", "destination": "/digital_access/corporate_treasury/corporate_treasury.html" },
       { "source": "/digital_access/digital_wallet", "destination": "/digital_access/digital_wallet/digital_wallet.html" },
@@ -30,5 +42,24 @@
       { "source": "/kyc", "destination": "/kyc-page/kyc.html" },
       
       { "source": "/(.*)", "destination": "/index.html" }
+    ],
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "key": "X-XSS-Protection",
+            "value": "1; mode=block"
+          }
+        ]
+      }
     ]
 }

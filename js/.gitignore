@@ -1,0 +1,16 @@
+.qodo
+.DS_Store
+node_modules/
+
+# Configuration files with sensitive data
+config.js
+.env
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

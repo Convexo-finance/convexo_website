@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convexo - Dashboard</title>
+    <link rel="icon" type="image/png" href="/logologo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <script src="/navbar-loader.js"></script>
+    <script src="/js/translations.js"></script>
+    <script src="/js/language-toggle.js"></script>
+    <script src="/footer-loader.js"></script>
+</head>
+<body>
+    <!-- Header will be loaded by navbar-loader.js -->
+    <header></header>
+
+    <main>
+        <section id="dashboard-section">
+            <div class="dashboard-container">
+                <div class="dashboard-header">
+                    <div class="welcome-banner">
+                        <h1>Welcome to Your Dashboard</h1>
+                        <p id="user-greeting">Loading your profile...</p>
+                    </div>
+                    <div class="user-actions">
+                        <button id="logout-btn" class="action-button">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="dashboard-content">
+                    <div class="dashboard-sidebar">
+                        <nav class="sidebar-nav">
+                            <ul>
+                                <li class="active">
+                                    <a href="#overview"><i class="fas fa-th-large"></i> Overview</a>
+                                </li>
+                                <li>
+                                    <a href="#wallet"><i class="fas fa-wallet"></i> My Wallet</a>
+                                </li>
+                                <li>
+                                    <a href="#transactions"><i class="fas fa-exchange-alt"></i> Transactions</a>
+                                </li>
+                                <li>
+                                    <a href="#services"><i class="fas fa-concierge-bell"></i> Services</a>
+                                </li>
+                                <li>
+                                    <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+                                </li>
+                                <li>
+                                    <a href="#support"><i class="fas fa-headset"></i> Support</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="dashboard-main">
+                        <div id="overview" class="dashboard-panel active">
+                            <div class="panel-header">
+                                <h2>Account Overview</h2>
+                            </div>
+                            
+                            <div class="account-summary">
+                                <div class="summary-card balance-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3>Total Balance</h3>
+                                        <p class="balance-amount">$0.00</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="summary-card assets-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3>Digital Assets</h3>
+                                        <p class="asset-count">0 assets</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="summary-card activity-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-history"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3>Recent Activity</h3>
+                                        <p class="activity-status">No recent activity</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="account-actions">
+                                <button class="action-button primary">
+                                    <i class="fas fa-plus"></i> Deposit Funds
+                                </button>
+                                <button class="action-button secondary">
+                                    <i class="fas fa-exchange-alt"></i> Transfer
+                                </button>
+                                <button class="action-button secondary">
+                                    <i class="fas fa-shopping-cart"></i> Buy Assets
+                                </button>
+                            </div>
+                            
+                            <div class="notification-area">
+                                <div class="notification-card">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <h4>Complete Your Profile</h4>
+                                        <p>Finish setting up your account to unlock all features.</p>
+                                        <a href="#settings" class="notification-action">Complete Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Other dashboard panels will be shown/hidden based on navigation -->
+                        <div id="wallet" class="dashboard-panel">
+                            <div class="panel-header">
+                                <h2>My Wallet</h2>
+                            </div>
+                            <div class="wallet-placeholder">
+                                <p>Your wallet information will appear here.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="transactions" class="dashboard-panel">
+                            <div class="panel-header">
+                                <h2>Transaction History</h2>
+                            </div>
+                            <div class="transactions-placeholder">
+                                <p>Your transaction history will appear here.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="services" class="dashboard-panel">
+                            <div class="panel-header">
+                                <h2>Available Services</h2>
+                            </div>
+                            <div class="services-placeholder">
+                                <p>Browse available services here.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="settings" class="dashboard-panel">
+                            <div class="panel-header">
+                                <h2>Account Settings</h2>
+                            </div>
+                            <div class="settings-placeholder">
+                                <p>Manage your account settings here.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="support" class="dashboard-panel">
+                            <div class="panel-header">
+                                <h2>Customer Support</h2>
+                            </div>
+                            <div class="support-placeholder">
+                                <p>Contact our support team for assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded by footer-loader.js -->
+    <footer></footer>
+
+    <!-- Privy SDK -->
+    <script src="https://unpkg.com/@privy-io/privy-browser@1.0.0/dist/index.js"></script>
+    <!-- Dashboard Logic -->
+    <script src="/js/dashboard.js"></script>
+</body>
+</html> 
