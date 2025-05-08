@@ -66,6 +66,7 @@ function setupNavigation() {
         mobileMenuToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         });
     }
     
@@ -75,27 +76,14 @@ function setupNavigation() {
         navLinks.addEventListener('click', function(e) {
             const rect = navLinks.getBoundingClientRect();
             // Check if click is near the top-right corner (where the X is)
-            if (e.clientX > rect.right - 50 && e.clientY < rect.top + 50) {
+            if (e.clientX > rect.right - 70 && e.clientY < rect.top + 70) {
                 navLinks.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
         
-        // Handle dropdown toggles on mobile
-        const dropdownItems = document.querySelectorAll('.navbar__item.has-dropdown');
-        if (window.innerWidth <= 970) {
-            dropdownItems.forEach(item => {
-                const link = item.querySelector('.navbar__link');
-                if (link) {
-                    link.addEventListener('click', function(e) {
-                        if (window.innerWidth <= 970) {
-                            e.preventDefault();
-                            // Toggle active class on parent item
-                            item.classList.toggle('active');
-                        }
-                    });
-                }
-            });
-        }
+        // Set up all dropdown items for both mobile and desktop
+        setupDropdownItems();
     }
     
     // Close menu when clicking outside
@@ -103,12 +91,93 @@ function setupNavigation() {
         if (navLinks && navLinks.classList.contains('active')) {
             if (!navLinks.contains(e.target) && e.target !== mobileMenuToggle) {
                 navLinks.classList.remove('active');
+                document.body.style.overflow = '';
             }
         }
     });
     
     // Language dropdown functionality
     setupLanguageDropdown();
+    
+    // Handle resize events
+    window.addEventListener('resize', handleResize);
+    
+    // Initial check
+    handleResize();
+}
+
+/**
+ * Set up dropdown items for both mobile and desktop
+ */
+function setupDropdownItems() {
+    const dropdownItems = document.querySelectorAll('.navbar__item.has-dropdown');
+    const isMobile = window.innerWidth <= 970;
+    
+    dropdownItems.forEach(item => {
+        const link = item.querySelector('.navbar__link');
+        const menu = item.querySelector('.mega-menu') || item.querySelector('.dropdown-menu');
+        
+        if (link) {
+            // Remove any existing event listeners (clean slate)
+            link.removeEventListener('click', handleDropdownClick);
+            
+            // Add proper event listener based on device type
+            if (isMobile) {
+                link.addEventListener('click', handleDropdownClick);
+            }
+            
+            // Add touch-specific event for mobile
+            if (isMobile && 'ontouchstart' in window) {
+                link.addEventListener('touchstart', function() {
+                    link.classList.add('touch-active');
+                });
+                
+                link.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        link.classList.remove('touch-active');
+                    }, 300);
+                });
+            }
+        }
+    });
+}
+
+/**
+ * Handle dropdown click event (for mobile)
+ * @param {Event} e - Click event
+ */
+function handleDropdownClick(e) {
+    if (window.innerWidth <= 970) {
+        e.preventDefault();
+        const item = this.parentNode;
+        
+        // Close other open dropdowns
+        const openItems = document.querySelectorAll('.navbar__item.has-dropdown.active');
+        openItems.forEach(openItem => {
+            if (openItem !== item) {
+                openItem.classList.remove('active');
+            }
+        });
+        
+        // Toggle this dropdown
+        item.classList.toggle('active');
+    }
+}
+
+/**
+ * Handle window resize events
+ */
+function handleResize() {
+    const isMobile = window.innerWidth <= 970;
+    const navLinks = document.querySelector('.navbar__links');
+    
+    // Reset body overflow if switching to desktop view
+    if (!isMobile && navLinks) {
+        document.body.style.overflow = '';
+    }
+    
+    // Reset all dropdown items
+    setupDropdownItems();
 }
 
 /**
