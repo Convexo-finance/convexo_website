@@ -4,20 +4,20 @@
 
 /* Base Card */
 .card {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 249, 239, 0.1);
+    background: var(--light-bg);
+    border: 1px solid #e9ecef;
     border-radius: var(--border-radius-xl);
     padding: 30px;
     transition: var(--transition-base);
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-md);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(255, 249, 239, 0.2);
+    box-shadow: var(--shadow-xl);
+    border-color: #dee2e6;
 }
 
 /* Card Header */
@@ -27,16 +27,16 @@
 
 .card__title {
     font-size: var(--font-size-large);
-    color: var(--accent-color);
+    color: var(--text-accent);
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* Card Content */
 .card__content {
-    color: rgba(255, 249, 239, 0.8);
+    color: var(--text-secondary);
     font-size: var(--font-size-base);
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 20px;
 }
 
@@ -61,33 +61,33 @@
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+    box-shadow: var(--shadow-md);
 }
 
 .card-icon__icon {
     font-size: var(--font-size-xl);
-    color: var(--accent-color);
+    color: var(--text-color-light);
 }
 
 /* Product Card & Service Card (Unified) */
 .product-card, .service-card {
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(255, 249, 239, 0.1);
+    background: var(--light-bg);
+    border: 1px solid #e9ecef;
     border-radius: var(--border-radius-xl);
-    padding: 30px;
+    padding: 2rem;
     transition: var(--transition-base);
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     height: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-md);
 }
 
 .product-card:hover, .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 249, 239, 0.2);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
 }
 
 .product-icon, .service-icon {
@@ -98,44 +98,45 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-md);
 }
 
 .product-icon i, .service-icon i {
     font-size: calc(var(--font-size-xl) + 4px);
-    color: var(--accent-color);
+    color: var(--text-color-light);
 }
 
 .product-card h3, .service-card h3 {
     font-size: var(--font-size-xl);
-    color: var(--accent-color);
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--text-accent);
+    margin-bottom: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 .product-link, .service-link {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 14px 28px;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: var(--accent-color);
+    color: var(--text-color-light);
     text-decoration: none;
-    border-radius: var(--border-radius-md);
-    font-weight: 600;
-    margin-top: 20px;
+    border-radius: var(--border-radius-lg);
+    font-weight: 700;
+    margin-top: auto;
     transition: var(--transition-base);
-    border: 1px solid rgba(255, 249, 239, 0.2);
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-md);
     align-self: flex-start;
+    font-size: var(--font-size-base);
+    letter-spacing: 0.3px;
 }
 
 .product-link:hover, .service-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-xl);
     background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    color: var(--text-color-light);
 }
 
 /* Feature/Service Item */
@@ -143,12 +144,12 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
 .service-item {
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 249, 239, 0.1);
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f3f4;
 }
 
 .service-item:last-child {
@@ -156,15 +157,15 @@
 }
 
 .service-item h4 {
-    color: var(--accent-color);
+    color: var(--text-accent);
     font-size: var(--font-size-medium);
-    margin-bottom: 10px;
-    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .service-item p {
-    color: rgba(255, 249, 239, 0.8);
-    font-size: var(--font-size-small);
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
     line-height: 1.6;
 }
 
@@ -173,24 +174,22 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    padding: 8px 15px;
-    font-size: var(--font-size-small);
-    font-weight: 600;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
     border-radius: 20px;
     z-index: 1;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-sm);
 }
 
 .product-label.enterprise {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: var(--accent-color);
-    border: 1px solid rgba(255, 249, 239, 0.2);
+    background: var(--primary-color);
+    color: var(--text-color-light);
 }
 
 .product-label.individual {
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
-    color: var(--accent-color);
-    border: 1px solid rgba(255, 249, 239, 0.2);
+    background: var(--secondary-color);
+    color: var(--text-color-light);
 } 
