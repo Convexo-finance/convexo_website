@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTC Quote Calculator | Convexo</title>
+    <link rel="icon" type="image/png" href="/logologo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/styles/css/main.css">
+    <link rel="stylesheet" href="/styles/css/pages/calculator.css">
+    <!-- Scripts -->
+    <script src="/src/scripts/universal-loader.js"></script>
+    
+    
+    <!-- Custom Styles for Contact Information -->
+    <style>
+        /* Contact Information Card Styles */
+        .contact-info-card {
+            border-left: 4px solid #3498db !important;
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.2) !important;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            z-index: 2; /* Ensure it's above other elements */
+        }
+        
+        /* Add subtle gradient background to make the section stand out */
+        .contact-info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                ellipse at top right,
+                rgba(52, 152, 219, 0.15),
+                transparent 70%
+            );
+            opacity: 0.6;
+            z-index: 0;
+        }
+        
+        /* Make the content appear above the background */
+        .contact-info-card .card-body {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Add smooth transitions for interactive elements */
+        .contact-input, .contact-icon-container {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        /* Add focus visual indicator that builds on existing styles */
+        .input-group:focus-within .contact-icon-container {
+            background: rgba(52, 152, 219, 0.3) !important;
+            color: #ffffff !important;
+        }
+        
+        /* Add professional placeholder styling */
+        .contact-input::placeholder {
+            color: rgba(255, 249, 239, 0.5);
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-7px) !important;
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.3) !important;
+        }
+        
+        .contact-info-card .card-header {
+            background: linear-gradient(45deg, #3498db, #2980b9) !important;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info-card .card-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.1) 50%, 
+                rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-20deg) translateX(-100%);
+            animation: cardHeaderShine 3s infinite;
+            z-index: -1;
+        }
+        
+        .contact-input {
+            border-left: 3px solid #3498db !important;
+            padding-left: 15px !important;
+            transition: all 0.3s ease;
+            height: 50px;
+            font-size: 1rem;
+        }
+        
+        .contact-input:focus {
+            border-left: 5px solid #3498db !important;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.3) !important;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-icon-container {
+            background: rgba(52, 152, 219, 0.2) !important;
+            color: #3498db !important;
+            border-color: rgba(52, 152, 219, 0.3) !important;
+            transition: all 0.3s ease;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .contact-icon-container i {
+            font-size: 1.2rem;
+        }
+        
+        .telegram-icon {
+            background: rgba(0, 136, 204, 0.2) !important;
+            color: #0088cc !important;
+            border-color: rgba(0, 136, 204, 0.3) !important;
+        }
+        
+        .contact-info-result-card {
+            border-left: 4px solid #3498db !important;
+            box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2) !important;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-info-result-card:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.3) !important;
+        }
+        
+        .contact-info-result-card .card-header {
+            background: linear-gradient(45deg, #3498db, #2980b9) !important;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info-result-card .card-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.1) 50%, 
+                rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-20deg) translateX(-100%);
+            animation: cardHeaderShine 3s infinite;
+            z-index: -1;
+        }
+        
+        .text-primary {
+            color: #3498db !important;
+        }
+        
+        /* Make the result text stand out better */
+        #result-email, #result-cellphone, #result-telegram {
+            font-weight: 500;
+            color: rgba(255, 249, 239, 0.95);
+            background: rgba(52, 152, 219, 0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            border-left: 2px solid #3498db;
+            margin-left: 5px;
+        }
+        
+        .contact-info-result-card p {
+            margin-bottom: 12px;
+        }
+        
+        /* Responsive adjustments for results */
+        @media (max-width: 768px) {
+            .contact-info-result-card .card-body {
+                padding: 1.25rem;
+            }
+            
+            #result-email, #result-cellphone, #result-telegram {
+                display: block;
+                margin-top: 5px;
+                margin-left: 0;
+                padding: 5px 10px;
+            }
+            
+            .contact-info-result-card p strong {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+        
+        /* Show the section more prominently */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+        }
+        
+        .contact-info-card {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Form text styling */
+        .form-text {
+            color: rgba(255, 249, 239, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        /* Label styling */
+        .contact-info-card .form-label {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .contact-info-card {
+                animation: none; /* Disable animation on smaller screens for better performance */
+            }
+            
+            .contact-input {
+                height: 46px;
+                font-size: 0.95rem;
+            }
+            
+            .contact-icon-container {
+                width: 46px;
+            }
+            
+            .contact-icon-container i {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info-card .card-body {
+                padding: 1.25rem;
+            }
+            
+            .contact-input {
+                height: 44px;
+                font-size: 0.9rem;
+            }
+            
+            .contact-icon-container {
+                width: 44px;
+            }
+            
+            .row + .row {
+                margin-top: 0.5rem;
+            }
+            
+            .contact-info-card .form-label {
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .form-text {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contact-info-card {
+                border-left-width: 3px !important;
+            }
+            
+            .contact-input {
+                padding-left: 12px !important;
+                height: 42px;
+                font-size: 0.875rem;
+            }
+            
+            .contact-icon-container {
+                width: 42px;
+            }
+            
+            .contact-icon-container i {
+                font-size: 1rem;
+            }
+            
+            .contact-info-card .card-header h5 {
+                font-size: 1rem;
+            }
+            
+            .contact-info-card .form-label {
+                font-size: 0.85rem;
+            }
+            
+            .form-text {
+                font-size: 0.75rem;
+            }
+            
+            /* Make the Telegram section full width on mobile for better handling */
+            #telegram-container {
+                width: 100%;
+            }
+            
+            /* Add better touch target sizes for mobile */
+            .contact-input {
+                min-height: 48px; /* Better for touch targets */
+            }
+            
+            .contact-icon-container {
+                min-width: 48px; /* Better for touch targets */
+            }
+            
+            /* Add a subtle indicator that fields are tappable */
+            .contact-input:focus {
+                transform: scale(1.02);
+            }
+            
+            /* Improve spacing between sections on mobile */
+            .contact-info-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    
+    <div class="container">
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <h1>Digital Asset Calculator</h1>
+                <p>Get an instant quote for OTC trading with accurate price information</p>
+            </div>
+            
+            <form id="calculator-form">
+                <div class="operation-selector mb-4">
+                    <label class="form-label fw-bold">Choose Operation</label>
+                    <div class="btn-group w-100" role="group">
+                        <input type="radio" class="btn-check" name="operation" id="buy" value="buy" checked>
+                        <label class="btn" for="buy" id="buyLabel">BUY</label>
+                        
+                        <input type="radio" class="btn-check" name="operation" id="sell" value="sell">
+                        <label class="btn" for="sell" id="sellLabel">SELL</label>
+                    </div>
+                </div>
+
+                <!-- CONTACT INFORMATION SECTION -->
+                <div class="card mb-4 contact-info-card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-address-card me-2"></i>CONTACT INFORMATION</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control contact-input" id="email" placeholder="Your email address">
+                                        <span class="input-group-text contact-icon-container"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <div class="form-text">Enter your email to receive the quote directly</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="cellphone" class="form-label">Cellphone</label>
+                                    <div class="input-group">
+                                        <input type="tel" class="form-control contact-input" id="cellphone" placeholder="Your phone number">
+                                        <span class="input-group-text contact-icon-container"><i class="fas fa-phone"></i></span>
+                                    </div>
+                                    <div class="form-text">For follow-up communication if needed</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" id="telegram-container">
+                                <div class="mb-3">
+                                    <label for="telegram" class="form-label">Telegram Handle</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control contact-input" id="telegram" placeholder="Your Telegram username">
+                                        <span class="input-group-text contact-icon-container telegram-icon"><i class="fab fa-telegram-plane"></i></span>
+                                    </div>
+                                    <div class="form-text">For secure and instant communication</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DIGITAL ASSET SECTION -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-coins me-2"></i>DIGITAL ASSET</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="crypto" class="form-label">Digital Asset</label>
+                            <select class="form-select" id="crypto" required>
+                                <option value="" disabled selected>Select Digital Asset</option>
+                                <option value="bitcoin">Bitcoin (BTC)</option>
+                                <option value="ethereum">Ethereum (ETH)</option>
+                                <option value="solana">Solana (SOL)</option>
+                                <option value="usd-coin">USD Coin (USDC)</option>
+                                <option value="tether">Tether (USDT)</option>
+                                <option value="dogecoin">Dogecoin (DOGE)</option>
+                                <option value="ripple">Ripple (XRP)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="blockchain" class="form-label">Blockchain</label>
+                            <select class="form-select" id="blockchain" required>
+                                <option value="" disabled selected>Select Blockchain</option>
+                                <option value="bitcoin">Bitcoin Legacy</option>
+                                <option value="ethereum">Ethereum, Base, OP Mainnet, Arbitrum, Polygon</option>
+                                <option value="tron">Tron</option>
+                                <option value="solana">Solana</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="wallet_address" class="form-label">Wallet Address</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="wallet_address" required>
+                                <button type="button" class="btn btn-outline-secondary input-group-text" id="paste-wallet-btn" title="Paste from clipboard">
+                                    <i class="fas fa-paste"></i>
+                                </button>
+                                <span class="input-group-text"><i class="fas fa-wallet"></i></span>
+                            </div>
+                            <div class="form-text" id="wallet-help">
+                                <span id="buy-help">Enter the address where you want to receive your digital assets.</span>
+                                <span id="sell-help" style="display: none;">Enter the address from which you'll send your digital assets.</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Convexo Wallet Address for SELL operations -->
+                        <div id="convexo-wallet-container" style="display: none;" class="mb-3 p-4 border rounded">
+                            <div class="text-center mb-4">
+                                <h5 class="wallet-title mb-2"><i class="fas fa-exchange-alt me-2"></i>Convexo Transfer Information</h5>
+                                <p class="wallet-subtitle">Please send your digital assets to our official EVM address below</p>
+                            </div>
+                            
+                            <div class="wallet-content-wrapper">
+                                <div class="row g-4 align-items-center">
+                                    <!-- QR Code Section - moved to left side -->
+                                    <div class="col-md-4 text-center wallet-qr-wrapper">
+                                        <div class="qr-container mb-2">
+                                            <img src="https://api.qrserver.com/v1/create-qr-code/?data=0x734d320aBACeAD00B82A5C8160961d57E27A3554&size=150x150" 
+                                                alt="Convexo Wallet QR Code" class="img-fluid" id="wallet-qr-code">
+                                        </div>
+                                        <span class="qr-label">Scan with your wallet app</span>
+                                    </div>
+                                    
+                                    <!-- Wallet Details - moved to right side -->
+                                    <div class="col-md-8">
+                                        <div class="wallet-details">
+                                            <!-- Network Badge -->
+                                            <div class="network-badge mb-3">
+                                                <span><i class="fas fa-network-wired me-2"></i>EVM Compatible Networks Only</span>
+                                            </div>
+                                            
+                                            <!-- Wallet Address Section -->
+                                            <div class="wallet-detail-item mb-3">
+                                                <div class="wallet-label">
+                                                    <i class="fas fa-wallet me-2"></i>
+                                                    <span>EVM Wallet Address</span>
+                                                </div>
+                                                <div class="wallet-value-container">
+                                                    <input type="text" class="wallet-value-field" 
+                                                        value="0x734d320aBACeAD00B82A5C8160961d57E27A3554" id="convexo-wallet" readonly>
+                                                    <button class="wallet-copy-btn" id="copy-convexo-wallet" title="Copy address">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- ENS Section -->
+                                            <div class="wallet-detail-item">
+                                                <div class="wallet-label">
+                                                    <i class="fas fa-tag me-2"></i>
+                                                    <span>ENS Domain (Ethereum Name Service)</span>
+                                                </div>
+                                                <div class="wallet-value-container">
+                                                    <input type="text" class="wallet-value-field" 
+                                                        value="convexofinance.eth" id="convexo-ens" readonly>
+                                                    <button class="wallet-copy-btn" id="copy-convexo-ens" title="Copy ENS domain">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Important Note -->
+                                            <div class="wallet-note mt-3">
+                                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                                <span>Important: Only send from EVM compatible networks. Make sure to use the correct blockchain selected above.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Amount</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="amount" step="any" min="0" required>
+                                <span class="input-group-text" id="crypto-symbol"><i class="fas fa-coins"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BANK INFORMATION SECTION -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-university me-2"></i>BANK INFORMATION</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="bank_name" class="form-label">Bank Name</label>
+                                    <input type="text" class="form-control" id="bank_name" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="fiat" class="form-label">Fiat Currency</label>
+                                    <select class="form-select" id="fiat" required>
+                                        <option value="" disabled selected>Select Fiat Currency</option>
+                                        <option value="usd">US Dollar (USD)</option>
+                                        <option value="eur">Euro (EUR)</option>
+                                        <option value="cop">Colombian Peso (COP)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="country" class="form-label">Country Bank</label>
+                                    <select class="form-select" id="country" required>
+                                        <option value="" disabled selected>Select Country</option>
+                                        <option value="us">United States</option>
+                                        <option value="co">Colombia</option>
+                                        <option value="es">Spain</option>
+                                        <option value="mx">Mexico</option>
+                                        <option value="ar">Argentina</option>
+                                        <option value="br">Brazil</option>
+                                        <option value="cl">Chile</option>
+                                        <option value="pe">Peru</option>
+                                        <option value="ec">Ecuador</option>
+                                        <option value="ve">Venezuela</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="account_owner" class="form-label">Name Account Owner</label>
+                                    <input type="text" class="form-control" id="account_owner" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="owner_id" class="form-label">Identification Account Owner</label>
+                                    <input type="text" class="form-control" id="owner_id" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="account_number" class="form-label">Bank Account Number</label>
+                                    <input type="text" class="form-control" id="account_number" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="account_type" class="form-label">Type Account</label>
+                                    <select class="form-select" id="account_type" required>
+                                        <option value="" disabled selected>Select Account Type</option>
+                                        <option value="savings">Savings</option>
+                                        <option value="checking">Checking</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                
+                <div class="action-buttons">
+                    <button type="button" id="clear-all" class="btn btn-outline-danger">
+                        <i class="fas fa-trash-alt me-2"></i>Clear All Data
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-calculator me-2"></i>Generate Quote
+                    </button>
+                </div>
+            </form>
+            
+            <div class="result-container mt-4" id="result">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="mb-0">QUOTE RESULT</h4>
+                    <small id="last-updated"></small>
+                </div>
+                
+                <!-- DIGITAL ASSET SECTION IN RESULT -->
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-coins me-2"></i>DIGITAL ASSET</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Operation:</strong> <span id="result-operation"></span></p>
+                                <p><strong>Digital Asset:</strong> <span id="result-asset"></span></p>
+                                <p><strong>Blockchain:</strong> <span id="result-blockchain"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Amount:</strong> <span id="result-amount"></span></p>
+                                <p><strong>Unit Price:</strong> <span id="result-price"></span></p>
+                                <p><strong>Total Price:</strong> <span id="result-total"></span></p>
+                                <p><strong>Wallet Address:</strong> <span id="result-wallet-address" class="text-break"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BANK INFORMATION SECTION IN RESULT -->
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-university me-2"></i>BANK INFORMATION</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Bank Name:</strong> <span id="result-bank-name"></span></p>
+                                <p><strong>Fiat Currency:</strong> <span id="result-fiat"></span></p>
+                                <p><strong>Country Bank:</strong> <span id="result-country"></span></p>
+                                <p><strong>Account Owner:</strong> <span id="result-account-owner"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Owner ID:</strong> <span id="result-owner-id"></span></p>
+                                <p><strong>Account Number:</strong> <span id="result-account-number"></span></p>
+                                <p><strong>Account Type:</strong> <span id="result-account-type"></span></p>
+                                <p><strong>Date of Generation:</strong> <span id="generation-date"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CONTACT INFORMATION SECTION IN RESULT -->
+                <div class="card mb-3 contact-info-result-card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-address-card me-2"></i>CONTACT INFORMATION</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong><i class="fas fa-envelope me-2 text-primary"></i>Email:</strong> <span id="result-email"></span></p>
+                                <p><strong><i class="fab fa-telegram-plane me-2 text-primary"></i>Telegram:</strong> <span id="result-telegram"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong><i class="fas fa-phone me-2 text-primary"></i>Cellphone:</strong> <span id="result-cellphone"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-actions">
+                    <button id="send-quote" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane me-2"></i>Send Quote
+                    </button>
+                    <button id="copy-quote" class="btn btn-outline-primary">
+                        <i class="fas fa-copy me-2"></i>Copy Quote
+                    </button>
+                    <button id="back-to-form" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Form
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-3" id="loading">
+                <div class="loading"></div> <span>Fetching latest prices...</span>
+            </div>
+            
+            <div class="alert alert-danger mt-3" id="error"></div>
+            
+            <!-- Add a tooltip section for market rates transparency -->
+            <div class="market-rates-info mt-3 p-3 rounded" style="display: none;">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h6 class="mb-0">Market Rates Information</h6>
+                    <button type="button" class="btn-close btn-close-white" id="close-rates-info"></button>
+                </div>
+                <div class="rates-content">
+                    <div class="rate-item mb-2">
+                        <div class="d-flex justify-content-between">
+                            <span>Spot Price:</span>
+                            <span id="spot-price-display">-</span>
+                        </div>
+                        <div class="progress" style="height: 4px;">
+                            <div class="progress-bar bg-info" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="rate-item mb-2">
+                        <div class="d-flex justify-content-between">
+                            <span>Buy Price (Spot):</span>
+                            <span id="buy-price-display">-</span>
+                        </div>
+                        <div class="progress" style="height: 4px;">
+                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="rate-item mb-2">
+                        <div class="d-flex justify-content-between">
+                            <span>Sell Price (Spot -2%):</span>
+                            <span id="sell-price-display">-</span>
+                        </div>
+                        <div class="progress" style="height: 4px;">
+                            <div class="progress-bar bg-danger" style="width: 98%"></div>
+                        </div>
+                    </div>
+                    <small class="d-block mt-2 text-muted">Last updated: <span id="rates-last-updated">-</span></small>
+                    <div class="text-end mt-1">
+                        <button type="button" class="btn btn-sm btn-outline-light" id="refresh-rates">
+                            <i class="fas fa-sync-alt me-1"></i>Refresh
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer></footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load navbar with correct path (two levels up)
+            fetch('../../navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load navbar');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.querySelector('header').innerHTML = data;
+                    
+                    // Fix any navbar links to use proper paths
+                    const navLinks = document.querySelectorAll('header a');
+                    navLinks.forEach(link => {
+                        // If link starts with / keep it as is (absolute path)
+                        if (!link.getAttribute('href')?.startsWith('/') && 
+                            !link.getAttribute('href')?.startsWith('http') && 
+                            !link.getAttribute('href')?.startsWith('#')) {
+                            // Add proper relative path prefix
+                            link.href = '../../' + link.getAttribute('href');
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading the navbar:', error);
+                    document.querySelector('header').innerHTML = '<div class="nav-error">Navigation temporarily unavailable</div>';
+                });
+                
+            // Operation type toggle
+            const buyRadio = document.getElementById('buy');
+            const sellRadio = document.getElementById('sell');
+            const buyHelp = document.getElementById('buy-help');
+            const sellHelp = document.getElementById('sell-help');
+            const pasteWalletBtn = document.getElementById('paste-wallet-btn');
+            const convexoWalletContainer = document.getElementById('convexo-wallet-container');
+            
+            buyRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    buyHelp.style.display = 'inline';
+                    sellHelp.style.display = 'none';
+                    pasteWalletBtn.style.display = 'block';
+                    convexoWalletContainer.style.display = 'none';
+                    
+                    // Update displayed price when operation changes
+                    updateDisplayedPrice();
+                }
+            });
+            
+            sellRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    buyHelp.style.display = 'none';
+                    sellHelp.style.display = 'inline';
+                    pasteWalletBtn.style.display = 'none';
+                    convexoWalletContainer.style.display = 'block';
+                    
+                    // Update displayed price when operation changes
+                    updateDisplayedPrice();
+                }
+            });
+            
+            // Paste from clipboard functionality
+            pasteWalletBtn.addEventListener('click', function() {
+                navigator.clipboard.readText()
+                    .then(text => {
+                        document.getElementById('wallet_address').value = text;
+                    })
+                    .catch(err => {
+                        console.error('Failed to read clipboard: ', err);
+                        alert('Unable to paste from clipboard. Please check your browser permissions.');
+                    });
+            });
+            
+            // Copy Convexo wallet address functionality
+            document.getElementById('copy-convexo-wallet').addEventListener('click', function() {
+                const walletAddress = document.getElementById('convexo-wallet').value;
+                navigator.clipboard.writeText(walletAddress)
+                    .then(() => {
+                        this.innerHTML = '<i class="fas fa-check"></i>';
+                        setTimeout(() => {
+                            this.innerHTML = '<i class="fas fa-copy"></i>';
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error('Could not copy wallet address: ', err);
+                    });
+            });
+            
+            // Copy Convexo ENS functionality
+            document.getElementById('copy-convexo-ens').addEventListener('click', function() {
+                const ensName = document.getElementById('convexo-ens').value;
+                navigator.clipboard.writeText(ensName)
+                    .then(() => {
+                        this.innerHTML = '<i class="fas fa-check"></i>';
+                        setTimeout(() => {
+                            this.innerHTML = '<i class="fas fa-copy"></i>';
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error('Could not copy ENS name: ', err);
+                    });
+            });
+            
+            // Real-time price data variables
+            let priceData = {
+                crypto: {},
+                fiat: {
+                    usd: 1,
+                    eur: 0.91, // Default EUR/USD rate
+                    cop: 3900   // Default COP/USD rate
+                },
+                lastUpdated: null
+            };
+            
+            // Helper function to get crypto ID from selection
+            function getCryptoId(selection) {
+                const mapping = {
+                    'bitcoin': 'bitcoin',
+                    'ethereum': 'ethereum',
+                    'solana': 'solana',
+                    'usd-coin': 'usd-coin',
+                    'tether': 'tether',
+                    'dogecoin': 'dogecoin',
+                    'ripple': 'ripple'
+                };
+                return mapping[selection] || selection;
+            }
+            
+            // Fetch crypto prices from CoinGecko API
+            async function fetchCryptoPrices(cryptoIds = ['bitcoin', 'ethereum', 'solana', 'usd-coin', 'tether', 'dogecoin', 'ripple']) {
+                try {
+                    const loadingIndicator = document.getElementById('loading');
+                    loadingIndicator.style.display = 'block';
+                    
+                    const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${cryptoIds.join(',')}&vs_currencies=usd&include_24hr_change=true&precision=4`);
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch crypto prices');
+                    }
+                    
+                    const data = await response.json();
+                    
+                    // Update priceData with fetched prices
+                    for (const crypto in data) {
+                        priceData.crypto[crypto] = {
+                            usd: data[crypto].usd,
+                            change24h: data[crypto].usd_24h_change || 0
+                        };
+                    }
+                    
+                    // Fetch fiat exchange rates
+                    await fetchFiatRates();
+                    
+                    // Update last updated timestamp
+                    priceData.lastUpdated = new Date();
+                    
+                    // Update UI with new prices
+                    updateDisplayedPrice();
+                    updateRatesInfo();
+                    
+                    return data;
+                } catch (error) {
+                    console.error('Error fetching crypto prices:', error);
+                    document.getElementById('error').textContent = 'Failed to fetch latest prices. Using estimated values.';
+                    document.getElementById('error').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('error').style.display = 'none';
+                    }, 5000);
+                    return null;
+                } finally {
+                    loadingIndicator.style.display = 'none';
+                }
+            }
+            
+            // Fetch fiat exchange rates
+            async function fetchFiatRates() {
+                try {
+                    const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch exchange rates');
+                    }
+                    
+                    const data = await response.json();
+                    
+                    // Update fiat rates
+                    priceData.fiat.eur = data.rates.EUR;
+                    priceData.fiat.cop = data.rates.COP;
+                    
+                    return data;
+                } catch (error) {
+                    console.error('Error fetching fiat rates:', error);
+                    // Using default rates if API fails
+                    return null;
+                }
+            }
+            
+            // Calculate price based on operation type and selected currencies
+            function calculatePrice(cryptoId, fiatCurrency, operation) {
+                let price = 0;
+                
+                // Get the base USD price
+                const cryptoData = priceData.crypto[cryptoId];
+                if (!cryptoData) return 0;
+                
+                const spotPrice = cryptoData.usd;
+                
+                // Apply buy/sell adjustment
+                if (operation === 'buy') {
+                    price = spotPrice; // Spot price for buy
+                } else if (operation === 'sell') {
+                    price = spotPrice * 0.98; // 2% less for sell
+                }
+                
+                // Convert to selected fiat currency
+                if (fiatCurrency !== 'usd') {
+                    price = price * priceData.fiat[fiatCurrency];
+                }
+                
+                return price;
+            }
+            
+            // Update the displayed price based on current selections
+            function updateDisplayedPrice() {
+                const crypto = document.getElementById('crypto').value;
+                const fiat = document.getElementById('fiat').value;
+                const operation = document.querySelector('input[name="operation"]:checked').value;
+                
+                if (!crypto || !fiat) return;
+                
+                const cryptoId = getCryptoId(crypto);
+                const price = calculatePrice(cryptoId, fiat, operation);
+                
+                // Format currency based on selected fiat
+                let formattedPrice;
+                switch (fiat) {
+                    case 'usd':
+                        formattedPrice = '$' + price.toLocaleString('en-US', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 6
+                        });
+                        break;
+                    case 'eur':
+                        formattedPrice = '€' + price.toLocaleString('de-DE', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 6
+                        });
+                        break;
+                    case 'cop':
+                        formattedPrice = 'COP ' + price.toLocaleString('es-CO', {
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0
+                        });
+                        break;
+                    default:
+                        formattedPrice = '$' + price.toLocaleString();
+                }
+                
+                // Update any UI elements with the price
+                // For example, a price display element or the crypto-symbol span
+                document.getElementById('crypto-symbol').textContent = formattedPrice;
+            }
+            
+            // Update the market rates information display
+            function updateRatesInfo() {
+                const crypto = document.getElementById('crypto').value;
+                const fiat = document.getElementById('fiat').value;
+                
+                if (!crypto || !fiat) return;
+                
+                const cryptoId = getCryptoId(crypto);
+                const cryptoData = priceData.crypto[cryptoId];
+                
+                if (!cryptoData) return;
+                
+                // Get spot price in selected currency
+                const spotPrice = cryptoData.usd * (fiat === 'usd' ? 1 : priceData.fiat[fiat]);
+                const buyPrice = spotPrice;
+                const sellPrice = spotPrice * 0.98;
+                
+                // Format currency symbols
+                let currencySymbol;
+                let locale;
+                
+                switch (fiat) {
+                    case 'usd':
+                        currencySymbol = '$';
+                        locale = 'en-US';
+                        break;
+                    case 'eur':
+                        currencySymbol = '€';
+                        locale = 'de-DE';
+                        break;
+                    case 'cop':
+                        currencySymbol = 'COP ';
+                        locale = 'es-CO';
+                        break;
+                    default:
+                        currencySymbol = '$';
+                        locale = 'en-US';
+                }
+                
+                // Format and display the prices
+                const decimals = fiat === 'cop' ? 0 : (spotPrice < 1 ? 6 : 2);
+                
+                document.getElementById('spot-price-display').textContent = 
+                    currencySymbol + spotPrice.toLocaleString(locale, {
+                        minimumFractionDigits: decimals,
+                        maximumFractionDigits: decimals
+                    });
+                
+                document.getElementById('buy-price-display').textContent = 
+                    currencySymbol + buyPrice.toLocaleString(locale, {
+                        minimumFractionDigits: decimals,
+                        maximumFractionDigits: decimals
+                    });
+                
+                document.getElementById('sell-price-display').textContent = 
+                    currencySymbol + sellPrice.toLocaleString(locale, {
+                        minimumFractionDigits: decimals,
+                        maximumFractionDigits: decimals
+                    });
+                
+                // Update last updated time
+                if (priceData.lastUpdated) {
+                    document.getElementById('rates-last-updated').textContent = 
+                        priceData.lastUpdated.toLocaleString();
+                }
+                
+                // Show the rates info panel
+                document.querySelector('.market-rates-info').style.display = 'block';
+            }
+            
+            // Event listeners for price updates
+            document.getElementById('crypto').addEventListener('change', updateDisplayedPrice);
+            document.getElementById('fiat').addEventListener('change', updateDisplayedPrice);
+            
+            // Display rates info button event listener
+            document.getElementById('refresh-rates').addEventListener('click', function() {
+                fetchCryptoPrices();
+            });
+            
+            // Close rates info
+            document.getElementById('close-rates-info').addEventListener('click', function() {
+                document.querySelector('.market-rates-info').style.display = 'none';
+            });
+            
+            // Form submission
+            const calculatorForm = document.getElementById('calculator-form');
+            const resultSection = document.getElementById('result');
+            const loadingIndicator = document.getElementById('loading');
+            const errorMessage = document.getElementById('error');
+            
+            calculatorForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show loading
+                calculatorForm.style.opacity = '0.5';
+                loadingIndicator.style.display = 'block';
+                errorMessage.style.display = 'none';
+                
+                // Get form values
+                const operation = document.querySelector('input[name="operation"]:checked').value;
+                const crypto = document.getElementById('crypto').value;
+                const cryptoName = document.getElementById('crypto').options[document.getElementById('crypto').selectedIndex].text;
+                const blockchain = document.getElementById('blockchain').value;
+                const blockchainName = document.getElementById('blockchain').options[document.getElementById('blockchain').selectedIndex].text;
+                const walletAddress = document.getElementById('wallet_address').value;
+                const amount = parseFloat(document.getElementById('amount').value);
+                
+                const bankName = document.getElementById('bank_name').value;
+                const fiat = document.getElementById('fiat').value;
+                const fiatName = document.getElementById('fiat').options[document.getElementById('fiat').selectedIndex].text;
+                const country = document.getElementById('country').value;
+                const countryName = document.getElementById('country').options[document.getElementById('country').selectedIndex].text;
+                const accountOwner = document.getElementById('account_owner').value;
+                const ownerId = document.getElementById('owner_id').value;
+                const accountNumber = document.getElementById('account_number').value;
+                const accountType = document.getElementById('account_type').value;
+                const accountTypeName = document.getElementById('account_type').options[document.getElementById('account_type').selectedIndex].text;
+                
+                // Calculate real prices
+                const cryptoId = getCryptoId(crypto);
+                const unitPrice = calculatePrice(cryptoId, fiat, operation);
+                const totalPrice = unitPrice * amount;
+                
+                // Format prices according to currency
+                let formattedUnitPrice, formattedTotalPrice;
+                
+                switch (fiat) {
+                    case 'usd':
+                        formattedUnitPrice = '$' + unitPrice.toLocaleString('en-US', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: unitPrice < 1 ? 6 : 2
+                        });
+                        formattedTotalPrice = '$' + totalPrice.toLocaleString('en-US', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        });
+                        break;
+                    case 'eur':
+                        formattedUnitPrice = '€' + unitPrice.toLocaleString('de-DE', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: unitPrice < 1 ? 6 : 2
+                        });
+                        formattedTotalPrice = '€' + totalPrice.toLocaleString('de-DE', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        });
+                        break;
+                    case 'cop':
+                        formattedUnitPrice = 'COP ' + unitPrice.toLocaleString('es-CO', {
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0
+                        });
+                        formattedTotalPrice = 'COP ' + totalPrice.toLocaleString('es-CO', {
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0
+                        });
+                        break;
+                    default:
+                        formattedUnitPrice = '$' + unitPrice.toLocaleString();
+                        formattedTotalPrice = '$' + totalPrice.toLocaleString();
+                }
+                
+                // Update result
+                document.getElementById('result-operation').textContent = operation.toUpperCase();
+                document.getElementById('result-asset').textContent = cryptoName;
+                document.getElementById('result-blockchain').textContent = blockchainName;
+                document.getElementById('result-wallet-address').textContent = walletAddress;
+                document.getElementById('result-amount').textContent = amount.toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 8
+                });
+                document.getElementById('result-price').textContent = formattedUnitPrice;
+                document.getElementById('result-total').textContent = formattedTotalPrice;
+                
+                document.getElementById('result-bank-name').textContent = bankName;
+                document.getElementById('result-fiat').textContent = fiatName;
+                document.getElementById('result-country').textContent = countryName;
+                document.getElementById('result-account-owner').textContent = accountOwner;
+                document.getElementById('result-owner-id').textContent = ownerId;
+                document.getElementById('result-account-number').textContent = accountNumber;
+                document.getElementById('result-account-type').textContent = accountTypeName;
+                
+                // Get contact information (optional)
+                const email = document.getElementById('email').value || 'Not provided';
+                const cellphone = document.getElementById('cellphone').value || 'Not provided';
+                const telegram = document.getElementById('telegram').value || 'Not provided';
+                
+                // Update contact information in results
+                document.getElementById('result-email').textContent = email;
+                document.getElementById('result-cellphone').textContent = cellphone;
+                document.getElementById('result-telegram').textContent = telegram;
+                
+                // Set generation date
+                const now = new Date();
+                document.getElementById('generation-date').textContent = now.toLocaleString();
+                document.getElementById('last-updated').textContent = `Updated: ${now.toLocaleString()}`;
+                
+                // Show result
+                setTimeout(function() {
+                    calculatorForm.style.display = 'none';
+                    resultSection.style.display = 'block';
+                    loadingIndicator.style.display = 'none';
+                    calculatorForm.style.opacity = '1';
+                    
+                    // Animate result entrance
+                    setTimeout(() => {
+                        resultSection.style.opacity = '1';
+                    }, 100);
+                }, 1500);
+            });
+            
+            // Back to form button
+            document.getElementById('back-to-form').addEventListener('click', function() {
+                resultSection.style.display = 'none';
+                calculatorForm.style.display = 'block';
+            });
+            
+            // Clear all button
+            document.getElementById('clear-all').addEventListener('click', function() {
+                calculatorForm.reset();
+                updateDisplayedPrice();
+            });
+            
+            // Copy quote button
+            document.getElementById('copy-quote').addEventListener('click', function() {
+                const quoteText = generateTextQuote();
+                
+                // Copy to clipboard
+                navigator.clipboard.writeText(quoteText)
+                    .then(() => {
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check me-2"></i>Copied!';
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error('Could not copy text: ', err);
+                    });
+            });
+            
+            // Send quote button
+            document.getElementById('send-quote').addEventListener('click', function() {
+                const quoteText = generateTextQuote();
+                const subject = 'Convexo OTC Trading Quote';
+                const userEmail = document.getElementById('email').value;
+                
+                // Use otc@convexo.xyz as the recipient email
+                const toEmail = 'otc@convexo.xyz';
+                
+                // Include user's email in CC if provided
+                const ccParam = userEmail ? `&cc=${encodeURIComponent(userEmail)}` : '';
+                
+                // Open email client with pre-populated fields
+                window.location.href = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}${ccParam}&body=${encodeURIComponent(quoteText)}`;
+            });
+            
+            // Generate text version of quote
+            function generateTextQuote() {
+                const operation = document.getElementById('result-operation').textContent;
+                const asset = document.getElementById('result-asset').textContent;
+                const blockchain = document.getElementById('result-blockchain').textContent;
+                const amount = document.getElementById('result-amount').textContent;
+                const unitPrice = document.getElementById('result-price').textContent;
+                const totalPrice = document.getElementById('result-total').textContent;
+                const walletAddress = document.getElementById('result-wallet-address').textContent;
+                
+                const bankName = document.getElementById('result-bank-name').textContent;
+                const fiat = document.getElementById('result-fiat').textContent;
+                const country = document.getElementById('result-country').textContent;
+                const accountOwner = document.getElementById('result-account-owner').textContent;
+                const ownerId = document.getElementById('result-owner-id').textContent;
+                const accountNumber = document.getElementById('result-account-number').textContent;
+                const accountType = document.getElementById('result-account-type').textContent;
+                const date = document.getElementById('generation-date').textContent;
+                
+                // Get contact information
+                const email = document.getElementById('result-email').textContent;
+                const cellphone = document.getElementById('result-cellphone').textContent;
+                const telegram = document.getElementById('result-telegram').textContent;
+                
+                const rateExplanation = operation.toUpperCase() === 'BUY'
+                    ? 'Market spot price'
+                    : 'Market spot price minus 2%';
+                
+                return `CONVEXO OTC TRADING QUOTE
+                
+DIGITAL ASSET
+Operation: ${operation}
+Digital Asset: ${asset}
+Blockchain: ${blockchain}
+Amount: ${amount}
+Unit Price: ${unitPrice} (${rateExplanation})
+Total Price: ${totalPrice}
+Wallet Address: ${walletAddress}
+
+BANK INFORMATION
+Bank Name: ${bankName}
+Fiat Currency: ${fiat}
+Country Bank: ${country}
+Account Owner: ${accountOwner}
+Owner ID: ${ownerId}
+Account Number: ${accountNumber}
+Account Type: ${accountType}
+
+CONTACT INFORMATION
+Email: ${email}
+Cellphone: ${cellphone}
+Telegram: ${telegram}
+
+Date of Generation: ${date}
+Quote Valid For: 15 minutes from generation time
+
+This quote is subject to market fluctuations. Please contact your OTC trading representative to execute this transaction.
+                `;
+            }
+            
+            // Initialize - fetch prices on load
+            fetchCryptoPrices().then(() => {
+                // Set initial values
+                updateDisplayedPrice();
+            });
+        });
+    </script>
+    <script src="scriptcalculator.js"></script>
+</body>
+</html>

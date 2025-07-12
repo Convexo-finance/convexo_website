@@ -1,0 +1,115 @@
+/* =========================
+   Typography
+========================= */
+
+body {
+    font-family: var(--font-family-secondary);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.75em 0;
+    line-height: 1.3;
+    font-weight: 700;
+    font-family: var(--font-family-primary);
+    color: var(--text-color-dark);
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-size: var(--font-size-4xl);
+    color: var(--text-accent);
+}
+
+h2 {
+    font-size: var(--font-size-3xl);
+    color: var(--text-accent);
+}
+
+h3 {
+    font-size: var(--font-size-2xl);
+    color: var(--text-color-dark);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+    color: var(--text-color-dark);
+}
+
+h5 {
+    font-size: var(--font-size-large);
+    color: var(--text-color-dark);
+}
+
+h6 {
+    font-size: var(--font-size-medium);
+    color: var(--text-color-dark);
+}
+
+p {
+    margin: 0 0 1.2rem 0;
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition-base);
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    opacity: 0.9;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section headers with better contrast */
+.section-header h2 {
+    color: var(--text-accent) !important;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-secondary) !important;
+    font-size: var(--font-size-medium);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Responsive typography */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: calc(var(--font-size-3xl) * 0.9);
+    }
+    
+    h2 {
+        font-size: calc(var(--font-size-2xl) * 0.9);
+    }
+    
+    .section-header p {
+        font-size: var(--font-size-base);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: calc(var(--font-size-2xl) * 0.95);
+    }
+    
+    h2 {
+        font-size: calc(var(--font-size-xl) * 0.95);
+    }
+} 

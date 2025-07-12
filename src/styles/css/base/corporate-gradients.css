@@ -1,0 +1,300 @@
+/* =========================
+   CONVEXO CORPORATE GRADIENT SYSTEM
+   High-Grade Professional Gradient Effects
+   Using Brand Colors: #401777, #081F5C, #334EAC, #BAD6EB, #FFF9EF
+   Primary Background: #1e0138
+========================= */
+
+:root {
+    /* Brand Colors */
+    --convexo-primary: #401777;
+    --convexo-secondary: #081F5C;
+    --convexo-tertiary: #334EAC;
+    --convexo-light-blue: #BAD6EB;
+    --convexo-cream: #FFF9EF;
+    --convexo-dark-primary: #1e0138;
+    
+    /* Extended Corporate Color Palette */
+    --convexo-deep-purple: #1a0130;
+    --convexo-mid-purple: #2a0144;
+    --convexo-accent-blue: #0a2470;
+    --convexo-soft-blue: #4a6bc4;
+    --convexo-pale-blue: #c5d8f0;
+    --convexo-warm-cream: #fff7e8;
+    
+    /* Corporate Gradient Backgrounds */
+    --gradient-corporate-primary: linear-gradient(135deg, 
+        var(--convexo-dark-primary) 0%, 
+        var(--convexo-primary) 25%, 
+        var(--convexo-secondary) 75%, 
+        var(--convexo-tertiary) 100%);
+    
+    --gradient-corporate-dark: linear-gradient(135deg, 
+        var(--convexo-deep-purple) 0%, 
+        var(--convexo-dark-primary) 40%, 
+        var(--convexo-primary) 100%);
+    
+    --gradient-corporate-hero: linear-gradient(135deg, 
+        var(--convexo-dark-primary) 0%, 
+        var(--convexo-primary) 30%, 
+        var(--convexo-secondary) 60%, 
+        var(--convexo-tertiary) 90%, 
+        var(--convexo-light-blue) 100%);
+    
+    --gradient-corporate-subtle: linear-gradient(135deg, 
+        var(--convexo-dark-primary) 0%, 
+        var(--convexo-mid-purple) 50%, 
+        var(--convexo-primary) 100%);
+    
+    --gradient-corporate-accent: linear-gradient(135deg, 
+        var(--convexo-tertiary) 0%, 
+        var(--convexo-secondary) 50%, 
+        var(--convexo-primary) 100%);
+    
+    --gradient-corporate-light: linear-gradient(135deg, 
+        var(--convexo-light-blue) 0%, 
+        var(--convexo-pale-blue) 50%, 
+        var(--convexo-cream) 100%);
+    
+    /* Radial Gradients for Enhanced Effects */
+    --gradient-radial-corporate: radial-gradient(ellipse at center, 
+        var(--convexo-primary) 0%, 
+        var(--convexo-dark-primary) 70%, 
+        var(--convexo-deep-purple) 100%);
+    
+    --gradient-radial-accent: radial-gradient(ellipse at top, 
+        var(--convexo-tertiary) 0%, 
+        var(--convexo-secondary) 50%, 
+        var(--convexo-dark-primary) 100%);
+    
+    /* Multi-Layer Complex Gradients */
+    --gradient-corporate-complex: linear-gradient(135deg, 
+        var(--convexo-dark-primary) 0%, 
+        var(--convexo-primary) 20%, 
+        var(--convexo-secondary) 40%, 
+        var(--convexo-tertiary) 60%, 
+        var(--convexo-light-blue) 80%, 
+        var(--convexo-cream) 100%);
+    
+    --gradient-corporate-mesh: conic-gradient(from 45deg, 
+        var(--convexo-dark-primary), 
+        var(--convexo-primary), 
+        var(--convexo-secondary), 
+        var(--convexo-tertiary), 
+        var(--convexo-dark-primary));
+    
+    /* Animated Gradient Effects */
+    --gradient-animated-corporate: linear-gradient(-45deg, 
+        var(--convexo-dark-primary), 
+        var(--convexo-primary), 
+        var(--convexo-secondary), 
+        var(--convexo-tertiary));
+    
+    /* Overlay Gradients for Text Readability */
+    --gradient-overlay-dark: linear-gradient(135deg, 
+        rgba(30, 1, 56, 0.95) 0%, 
+        rgba(64, 23, 119, 0.85) 50%, 
+        rgba(8, 31, 92, 0.75) 100%);
+    
+    --gradient-overlay-light: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        rgba(255, 249, 239, 0.05) 100%);
+    
+    /* Specialized Gradients for Different Sections */
+    --gradient-defi: linear-gradient(135deg, 
+        #8B5CF6 0%, 
+        #7C3AED 50%, 
+        #6D28D9 100%);
+    
+    --gradient-tools: linear-gradient(135deg, 
+        #10B981 0%, 
+        #059669 50%, 
+        #047857 100%);
+    
+    --gradient-enterprise: linear-gradient(135deg, 
+        var(--convexo-tertiary) 0%, 
+        var(--convexo-secondary) 100%);
+    
+    --gradient-individual: linear-gradient(135deg, 
+        var(--convexo-light-blue) 0%, 
+        var(--convexo-tertiary) 100%);
+    
+    /* Corporate Shadow Effects */
+    --shadow-corporate-sm: 0 2px 10px rgba(30, 1, 56, 0.2);
+    --shadow-corporate-md: 0 4px 20px rgba(30, 1, 56, 0.3);
+    --shadow-corporate-lg: 0 8px 40px rgba(30, 1, 56, 0.4);
+    --shadow-corporate-xl: 0 16px 60px rgba(30, 1, 56, 0.5);
+    
+    /* Glow Effects */
+    --glow-corporate-primary: 0 0 20px rgba(64, 23, 119, 0.3);
+    --glow-corporate-accent: 0 0 30px rgba(51, 78, 172, 0.4);
+    --glow-corporate-light: 0 0 40px rgba(186, 214, 235, 0.2);
+}
+
+/* Corporate Background Classes */
+.bg-corporate-primary {
+    background: var(--gradient-corporate-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-corporate-dark {
+    background: var(--gradient-corporate-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-corporate-hero {
+    background: var(--gradient-corporate-hero);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-corporate-subtle {
+    background: var(--gradient-corporate-subtle);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-corporate-complex {
+    background: var(--gradient-corporate-complex);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Enhanced Background Effects */
+.bg-corporate-enhanced {
+    background: var(--gradient-corporate-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-corporate-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-radial-corporate);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.bg-corporate-enhanced::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-overlay-light);
+    z-index: 2;
+}
+
+.bg-corporate-enhanced > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Animated Gradient Background */
+.bg-corporate-animated {
+    background: var(--gradient-animated-corporate);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Mesh Gradient Background */
+.bg-corporate-mesh {
+    background: var(--gradient-corporate-mesh);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-corporate-mesh::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-overlay-dark);
+    z-index: 1;
+}
+
+.bg-corporate-mesh > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Utility Classes for Enhanced Effects */
+.shadow-corporate-sm { box-shadow: var(--shadow-corporate-sm); }
+.shadow-corporate-md { box-shadow: var(--shadow-corporate-md); }
+.shadow-corporate-lg { box-shadow: var(--shadow-corporate-lg); }
+.shadow-corporate-xl { box-shadow: var(--shadow-corporate-xl); }
+
+.glow-corporate-primary { box-shadow: var(--glow-corporate-primary); }
+.glow-corporate-accent { box-shadow: var(--glow-corporate-accent); }
+.glow-corporate-light { box-shadow: var(--glow-corporate-light); }
+
+/* Corporate Text Colors for Contrast */
+.text-corporate-light { color: var(--convexo-cream); }
+.text-corporate-accent { color: var(--convexo-light-blue); }
+.text-corporate-primary { color: var(--convexo-primary); }
+.text-corporate-white { color: #ffffff; }
+
+/* Corporate Card Backgrounds */
+.card-corporate {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: var(--shadow-corporate-md);
+}
+
+.card-corporate-accent {
+    background: rgba(51, 78, 172, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(51, 78, 172, 0.2);
+    border-radius: 16px;
+    box-shadow: var(--shadow-corporate-lg);
+}
+
+/* Professional Overlay Effects */
+.overlay-corporate-dark {
+    background: var(--gradient-overlay-dark);
+}
+
+.overlay-corporate-light {
+    background: var(--gradient-overlay-light);
+}
+
+/* Responsive Gradient Adjustments */
+@media (max-width: 768px) {
+    .bg-corporate-animated {
+        background-size: 200% 200%;
+        animation-duration: 10s;
+    }
+    
+    .bg-corporate-enhanced::before {
+        opacity: 0.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg-corporate-complex {
+        background: var(--gradient-corporate-primary);
+    }
+    
+    .bg-corporate-mesh {
+        background: var(--gradient-corporate-dark);
+    }
+} 

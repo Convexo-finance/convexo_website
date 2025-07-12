@@ -1,0 +1,293 @@
+/* =========================
+   MAIN CSS FILE
+   Essential Layout Styles
+========================= */
+
+/* Base Variables */
+@import 'base/variables.css';
+
+
+/* Corporate Gradient System */
+@import 'base/corporate-gradients.css';
+
+/* New Corporate Components */
+@import 'components/navbar-new.css';
+@import 'components/footer-new.css';
+
+
+/* =========================
+   GLOBAL BODY STYLES WITH CORPORATE GRADIENT
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--text-on-gradient);
+    background: var(--gradient-corporate-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Corporate Page Wrapper */
+.page-wrapper {
+    background: var(--gradient-corporate-hero);
+    min-height: 100vh;
+    position: relative;
+}
+
+.page-wrapper::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-radial-corporate);
+    opacity: 0.3;
+    z-index: -2;
+}
+
+.page-wrapper::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-overlay-light);
+    z-index: -1;
+}
+
+/* Enhanced Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Corporate Section Styling */
+.section {
+    padding: 4rem 0;
+    position: relative;
+}
+
+.section-hero {
+    background: var(--gradient-corporate-hero);
+    padding: 6rem 0;
+    text-align: center;
+    color: var(--text-on-gradient);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-radial-accent);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.section-hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Corporate Cards */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-corporate-lg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-overlay-light);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-corporate-xl);
+    border-color: rgba(186, 214, 235, 0.3);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Corporate Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--gradient-corporate-accent);
+    color: var(--text-on-gradient);
+    box-shadow: var(--shadow-corporate-md);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-corporate-lg);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-on-gradient);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Corporate Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text-on-gradient);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Corporate Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .section-hero {
+        padding: 4rem 0;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .section-hero {
+        padding: 3rem 0;
+    }
+} 

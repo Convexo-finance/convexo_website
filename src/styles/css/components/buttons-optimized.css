@@ -1,0 +1,307 @@
+/* =========================
+   Optimized Professional Button Styles
+========================= */
+
+/* Base Button Reset and Foundation */
+.btn, .hero-button, .cta-button, .product-link, .service-link, .enterprise-button, .individual-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius-lg);
+    font-family: var(--font-family-primary);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    white-space: nowrap;
+    min-height: 44px; /* Accessibility: minimum touch target */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button States */
+.btn:disabled, .hero-button:disabled, .cta-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn:focus, .hero-button:focus, .cta-button:focus, .product-link:focus, .service-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Primary Button - Main CTA */
+.hero-button.primary, .cta-button {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-color-light);
+    border: 2px solid transparent;
+    padding: 16px 32px;
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(30, 1, 56, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-button.primary::before, .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.hero-button.primary:hover, .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(30, 1, 56, 0.4);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+}
+
+.hero-button.primary:hover::before, .cta-button:hover::before {
+    left: 100%;
+}
+
+.hero-button.primary:active, .cta-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(30, 1, 56, 0.3);
+}
+
+/* Enterprise Buttons */
+.enterprise-button, .product-link {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-color-light);
+    border: 2px solid transparent;
+    padding: 14px 28px;
+    font-weight: 700;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 3px 12px rgba(30, 1, 56, 0.25);
+    position: relative;
+}
+
+.enterprise-button::after, .product-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.enterprise-button:hover, .product-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 1, 56, 0.35);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+}
+
+.enterprise-button:hover::after, .product-link:hover::after {
+    opacity: 1;
+}
+
+/* Individual/Personal Buttons */
+.individual-button, .service-link {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #4169E1 100%);
+    color: var(--text-color-light);
+    border: 2px solid transparent;
+    padding: 14px 28px;
+    font-weight: 700;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 3px 12px rgba(8, 31, 92, 0.25);
+}
+
+.individual-button:hover, .service-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(8, 31, 92, 0.35);
+    background: linear-gradient(135deg, #4169E1 0%, var(--secondary-color) 100%);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-accent);
+    border: 2px solid rgba(30, 1, 56, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(30, 1, 56, 0.2);
+}
+
+/* Outline Button */
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(30, 1, 56, 0.3);
+}
+
+/* Login/Navigation Buttons */
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    border-radius: var(--border-radius-md);
+    transition: all 0.3s ease;
+    min-height: 40px;
+}
+
+.login-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-accent);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.login-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-color-light);
+    border: 1px solid transparent;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 1, 56, 0.3);
+}
+
+/* Button Sizes */
+.btn-sm {
+    padding: 8px 16px;
+    font-size: var(--font-size-small);
+    min-height: 36px;
+}
+
+.btn-lg {
+    padding: 16px 32px;
+    font-size: var(--font-size-large);
+    min-height: 52px;
+}
+
+.btn-xl {
+    padding: 20px 40px;
+    font-size: var(--font-size-xl);
+    min-height: 60px;
+    border-radius: var(--border-radius-xl);
+}
+
+/* Button Groups */
+.btn-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-group .btn:not(:last-child) {
+    margin-right: 0;
+}
+
+/* Loading State */
+.btn-loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.btn-loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .hero-button.primary, .cta-button {
+        padding: 14px 28px;
+        font-size: var(--font-size-base);
+    }
+    
+    .enterprise-button, .individual-button, .product-link, .service-link {
+        padding: 12px 24px;
+        font-size: var(--font-size-base);
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-button.primary, .cta-button {
+        padding: 12px 24px;
+        font-size: var(--font-size-base);
+        border-radius: var(--border-radius-lg);
+    }
+    
+    .btn-xl {
+        padding: 16px 32px;
+        font-size: var(--font-size-large);
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .btn, .hero-button, .cta-button, .product-link, .service-link, .enterprise-button, .individual-button {
+        transition: none;
+    }
+    
+    .btn:hover, .hero-button:hover, .cta-button:hover, .product-link:hover, .service-link:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .btn, .hero-button, .cta-button, .product-link, .service-link {
+        border: 2px solid currentColor;
+    }
+} 
