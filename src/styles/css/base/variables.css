@@ -20,6 +20,12 @@
     --background-light: #ffffff;
     --background-gradient: linear-gradient(135deg, #1e0138 0%, #401777 25%, #081F5C 75%, #334EAC 100%);
     
+    /* Corporate Gradients for Navigation */
+    --gradient-corporate-dark: linear-gradient(135deg, #1e0138 0%, #401777 50%, #081F5C 100%);
+    --gradient-corporate-primary: linear-gradient(135deg, #401777 0%, #081F5C 100%);
+    --gradient-corporate-accent: linear-gradient(135deg, #334EAC 0%, #401777 100%);
+    --gradient-corporate-light: linear-gradient(135deg, #BAD6EB 0%, #FFF9EF 100%);
+    
     /* Accent Colors */
     --accent-color: #401777;
     --accent-color-rgb: 64, 23, 119;
@@ -86,6 +92,12 @@
     --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
     --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.18);
+    
+    /* Corporate Shadows */
+    --shadow-corporate-sm: 0 2px 8px rgba(64, 23, 119, 0.15);
+    --shadow-corporate-md: 0 4px 12px rgba(64, 23, 119, 0.2);
+    --shadow-corporate-lg: 0 8px 20px rgba(64, 23, 119, 0.25);
+    --shadow-corporate-xl: 0 12px 30px rgba(64, 23, 119, 0.3);
     
     /* Transitions */
     --transition-fast: all 0.2s ease;
