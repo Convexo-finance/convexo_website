@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const baseUrl = window.location.protocol + '//' + window.location.host;
     
     // Fetch the navbar HTML using absolute path
-    fetch('/src/components/navbar.html')
+    fetch('/src/components/navbar-new.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');

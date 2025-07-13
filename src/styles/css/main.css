@@ -262,6 +262,27 @@ body {
     line-height: 1.6;
 }
 
+/* Card Description Component */
+.card-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 1rem 0 1.5rem 0;
+    padding: 0;
+    text-align: left;
+}
+
+.defi-card .card-description,
+.product-card .card-description,
+.service-card .card-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 1rem 0 1.5rem 0;
+    padding: 0;
+    text-align: left;
+}
+
 /* Stats Component */
 .stats-section {
     padding: var(--spacing-2xl) 0;
@@ -349,6 +370,13 @@ body {
     
     .stat-number {
         font-size: var(--font-size-2xl);
+    }
+    
+    /* Card Description Responsive */
+    .card-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0.75rem 0 1.25rem 0;
     }
 }
 

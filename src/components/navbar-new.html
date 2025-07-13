@@ -1,263 +1,182 @@
-<!-- CONVEXO CORPORATE NAVBAR -->
+<!-- CONVEXO SIMPLIFIED NAVBAR -->
 <nav class="convexo-navbar">
-    <div class="navbar-container">
-        <!-- Logo Section -->
-        <div class="navbar-logo">
-            <a href="/" class="logo-link">
-                <img src="/src/assets/brading/logoversions/convexo_imagotico_white.png" alt="Convexo" class="logo-image">
-            </a>
-        </div>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-        
-        <!-- Navigation Links -->
-        <div class="navbar-menu" id="navbarMenu">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="/" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about_us" class="nav-link">About</a>
-                </li>
-                
-                <!-- Digital Access Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="/digital_access" class="nav-link dropdown-toggle">
-                        Digital Access
-                        <i class="fas fa-chevron-down dropdown-arrow"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-content">
-                            <div class="dropdown-section">
-                                <h4 class="dropdown-header">Enterprise</h4>
-                                <ul class="dropdown-links">
-                                    <li><a href="/digital_access/private_brokerage" class="dropdown-link">
-                                        <i class="fas fa-chart-line"></i>
-                                        <span>Private Brokerage</span>
-                                    </a></li>
-                                    <li><a href="/digital_access/corporate_treasury" class="dropdown-link">
-                                        <i class="fas fa-building"></i>
-                                        <span>Corporate Treasury</span>
-                                    </a></li>
-                                    <li><a href="/digital_access/private_brokerage/calculator" class="dropdown-link">
-                                        <i class="fas fa-calculator"></i>
-                                        <span>Trading Calculator</span>
-                                    </a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-section">
-                                <h4 class="dropdown-header">Personal</h4>
-                                <ul class="dropdown-links">
-                                    <li><a href="https://app.convexo.xyz" class="dropdown-link" target="_blank">
-                                        <i class="fas fa-mobile-alt"></i>
-                                        <span>Convexo App</span>
-                                    </a></li>
-                                    <li><a href="/digital_access/digital_card" class="dropdown-link">
-                                        <i class="fas fa-credit-card"></i>
-                                        <span>Digital Card</span>
-                                    </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                <!-- Digital Financial Services Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="/digital_financial_services" class="nav-link dropdown-toggle">
-                        Digital Finance
-                        <i class="fas fa-chevron-down dropdown-arrow"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-content">
-                            <div class="dropdown-section">
-                                <h4 class="dropdown-header">Enterprise Services</h4>
-                                <ul class="dropdown-links">
-                                    <li><a href="/digital_financial_services/payroll" class="dropdown-link">
-                                        <i class="fas fa-users"></i>
-                                        <span>Payroll</span>
-                                    </a></li>
-                                    <li><a href="/digital_financial_services/cross_border" class="dropdown-link">
-                                        <i class="fas fa-globe"></i>
-                                        <span>Cross-border Payments</span>
-                                    </a></li>
-                                    <li><a href="/digital_financial_services/asset_management" class="dropdown-link">
-                                        <i class="fas fa-briefcase"></i>
-                                        <span>Asset Management</span>
-                                    </a></li>
-                                    <li><a href="/digital_financial_services/custody_solutions" class="dropdown-link">
-                                        <i class="fas fa-shield-alt"></i>
-                                        <span>Custody Solutions</span>
-                                    </a></li>
-                                    <li><a href="/digital_financial_services/rwa_tokenization" class="dropdown-link">
-                                        <i class="fas fa-coins"></i>
-                                        <span>RWA Tokenization</span>
-                                    </a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-section">
-                                <h4 class="dropdown-header">DeFi & Trading</h4>
-                                <ul class="dropdown-links">
-                                    <li><a href="/digital_financial_services/stablecoins" class="dropdown-link">
-                                        <i class="fas fa-dollar-sign"></i>
-                                        <span>Stablecoins</span>
-                                    </a></li>
-                                    <li><a href="/digital_financial_services/liquidity_provision" class="dropdown-link">
-                                        <i class="fas fa-water"></i>
-                                        <span>Liquidity Provision</span>
-                                    </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            
-            <!-- Action Buttons -->
-            <div class="navbar-actions">
-                <a href="#" class="btn btn-login">
-                    <i class="fas fa-user"></i>
-                    <span>Login</span>
-                </a>
-                <a href="https://form.typeform.com/to/R7OwSKPX" class="btn btn-signup" target="_blank">
-                    <i class="fas fa-rocket"></i>
-                    <span>Sign Up</span>
-                </a>
-                
-
-            </div>
-        </div>
+  <div class="navbar-container">
+    <!-- Logo Section -->
+    <div class="navbar-logo">
+      <a href="/" class="logo-link">
+        <img src="/src/assets/brading/logoversions/convexo_imagotico_white.png" alt="Convexo" class="logo-image">
+        <span class="logo-text">Convexo</span>
+      </a>
     </div>
+    
+    <!-- Desktop Search (hidden on mobile) -->
+    <div class="navbar-search-desktop">
+      <div class="search-container">
+        <svg class="search-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+        <input type="text" id="search-navbar" class="search-input" placeholder="Search...">
+      </div>
+    </div>
+    
+    <!-- Mobile Controls -->
+    <div class="navbar-mobile-controls">
+      <!-- Mobile Search Button -->
+      <button type="button" class="mobile-search-toggle" id="mobileSearchToggle" aria-label="Toggle search">
+        <svg class="search-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+      </button>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+        <svg class="hamburger-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <div class="navbar-menu" id="navbarMenu">
+      <!-- Mobile Search (hidden on desktop) -->
+      <div class="navbar-search-mobile">
+        <div class="search-container">
+          <svg class="search-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          </svg>
+          <input type="text" class="search-input" placeholder="Search...">
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/src/pages/about_us/about_us.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" id="digitalAccessDropdown">
+            Digital Access
+            <svg class="dropdown-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" id="digitalAccessMenu">
+            <a href="/src/pages/digital_access/digital_access.html" class="dropdown-link dropdown-overview">View All Digital Access</a>
+            <div class="dropdown-divider"></div>
+            <a href="/src/pages/digital_access/corporate_treasury/corporate_treasury.html" class="dropdown-link">Corporate Treasury</a>
+            <a href="/src/pages/digital_access/digital_card/digital_card.html" class="dropdown-link">Digital Card</a>
+            <a href="/src/pages/digital_access/point_of_sale/point_of_sale.html" class="dropdown-link">Point of Sale</a>
+            <a href="/src/pages/defi_trading/private_brokerage/private_brokerage.html" class="dropdown-link">Private Brokerage</a>
+            <a href="/src/pages/defi_trading/private_brokerage/calculator/calculator.html" class="dropdown-link">Trading Calculator</a>
+            <a href="/src/pages/defi_trading/Stablecoins/stablecoins.html" class="dropdown-link">Stablecoins</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" id="digitalFinanceDropdown">
+            Digital Finance
+            <svg class="dropdown-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" id="digitalFinanceMenu">
+            <a href="/src/pages/digital_financial_services/digital_financial_services.html" class="dropdown-link dropdown-overview">View All Digital Finance</a>
+            <div class="dropdown-divider"></div>
+            <a href="/src/pages/digital_financial_services/payrrol/payrrol.html" class="dropdown-link">Payroll</a>
+            <a href="/src/pages/digital_financial_services/cross_border/cross_border.html" class="dropdown-link">Cross Border</a>
+            <a href="/src/pages/digital_financial_services/asset-management/asset-management.html" class="dropdown-link">Asset Management</a>
+            <a href="/src/pages/digital_financial_services/custody_solutions/custody_solutions.html" class="dropdown-link">Custody Solutions</a>
+            <a href="/src/pages/digital_financial_services/rwa-tokenization/rwa-tokenization.html" class="dropdown-link">RWA Tokenization</a>
+          </div>
+        </li>
+      </ul>
+      
+      <!-- Action Buttons -->
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-login">Login</a>
+        <a href="https://form.typeform.com/to/R7OwSKPX" class="btn btn-signup" target="_blank">Sign Up</a>
+      </div>
+    </div>
+  </div>
 </nav>
-
-<!-- Navbar Backdrop for Mobile -->
-<div class="navbar-backdrop" id="navbarBackdrop"></div>
 
 <!-- Navbar JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.convexo-navbar');
-    const mobileToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navbarMenu = document.getElementById('navbarMenu');
-    const navbarBackdrop = document.getElementById('navbarBackdrop');
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
-    // Check if we're on mobile
-    function isMobile() {
-        return window.innerWidth <= 768;
-    }
+    const mobileSearchToggle = document.getElementById('mobileSearchToggle');
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     
     // Mobile menu toggle
-    function toggleMobileMenu() {
-        const isOpen = navbarMenu.classList.contains('active');
-        
-        if (isOpen) {
-            navbarMenu.classList.remove('active');
-            navbarBackdrop.classList.remove('active');
-            mobileToggle.classList.remove('active');
-            document.body.classList.remove('navbar-open');
-        } else {
-            navbarMenu.classList.add('active');
-            navbarBackdrop.classList.add('active');
-            mobileToggle.classList.add('active');
-            document.body.classList.add('navbar-open');
-        }
-    }
-    
-    // Close mobile menu
-    function closeMobileMenu() {
-        navbarMenu.classList.remove('active');
-        navbarBackdrop.classList.remove('active');
-        mobileToggle.classList.remove('active');
-        document.body.classList.remove('navbar-open');
-    }
-    
-    // Close all dropdowns
-    function closeAllDropdowns() {
-        dropdowns.forEach(dropdown => {
-            dropdown.classList.remove('active');
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            navbarMenu.classList.toggle('active');
+            document.body.classList.toggle('navbar-open');
         });
     }
     
-    // Event listeners
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', toggleMobileMenu);
+    // Mobile search toggle
+    if (mobileSearchToggle) {
+        mobileSearchToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const mobileSearch = document.querySelector('.navbar-search-mobile');
+            if (mobileSearch) {
+                mobileSearch.classList.toggle('active');
+            }
+        });
     }
     
-    if (navbarBackdrop) {
-        navbarBackdrop.addEventListener('click', closeMobileMenu);
-    }
-    
-    // Enhanced dropdown functionality
-    dropdowns.forEach(dropdown => {
-        const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-        
-        if (!dropdownToggle || !dropdownMenu) return;
-        
-        // Handle dropdown toggle click (works on all devices)
-        dropdownToggle.addEventListener('click', function(e) {
+    // Dropdown functionality
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             
-            const isCurrentlyActive = dropdown.classList.contains('active');
+            const dropdown = this.closest('.dropdown');
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
             
-            // Close all other dropdowns first
-            closeAllDropdowns();
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (menu !== dropdownMenu) {
+                    menu.classList.remove('active');
+                }
+            });
             
             // Toggle current dropdown
-            if (!isCurrentlyActive) {
-                dropdown.classList.add('active');
-                console.log('Dropdown activated:', dropdown);
-            }
+            dropdownMenu.classList.toggle('active');
         });
-        
-        // Handle dropdown menu hover for desktop only
-        if (!isMobile()) {
-            dropdown.addEventListener('mouseenter', function() {
-                // Close other dropdowns
-                dropdowns.forEach(otherDropdown => {
-                    if (otherDropdown !== dropdown) {
-                        otherDropdown.classList.remove('active');
-                    }
-                });
-                dropdown.classList.add('active');
-            });
-            
-            dropdown.addEventListener('mouseleave', function() {
-                dropdown.classList.remove('active');
-            });
-        }
-        
-        // Prevent dropdown from closing when clicking inside
-        if (dropdownMenu) {
-            dropdownMenu.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-        }
     });
     
     // Close dropdowns when clicking outside
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.dropdown')) {
-            closeAllDropdowns();
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('active');
+            });
         }
     });
     
-    // Handle window resize
-    window.addEventListener('resize', function() {
-        // Close mobile menu if window is resized to desktop
-        if (!isMobile() && navbarMenu.classList.contains('active')) {
-            closeMobileMenu();
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.convexo-navbar') && !e.target.closest('.mobile-menu-toggle')) {
+            navbarMenu.classList.remove('active');
+            document.body.classList.remove('navbar-open');
         }
-        
-        // Close all dropdowns on resize
-        closeAllDropdowns();
+    });
+    
+    // Close mobile menu on window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navbarMenu.classList.remove('active');
+            document.body.classList.remove('navbar-open');
+        }
     });
     
     // Navbar scroll effect
@@ -287,13 +206,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const navLinks = document.querySelectorAll('.nav-link, .dropdown-link');
         
         navLinks.forEach(link => {
-            const linkPath = new URL(link.href).pathname;
-            if (linkPath === currentPath) {
-                link.classList.add('active');
-                // Also highlight parent dropdown if it's a dropdown link
-                const parentDropdown = link.closest('.dropdown');
-                if (parentDropdown) {
-                    parentDropdown.querySelector('.dropdown-toggle').classList.add('active');
+            try {
+                const linkPath = new URL(link.href).pathname;
+                if (linkPath === currentPath) {
+                    link.classList.add('active');
+                    // Also highlight parent dropdown if it's a dropdown link
+                    const parentDropdown = link.closest('.dropdown');
+                    if (parentDropdown) {
+                        parentDropdown.querySelector('.dropdown-toggle').classList.add('active');
+                    }
+                }
+            } catch (e) {
+                // Handle relative links
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
                 }
             }
         });
@@ -302,7 +228,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     highlightCurrentPage();
     
-    // Debug logging
-    console.log('Navbar initialized with', dropdowns.length, 'dropdowns');
+    console.log('✅ Simplified navbar initialized successfully');
 });
 </script> 

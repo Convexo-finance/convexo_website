@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const baseUrl = window.location.protocol + '//' + window.location.host;
     
     // Load the footer content using absolute path
-    fetch('/src/components/footer.html')
+    fetch('/src/components/footer-new.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Failed to load footer (${response.status})`);
