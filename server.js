@@ -20,9 +20,22 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Home page route
-app.get('/home', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/home/index.html'));
+// About Us
+app.get('/about_us', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/about_us/about_us.html'));
+});
+
+// Institutional Trading
+app.get('/institutional_trading', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/defi_trading/institutional_trading.html'));
+});
+
+app.get('/institutional_trading/private_brokerage', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/defi_trading/private_brokerage/private_brokerage.html'));
+});
+
+app.get('/institutional_trading/stablecoins', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/defi_trading/Stablecoins/stablecoins.html'));
 });
 
 // Digital Access section and sub-pages
@@ -30,76 +43,66 @@ app.get('/digital_access', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/pages/digital_access/digital_access.html'));
 });
 
-app.get('/digital_access/corporate_treasury', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/digital_access/corporate_treasury/corporate_treasury.html'));
+app.get('/digital_access/convexo_app', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/digital_access/convexo_app/convexo_app.html'));
 });
 
-app.get('/digital_access/digital_card', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/digital_access/digital_card/digital_card.html'));
+app.get('/digital_access/corporate_treasury', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/digital_access/corporate_treasury/corporate_treasury.html'));
 });
 
 app.get('/digital_access/point_of_sale', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/pages/digital_access/point_of_sale/point_of_sale.html'));
 });
 
-app.get('/digital_access/private_brokerage', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/defi_trading/private_brokerage/private_brokerage.html'));
-});
-
-app.get('/digital_access/private_brokerage/calculator', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/defi_trading/private_brokerage/calculator/calculator.html'));
+app.get('/digital_access/digital_card', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/digital_access/digital_card/digital_card.html'));
 });
 
 // Digital Financial Services section and sub-pages
-app.get('/digital_financial_services', (req, res) => {
+app.get('/financial_services', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/pages/digital_financial_services/digital_financial_services.html'));
 });
 
-app.get('/digital_financial_services/payroll', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/digital_financial_services/payrrol/payrrol.html'));
-});
-
-app.get('/digital_financial_services/cross_border', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/digital_financial_services/cross_border/cross_border.html'));
-});
-
-app.get('/digital_financial_services/custody_solutions', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/digital_financial_services/custody_solutions/custody_solutions.html'));
-});
-
-app.get('/digital_financial_services/asset_management', (req, res) => {
+app.get('/financial_services/asset-management', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/pages/digital_financial_services/asset-management/asset-management.html'));
 });
 
-app.get('/digital_financial_services/rwa_tokenization', (req, res) => {
+app.get('/financial_services/cross_border', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/digital_financial_services/cross_border/cross_border.html'));
+});
+
+app.get('/financial_services/custody_solutions', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/digital_financial_services/custody_solutions/custody_solutions.html'));
+});
+
+app.get('/financial_services/payrrol', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/digital_financial_services/payrrol/payrrol.html'));
+});
+
+app.get('/financial_services/rwa-tokenization', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/pages/digital_financial_services/rwa-tokenization/rwa-tokenization.html'));
 });
 
-app.get('/digital_financial_services/stablecoins', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/defi_trading/Stablecoins/stablecoins.html'));
+// Legal and Compliance pages
+app.get('/legal_compliance', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/lega_docs/legal.html'));
 });
 
-app.get('/digital_financial_services/liquidity_provision', (req, res) => {
-  // Redirect to stablecoins page since liquidity-provision doesn't exist yet
-  res.redirect('/digital_financial_services/stablecoins');
-});
-
-// Legal pages
-app.get('/privacy_policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/lega_docs/Privacy_Policy/Privacy_policy.html'));
-});
-
-app.get('/terms_conditions', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/lega_docs/Terms_conditions/Terms_conditions.html'));
-});
-
-app.get('/amlft_policy', (req, res) => {
+app.get('/legal_compliance/amlft_policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/pages/lega_docs/AMLFT_policy/amlft_policy.html'));
 });
 
-// About Us
-app.get('/about_us', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/pages/about_us/about_us.html'));
+app.get('/legal_compliance/Privacy_policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/lega_docs/Privacy_Policy/Privacy_policy.html'));
+});
+
+app.get('/legal_compliance/risk_warnings', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/lega_docs/risk_warnings/risk_warnings.html'));
+});
+
+app.get('/legal_compliance/Terms_conditions', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/lega_docs/Terms_conditions/Terms_conditions.html'));
 });
 
 // KYC Page

@@ -4,8 +4,7 @@
     <!-- Logo Section -->
     <div class="navbar-logo">
       <a href="/" class="logo-link">
-        <img src="/src/assets/brading/logoversions/convexo_imagotico_white.png" alt="Convexo" class="logo-image">
-        <span class="logo-text">Convexo</span>
+        <img src="/src/assets/images/logo_convexo.png" alt="Convexo" class="logo-image">
       </a>
     </div>
     
@@ -51,10 +50,19 @@
       <!-- Navigation Links -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="/" class="nav-link">Home</a>
+          <a href="/about_us" class="nav-link">About us</a>
         </li>
-        <li class="nav-item">
-          <a href="/src/pages/about_us/about_us.html" class="nav-link">About</a>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" id="institutionalTradingDropdown">
+            Institutional Trading
+            <svg class="dropdown-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" id="institutionalTradingMenu">
+            <a href="/institutional_trading/private_brokerage" class="dropdown-link">Private Brokerage</a>
+            <a href="/institutional_trading/stablecoins" class="dropdown-link">Stablecoins</a>
+          </div>
         </li>
         <li class="nav-item dropdown">
           <button class="nav-link dropdown-toggle" id="digitalAccessDropdown">
@@ -64,39 +72,32 @@
             </svg>
           </button>
           <div class="dropdown-menu" id="digitalAccessMenu">
-            <a href="/src/pages/digital_access/digital_access.html" class="dropdown-link dropdown-overview">View All Digital Access</a>
-            <div class="dropdown-divider"></div>
-            <a href="/src/pages/digital_access/corporate_treasury/corporate_treasury.html" class="dropdown-link">Corporate Treasury</a>
-            <a href="/src/pages/digital_access/digital_card/digital_card.html" class="dropdown-link">Digital Card</a>
-            <a href="/src/pages/digital_access/point_of_sale/point_of_sale.html" class="dropdown-link">Point of Sale</a>
-            <a href="/src/pages/defi_trading/private_brokerage/private_brokerage.html" class="dropdown-link">Private Brokerage</a>
-            <a href="/src/pages/defi_trading/private_brokerage/calculator/calculator.html" class="dropdown-link">Trading Calculator</a>
-            <a href="/src/pages/defi_trading/Stablecoins/stablecoins.html" class="dropdown-link">Stablecoins</a>
+            <a href="/digital_access/convexo_app" class="dropdown-link">Convexo App</a>
+            <a href="/digital_access/corporate_treasury" class="dropdown-link">Corporate Treasury</a>
+            <a href="/digital_access/point_of_sale" class="dropdown-link">Point of Sale</a>
+            <a href="/digital_access/digital_card" class="dropdown-link">Digital card</a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <button class="nav-link dropdown-toggle" id="digitalFinanceDropdown">
-            Digital Finance
+            Digital Financial Services
             <svg class="dropdown-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
           </button>
           <div class="dropdown-menu" id="digitalFinanceMenu">
-            <a href="/src/pages/digital_financial_services/digital_financial_services.html" class="dropdown-link dropdown-overview">View All Digital Finance</a>
-            <div class="dropdown-divider"></div>
-            <a href="/src/pages/digital_financial_services/payrrol/payrrol.html" class="dropdown-link">Payroll</a>
-            <a href="/src/pages/digital_financial_services/cross_border/cross_border.html" class="dropdown-link">Cross Border</a>
-            <a href="/src/pages/digital_financial_services/asset-management/asset-management.html" class="dropdown-link">Asset Management</a>
-            <a href="/src/pages/digital_financial_services/custody_solutions/custody_solutions.html" class="dropdown-link">Custody Solutions</a>
-            <a href="/src/pages/digital_financial_services/rwa-tokenization/rwa-tokenization.html" class="dropdown-link">RWA Tokenization</a>
+            <a href="/financial_services/asset-management" class="dropdown-link">Asset Management</a>
+            <a href="/financial_services/cross_border" class="dropdown-link">Cross-Border Payments</a>
+            <a href="/financial_services/custody_solutions" class="dropdown-link">Custody-solutions</a>
+            <a href="/financial_services/payrrol" class="dropdown-link">Payroll</a>
+            <a href="/financial_services/rwa-tokenization" class="dropdown-link">RWA Tokenization</a>
           </div>
         </li>
       </ul>
       
       <!-- Action Buttons -->
       <div class="navbar-actions">
-        <a href="#" class="btn btn-login">Login</a>
-        <a href="https://form.typeform.com/to/R7OwSKPX" class="btn btn-signup" target="_blank">Sign Up</a>
+        <a href="https://app.convexo.xyz/" class="btn btn-login" target="_blank">APP</a>
       </div>
     </div>
   </div>

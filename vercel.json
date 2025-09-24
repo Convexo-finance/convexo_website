@@ -5,28 +5,31 @@
     "rewrites": [
       { "source": "/", "destination": "/index.html" },
       
-      { "source": "/digital_access", "destination": "/src/pages/digital_access/digital_access.html" },
-      { "source": "/digital_access/corporate_treasury", "destination": "/src/pages/digital_access/corporate_treasury/corporate_treasury.html" },
-
-      { "source": "/digital_access/digital_card", "destination": "/src/pages/digital_access/digital_card/digital_card.html" },
-      { "source": "/digital_access/point_of_sale", "destination": "/src/pages/digital_access/point_of_sale/point_of_sale.html" },
-      { "source": "/digital_access/private_brokerage", "destination": "/src/pages/defi_trading/private_brokerage/private_brokerage.html" },
-      { "source": "/digital_access/private_brokerage/calculator", "destination": "/src/pages/defi_trading/private_brokerage/calculator/calculator.html" },
-    
-      { "source": "/digital_financial_services", "destination": "/src/pages/digital_financial_services/digital_financial_services.html" },
-      { "source": "/digital_financial_services/payroll", "destination": "/src/pages/digital_financial_services/payrrol/payrrol.html" },
-      { "source": "/digital_financial_services/cross_border", "destination": "/src/pages/digital_financial_services/cross_border/cross_border.html" },
-      { "source": "/digital_financial_services/custody_solutions", "destination": "/src/pages/digital_financial_services/custody_solutions/custody_solutions.html" },
-      { "source": "/digital_financial_services/asset_management", "destination": "/src/pages/digital_financial_services/asset-management/asset-management.html" },
-      { "source": "/digital_financial_services/rwa_tokenization", "destination": "/src/pages/digital_financial_services/rwa-tokenization/rwa-tokenization.html" },
-      { "source": "/digital_financial_services/stablecoins", "destination": "/src/pages/defi_trading/Stablecoins/stablecoins.html" },
-      { "source": "/digital_financial_services/liquidity_provision", "destination": "/src/pages/defi_trading/Stablecoins/liquidity-provision.html" },
-      
-      { "source": "/privacy_policy", "destination": "/src/pages/lega_docs/Privacy_Policy/Privacy_policy.html" },
-      { "source": "/terms_conditions", "destination": "/src/pages/lega_docs/Terms_conditions/Terms_conditions.html" },
-      { "source": "/amlft_policy", "destination": "/src/pages/lega_docs/AMLFT_policy/amlft_policy.html" },
-      
       { "source": "/about_us", "destination": "/src/pages/about_us/about_us.html" },
+      
+      { "source": "/institutional_trading", "destination": "/src/pages/defi_trading/institutional_trading.html" },
+      { "source": "/institutional_trading/private_brokerage", "destination": "/src/pages/defi_trading/private_brokerage/private_brokerage.html" },
+      { "source": "/institutional_trading/stablecoins", "destination": "/src/pages/defi_trading/Stablecoins/stablecoins.html" },
+      
+      { "source": "/digital_access", "destination": "/src/pages/digital_access/digital_access.html" },
+      { "source": "/digital_access/convexo_app", "destination": "/src/pages/digital_access/convexo_app/convexo_app.html" },
+      { "source": "/digital_access/corporate_treasury", "destination": "/src/pages/digital_access/corporate_treasury/corporate_treasury.html" },
+      { "source": "/digital_access/point_of_sale", "destination": "/src/pages/digital_access/point_of_sale/point_of_sale.html" },
+      { "source": "/digital_access/digital_card", "destination": "/src/pages/digital_access/digital_card/digital_card.html" },
+      
+      { "source": "/financial_services", "destination": "/src/pages/digital_financial_services/digital_financial_services.html" },
+      { "source": "/financial_services/asset-management", "destination": "/src/pages/digital_financial_services/asset-management/asset-management.html" },
+      { "source": "/financial_services/cross_border", "destination": "/src/pages/digital_financial_services/cross_border/cross_border.html" },
+      { "source": "/financial_services/custody_solutions", "destination": "/src/pages/digital_financial_services/custody_solutions/custody_solutions.html" },
+      { "source": "/financial_services/payrrol", "destination": "/src/pages/digital_financial_services/payrrol/payrrol.html" },
+      { "source": "/financial_services/rwa-tokenization", "destination": "/src/pages/digital_financial_services/rwa-tokenization/rwa-tokenization.html" },
+      
+      { "source": "/legal_compliance", "destination": "/src/pages/lega_docs/legal.html" },
+      { "source": "/legal_compliance/amlft_policy", "destination": "/src/pages/lega_docs/AMLFT_policy/amlft_policy.html" },
+      { "source": "/legal_compliance/Privacy_policy", "destination": "/src/pages/lega_docs/Privacy_Policy/Privacy_policy.html" },
+      { "source": "/legal_compliance/risk_warnings", "destination": "/src/pages/lega_docs/risk_warnings/risk_warnings.html" },
+      { "source": "/legal_compliance/Terms_conditions", "destination": "/src/pages/lega_docs/Terms_conditions/Terms_conditions.html" },
+      
       { "source": "/kyc", "destination": "/src/scripts/kyc-page/kyc.html" },
       
       { "source": "/(.*)", "destination": "/index.html" }
