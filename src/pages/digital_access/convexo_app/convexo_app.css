@@ -1,0 +1,374 @@
+/* CONVEXO APP PAGE STYLES */
+
+/* Hero Section */
+.app-hero {
+  background: linear-gradient(135deg, #401777 0%, #081F5C 100%);
+  color: white;
+  padding: 120px 0 80px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: white;
+  color: #401777;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #401777;
+}
+
+/* App Mockup */
+.app-mockup {
+  display: flex;
+  justify-content: center;
+}
+
+.phone-frame {
+  width: 300px;
+  height: 600px;
+  background: #1a1a1a;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #401777, #081F5C);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-logo {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.app-balance {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.app-nav {
+  display: flex;
+  background: white;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.nav-item {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  color: #6c757d;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-item.active {
+  color: #401777;
+  background: #f8f9fa;
+  border-bottom: 2px solid #401777;
+}
+
+.app-content {
+  padding: 20px;
+}
+
+.asset-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.asset-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.asset-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.asset-icon.btc {
+  background: #f7931a;
+}
+
+.asset-icon.eth {
+  background: #627eea;
+}
+
+.asset-icon::before {
+  content: attr(class);
+}
+
+.asset-icon.btc::before {
+  content: "₿";
+}
+
+.asset-icon.eth::before {
+  content: "Ξ";
+}
+
+.asset-info {
+  flex: 1;
+}
+
+.asset-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.asset-amount {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.asset-value {
+  font-weight: 600;
+  color: #28a745;
+}
+
+/* Features Section */
+.features-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #401777, #081F5C);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* Access Section */
+.access-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.access-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.access-content h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.access-content p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 40px;
+}
+
+.access-requirements {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.requirement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.requirement i {
+  font-size: 20px;
+}
+
+.access-btn {
+  background: linear-gradient(135deg, #401777, #081F5C);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.access-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(64, 23, 119, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .access-requirements {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .phone-frame {
+    width: 250px;
+    height: 500px;
+  }
+}
