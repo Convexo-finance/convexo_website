@@ -1,740 +1,341 @@
-<!-- CONVEXO PROFESSIONAL NAVBAR -->
+<!DOCTYPE html>
 <nav class="convexo-navbar">
   <div class="navbar-container">
-    <!-- Logo Section -->
+    <!-- Logo -->
     <div class="navbar-logo">
-      <a href="/" class="logo-link">
-        <img src="/src/assets/images/logo_convexo.png" alt="Convexo" class="logo-image">
+      <a href="/">
+        <img src="/src/assets/images/logo_convexo.png" alt="Convexo" class="logo">
       </a>
     </div>
-    
-    <!-- Desktop Navigation -->
-    <div class="navbar-desktop">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="/about_us" class="nav-link">About us</a>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" type="button" data-dropdown="institutional">
-            Institutional Trading
-            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
-              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="dropdown-menu" data-dropdown-menu="institutional">
-            <a href="/institutional_trading/private_brokerage" class="dropdown-link">Private Brokerage</a>
-            <a href="/institutional_trading/stablecoins" class="dropdown-link">Stablecoins</a>
-          </div>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" type="button" data-dropdown="digital-access">
-            Digital Access
-            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
-              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="dropdown-menu" data-dropdown-menu="digital-access">
-            <a href="/digital_access/convexo_app" class="dropdown-link">Convexo App</a>
-            <a href="/digital_access/corporate_treasury" class="dropdown-link">Corporate Treasury</a>
-            <a href="/digital_access/point_of_sale" class="dropdown-link">Point of Sale</a>
-            <a href="/digital_access/digital_card" class="dropdown-link">Digital Card</a>
-          </div>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" type="button" data-dropdown="financial-services">
-            Digital Financial Services
-            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
-              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="dropdown-menu" data-dropdown-menu="financial-services">
-            <a href="/financial_services/asset-management" class="dropdown-link">Asset Management</a>
-            <a href="/financial_services/cross_border" class="dropdown-link">Cross-Border Payments</a>
-            <a href="/financial_services/custody_solutions" class="dropdown-link">Custody Solutions</a>
-            <a href="/financial_services/payrrol" class="dropdown-link">Payroll</a>
-            <a href="/financial_services/rwa-tokenization" class="dropdown-link">RWA Tokenization</a>
-          </div>
-        </li>
-      </ul>
+
+    <!-- Desktop Menu -->
+    <ul class="navbar-menu">
+      <li><a href="/about_us">About us</a></li>
       
-      <!-- Action Button -->
-      <div class="navbar-actions">
-        <a href="https://app.convexo.xyz/" class="btn btn-app" target="_blank">APP</a>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">
+          Institutional Trading <span class="arrow">▼</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="/institutional_trading/private_brokerage">Private Brokerage</a></li>
+          <li><a href="/institutional_trading/stablecoins">Stablecoins</a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">
+          Digital Access <span class="arrow">▼</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="/digital_access/convexo_app">Convexo App</a></li>
+          <li><a href="/digital_access/corporate_treasury">Corporate Treasury</a></li>
+          <li><a href="/digital_access/point_of_sale">Point of Sale</a></li>
+          <li><a href="/digital_access/digital_card">Digital Card</a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">
+          Digital Financial Services <span class="arrow">▼</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="/financial_services/asset-management">Asset Management</a></li>
+          <li><a href="/financial_services/cross_border">Cross-Border Payments</a></li>
+          <li><a href="/financial_services/custody_solutions">Custody Solutions</a></li>
+          <li><a href="/financial_services/payrrol">Payroll</a></li>
+          <li><a href="/financial_services/rwa-tokenization">RWA Tokenization</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- APP Button -->
+    <a href="https://app.convexo.xyz/" class="app-btn" target="_blank">APP</a>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-btn">☰</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="/about_us">About us</a>
+    
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-toggle">Institutional Trading <span class="mobile-arrow">▼</span></button>
+      <div class="mobile-dropdown-content">
+        <a href="/institutional_trading/private_brokerage">Private Brokerage</a>
+        <a href="/institutional_trading/stablecoins">Stablecoins</a>
       </div>
     </div>
     
-    <!-- Mobile Menu Button -->
-    <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation" data-mobile-toggle>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-    
-    <!-- Mobile Navigation -->
-    <div class="navbar-mobile" data-mobile-menu>
-      <ul class="mobile-nav">
-        <li class="mobile-nav-item">
-          <a href="/about_us" class="mobile-nav-link">About us</a>
-        </li>
-        
-        <li class="mobile-nav-item mobile-dropdown">
-          <button class="mobile-nav-link mobile-dropdown-toggle" type="button" data-mobile-dropdown="institutional">
-            Institutional Trading
-            <svg class="mobile-dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
-              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="mobile-dropdown-menu" data-mobile-dropdown-menu="institutional">
-            <a href="/institutional_trading/private_brokerage" class="mobile-dropdown-link">Private Brokerage</a>
-            <a href="/institutional_trading/stablecoins" class="mobile-dropdown-link">Stablecoins</a>
-          </div>
-        </li>
-        
-        <li class="mobile-nav-item mobile-dropdown">
-          <button class="mobile-nav-link mobile-dropdown-toggle" type="button" data-mobile-dropdown="digital-access">
-            Digital Access
-            <svg class="mobile-dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
-              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="mobile-dropdown-menu" data-mobile-dropdown-menu="digital-access">
-            <a href="/digital_access/convexo_app" class="mobile-dropdown-link">Convexo App</a>
-            <a href="/digital_access/corporate_treasury" class="mobile-dropdown-link">Corporate Treasury</a>
-            <a href="/digital_access/point_of_sale" class="mobile-dropdown-link">Point of Sale</a>
-            <a href="/digital_access/digital_card" class="mobile-dropdown-link">Digital Card</a>
-          </div>
-        </li>
-        
-        <li class="mobile-nav-item mobile-dropdown">
-          <button class="mobile-nav-link mobile-dropdown-toggle" type="button" data-mobile-dropdown="financial-services">
-            Digital Financial Services
-            <svg class="mobile-dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
-              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="mobile-dropdown-menu" data-mobile-dropdown-menu="financial-services">
-            <a href="/financial_services/asset-management" class="mobile-dropdown-link">Asset Management</a>
-            <a href="/financial_services/cross_border" class="mobile-dropdown-link">Cross-Border Payments</a>
-            <a href="/financial_services/custody_solutions" class="mobile-dropdown-link">Custody Solutions</a>
-            <a href="/financial_services/payrrol" class="mobile-dropdown-link">Payroll</a>
-            <a href="/financial_services/rwa-tokenization" class="mobile-dropdown-link">RWA Tokenization</a>
-          </div>
-        </li>
-        
-        <li class="mobile-nav-item">
-          <a href="https://app.convexo.xyz/" class="mobile-nav-link mobile-app-link" target="_blank">APP</a>
-        </li>
-      </ul>
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-toggle">Digital Access <span class="mobile-arrow">▼</span></button>
+      <div class="mobile-dropdown-content">
+        <a href="/digital_access/convexo_app">Convexo App</a>
+        <a href="/digital_access/corporate_treasury">Corporate Treasury</a>
+        <a href="/digital_access/point_of_sale">Point of Sale</a>
+        <a href="/digital_access/digital_card">Digital Card</a>
+      </div>
     </div>
+    
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-toggle">Digital Financial Services <span class="mobile-arrow">▼</span></button>
+      <div class="mobile-dropdown-content">
+        <a href="/financial_services/asset-management">Asset Management</a>
+        <a href="/financial_services/cross_border">Cross-Border Payments</a>
+        <a href="/financial_services/custody_solutions">Custody Solutions</a>
+        <a href="/financial_services/payrrol">Payroll</a>
+        <a href="/financial_services/rwa-tokenization">RWA Tokenization</a>
+      </div>
+    </div>
+    
+    <a href="https://app.convexo.xyz/" target="_blank" class="mobile-app-btn">APP</a>
   </div>
 </nav>
 
-<!-- Professional Navbar JavaScript -->
-<script>
-class ConvexoNavbar {
-    constructor() {
-        this.navbar = document.querySelector('.convexo-navbar');
-        this.mobileMenuBtn = document.querySelector('[data-mobile-toggle]');
-        this.mobileMenu = document.querySelector('[data-mobile-menu]');
-        this.dropdownToggles = document.querySelectorAll('[data-dropdown]');
-        this.mobileDropdownToggles = document.querySelectorAll('[data-mobile-dropdown]');
-        this.isMenuOpen = false;
-        
-        this.init();
-    }
-    
-    init() {
-        this.setupDesktopDropdowns();
-        this.setupMobileMenu();
-        this.setupMobileDropdowns();
-        this.setupClickOutside();
-        this.setupScrollEffects();
-        this.highlightCurrentPage();
-        this.setupResize();
-        
-        console.log('✅ Convexo Professional Navbar initialized');
-    }
-    
-    setupDesktopDropdowns() {
-        this.dropdownToggles.forEach(toggle => {
-            const dropdownId = toggle.dataset.dropdown;
-            const dropdownMenu = document.querySelector(`[data-dropdown-menu="${dropdownId}"]`);
-            
-            if (!dropdownMenu) return;
-            
-            // Click to toggle
-            toggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                this.toggleDesktopDropdown(dropdownMenu, toggle);
-            });
-            
-            // Hover to show (desktop only)
-            if (window.innerWidth > 768) {
-                const navItem = toggle.closest('.nav-item');
-                
-                navItem.addEventListener('mouseenter', () => {
-                    this.showDesktopDropdown(dropdownMenu, toggle);
-                });
-                
-                navItem.addEventListener('mouseleave', () => {
-                    this.hideDesktopDropdown(dropdownMenu, toggle);
-                });
-            }
-        });
-    }
-    
-    toggleDesktopDropdown(menu, toggle) {
-        const isActive = menu.classList.contains('active');
-        
-        // Close all other dropdowns
-        this.closeAllDesktopDropdowns();
-        
-        if (!isActive) {
-            this.showDesktopDropdown(menu, toggle);
-        }
-    }
-    
-    showDesktopDropdown(menu, toggle) {
-        menu.classList.add('active');
-        toggle.classList.add('active');
-        toggle.setAttribute('aria-expanded', 'true');
-        
-        // Animate arrow
-        const arrow = toggle.querySelector('.dropdown-arrow');
-        if (arrow) {
-            arrow.style.transform = 'rotate(180deg)';
-        }
-    }
-    
-    hideDesktopDropdown(menu, toggle) {
-        menu.classList.remove('active');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-        
-        // Animate arrow
-        const arrow = toggle.querySelector('.dropdown-arrow');
-        if (arrow) {
-            arrow.style.transform = 'rotate(0deg)';
-        }
-    }
-    
-    closeAllDesktopDropdowns() {
-        document.querySelectorAll('[data-dropdown-menu]').forEach(menu => {
-            menu.classList.remove('active');
-        });
-        
-        this.dropdownToggles.forEach(toggle => {
-            toggle.classList.remove('active');
-            toggle.setAttribute('aria-expanded', 'false');
-            
-            const arrow = toggle.querySelector('.dropdown-arrow');
-            if (arrow) {
-                arrow.style.transform = 'rotate(0deg)';
-            }
-        });
-    }
-    
-    setupMobileMenu() {
-        if (!this.mobileMenuBtn || !this.mobileMenu) return;
-        
-        this.mobileMenuBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            this.toggleMobileMenu();
-        });
-    }
-    
-    toggleMobileMenu() {
-        this.isMenuOpen = !this.isMenuOpen;
-        
-        if (this.isMenuOpen) {
-            this.mobileMenu.classList.add('active');
-            this.mobileMenuBtn.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            this.mobileMenuBtn.setAttribute('aria-expanded', 'true');
-        } else {
-            this.mobileMenu.classList.remove('active');
-            this.mobileMenuBtn.classList.remove('active');
-            document.body.style.overflow = '';
-            this.mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            this.closeAllMobileDropdowns();
-        }
-    }
-    
-    setupMobileDropdowns() {
-        this.mobileDropdownToggles.forEach(toggle => {
-            const dropdownId = toggle.dataset.mobileDropdown;
-            const dropdownMenu = document.querySelector(`[data-mobile-dropdown-menu="${dropdownId}"]`);
-            
-            if (!dropdownMenu) return;
-            
-            toggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                this.toggleMobileDropdown(dropdownMenu, toggle);
-            });
-        });
-    }
-    
-    toggleMobileDropdown(menu, toggle) {
-        const isActive = menu.classList.contains('active');
-        
-        if (isActive) {
-            this.hideMobileDropdown(menu, toggle);
-        } else {
-            this.showMobileDropdown(menu, toggle);
-        }
-    }
-    
-    showMobileDropdown(menu, toggle) {
-        menu.classList.add('active');
-        toggle.classList.add('active');
-        toggle.setAttribute('aria-expanded', 'true');
-        
-        const arrow = toggle.querySelector('.mobile-dropdown-arrow');
-        if (arrow) {
-            arrow.style.transform = 'rotate(180deg)';
-        }
-    }
-    
-    hideMobileDropdown(menu, toggle) {
-        menu.classList.remove('active');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-        
-        const arrow = toggle.querySelector('.mobile-dropdown-arrow');
-        if (arrow) {
-            arrow.style.transform = 'rotate(0deg)';
-        }
-    }
-    
-    closeAllMobileDropdowns() {
-        document.querySelectorAll('[data-mobile-dropdown-menu]').forEach(menu => {
-            menu.classList.remove('active');
-        });
-        
-        this.mobileDropdownToggles.forEach(toggle => {
-            toggle.classList.remove('active');
-            toggle.setAttribute('aria-expanded', 'false');
-            
-            const arrow = toggle.querySelector('.mobile-dropdown-arrow');
-            if (arrow) {
-                arrow.style.transform = 'rotate(0deg)';
-            }
-        });
-    }
-    
-    setupClickOutside() {
-        document.addEventListener('click', (e) => {
-            // Close desktop dropdowns when clicking outside
-            if (!e.target.closest('.dropdown') && !e.target.closest('[data-dropdown]')) {
-                this.closeAllDesktopDropdowns();
-            }
-            
-            // Close mobile menu when clicking outside
-            if (!e.target.closest('.convexo-navbar') && this.isMenuOpen) {
-                this.toggleMobileMenu();
-            }
-        });
-    }
-    
-    setupScrollEffects() {
-        let lastScrollTop = 0;
-        let ticking = false;
-        
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    
-                    // Add/remove scrolled class
-                    if (scrollTop > 50) {
-                        this.navbar.classList.add('scrolled');
-                    } else {
-                        this.navbar.classList.remove('scrolled');
-                    }
-                    
-                    // Hide/show navbar on scroll
-                    if (scrollTop > lastScrollTop && scrollTop > 200) {
-                        this.navbar.classList.add('navbar-hidden');
-                    } else {
-                        this.navbar.classList.remove('navbar-hidden');
-                    }
-                    
-                    lastScrollTop = scrollTop;
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-    }
-    
-    setupResize() {
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768 && this.isMenuOpen) {
-                this.toggleMobileMenu();
-            }
-            
-            // Reinitialize desktop dropdowns on resize
-            if (window.innerWidth > 768) {
-                this.setupDesktopDropdowns();
-            }
-        });
-    }
-    
-    highlightCurrentPage() {
-        const currentPath = window.location.pathname;
-        const allLinks = document.querySelectorAll('.nav-link, .dropdown-link, .mobile-nav-link, .mobile-dropdown-link');
-        
-        allLinks.forEach(link => {
-            if (link.tagName === 'A') {
-                try {
-                    const linkPath = new URL(link.href).pathname;
-                    if (linkPath === currentPath || (currentPath !== '/' && currentPath.includes(linkPath) && linkPath !== '/')) {
-                        link.classList.add('active');
-                        
-                        // Highlight parent dropdown
-                        const parentDropdown = link.closest('.dropdown, .mobile-dropdown');
-                        if (parentDropdown) {
-                            const parentToggle = parentDropdown.querySelector('[data-dropdown], [data-mobile-dropdown]');
-                            if (parentToggle) {
-                                parentToggle.classList.add('active-parent');
-                            }
-                        }
-                    }
-                } catch (e) {
-                    // Handle relative URLs
-                    if (link.getAttribute('href') === currentPath) {
-                        link.classList.add('active');
-                    }
-                }
-            }
-        });
-    }
-}
-
-// Initialize navbar when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new ConvexoNavbar();
-});
-</script>
-
-<!-- Professional Navbar CSS -->
 <style>
-/* Reset and base styles */
+/* Basic Reset */
 .convexo-navbar * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Main Navbar */
 .convexo-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.convexo-navbar.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-}
-
-.convexo-navbar.navbar-hidden {
-    transform: translateY(-100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
 }
 
 /* Logo */
-.navbar-logo .logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+.navbar-logo .logo {
+  height: 40px;
 }
 
-.navbar-logo .logo-image {
-    height: 40px;
-    width: auto;
+/* Desktop Menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 30px;
 }
 
-/* Desktop Navigation */
-.navbar-desktop {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.navbar-menu > li > a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 0;
 }
 
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 0;
-    color: #2c3e50;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active,
-.nav-link.active-parent {
-    color: #401777;
-}
-
-.dropdown-arrow {
-    transition: transform 0.3s ease;
-    color: currentColor;
+.navbar-menu > li > a:hover {
+  color: #401777;
 }
 
 /* Desktop Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow {
+  font-size: 12px;
+  transition: transform 0.3s;
+}
+
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 200px;
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    z-index: 1001;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s;
 }
 
-.dropdown-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-.dropdown-link {
-    display: block;
-    padding: 12px 20px;
-    color: #2c3e50;
-    text-decoration: none;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
 }
 
-.dropdown-link:last-child {
-    border-bottom: none;
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.dropdown-link:hover,
-.dropdown-link.active {
-    background: #f8f9fa;
-    color: #401777;
-    padding-left: 25px;
+.dropdown-menu li:last-child a {
+  border-bottom: none;
 }
 
-/* App Button */
-.btn-app {
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #401777, #081F5C);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
+.dropdown-menu li a:hover {
+  background: #f8f9fa;
+  color: #401777;
 }
 
-.btn-app:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(64, 23, 119, 0.3);
+/* APP Button */
+.app-btn {
+  background: linear-gradient(135deg, #401777, #081F5C);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
-/* Mobile Menu Button */
-.mobile-menu-btn {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    gap: 4px;
+.app-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(64, 23, 119, 0.3);
 }
 
-.hamburger-line {
-    width: 25px;
-    height: 3px;
-    background: #2c3e50;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+/* Mobile Button */
+.mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.mobile-menu-btn.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  background: white;
+  padding: 20px;
+  border-top: 1px solid #f0f0f0;
 }
 
-.mobile-menu-btn.active .hamburger-line:nth-child(2) {
-    opacity: 0;
+.mobile-menu a {
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+  font-weight: 500;
 }
 
-.mobile-menu-btn.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+.mobile-menu a:hover {
+  color: #401777;
 }
 
-/* Mobile Navigation */
-.navbar-mobile {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
-    overflow-y: auto;
-    z-index: 999;
+/* Mobile Dropdown */
+.mobile-dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar-mobile.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+.mobile-arrow {
+  transition: transform 0.3s;
 }
 
-.mobile-nav {
-    list-style: none;
-    margin: 0;
-    padding: 20px;
+.mobile-dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  background: #f8f9fa;
+  margin-left: 20px;
 }
 
-.mobile-nav-item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.mobile-dropdown-content.open {
+  max-height: 300px;
+  padding: 10px 0;
 }
 
-.mobile-nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 0;
-    color: #2c3e50;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    background: none;
-    width: 100%;
-    cursor: pointer;
+.mobile-dropdown-content a {
+  padding: 10px 0;
+  font-size: 14px;
+  border: none;
 }
 
-.mobile-nav-link:hover,
-.mobile-nav-link.active {
-    color: #401777;
-}
-
-.mobile-app-link {
-    background: linear-gradient(135deg, #401777, #081F5C);
-    color: white !important;
-    border-radius: 6px;
-    margin-top: 10px;
-    justify-content: center;
-}
-
-.mobile-dropdown-arrow {
-    transition: transform 0.3s ease;
-}
-
-.mobile-dropdown-menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    background: #f8f9fa;
-    border-radius: 6px;
-    margin-top: 10px;
-}
-
-.mobile-dropdown-menu.active {
-    max-height: 300px;
-    padding: 10px 0;
-}
-
-.mobile-dropdown-link {
-    display: block;
-    padding: 10px 20px;
-    color: #2c3e50;
-    text-decoration: none;
-    font-size: 14px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.mobile-dropdown-link:last-child {
-    border-bottom: none;
-}
-
-.mobile-dropdown-link:hover,
-.mobile-dropdown-link.active {
-    color: #401777;
-    background: white;
+.mobile-app-btn {
+  background: linear-gradient(135deg, #401777, #081F5C);
+  color: white !important;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .navbar-desktop {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: flex;
-    }
+  .navbar-menu,
+  .app-btn {
+    display: none;
+  }
+  
+  .mobile-btn {
+    display: block;
+  }
+  
+  .mobile-menu.open {
+    display: block;
+  }
 }
+</style>
 
-@media (min-width: 769px) {
-    .navbar-mobile,
-    .mobile-menu-btn {
-        display: none;
-    }
-}
-
-/* Active states */
-.nav-link.active,
-.dropdown-link.active,
-.mobile-nav-link.active,
-.mobile-dropdown-link.active {
-    color: #401777;
-    font-weight: 600;
-}
-</style> 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu toggle
+  const mobileBtn = document.querySelector('.mobile-btn');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  
+  mobileBtn.addEventListener('click', function() {
+    mobileMenu.classList.toggle('open');
+  });
+  
+  // Mobile dropdown toggles
+  const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+  
+  mobileDropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const arrow = this.querySelector('.mobile-arrow');
+      
+      content.classList.toggle('open');
+      arrow.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+    });
+  });
+  
+  console.log('✅ Simple navbar loaded successfully');
+});
+</script>
