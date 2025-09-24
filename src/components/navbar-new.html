@@ -1,4 +1,4 @@
-<!-- CONVEXO SIMPLIFIED NAVBAR -->
+<!-- CONVEXO PROFESSIONAL NAVBAR -->
 <nav class="convexo-navbar">
   <div class="navbar-container">
     <!-- Logo Section -->
@@ -8,227 +8,733 @@
       </a>
     </div>
     
-    <!-- Desktop Search (hidden on mobile) -->
-    <div class="navbar-search-desktop">
-      <div class="search-container">
-        <svg class="search-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-        </svg>
-        <input type="text" id="search-navbar" class="search-input" placeholder="Search...">
-      </div>
-    </div>
-    
-    <!-- Mobile Controls -->
-    <div class="navbar-mobile-controls">
-      <!-- Mobile Search Button -->
-      <button type="button" class="mobile-search-toggle" id="mobileSearchToggle" aria-label="Toggle search">
-        <svg class="search-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-        </svg>
-      </button>
-      
-      <!-- Mobile Menu Toggle -->
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
-        <svg class="hamburger-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-      </button>
-    </div>
-    
-    <!-- Navigation Menu -->
-    <div class="navbar-menu" id="navbarMenu">
-      <!-- Mobile Search (hidden on desktop) -->
-      <div class="navbar-search-mobile">
-        <div class="search-container">
-          <svg class="search-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-          </svg>
-          <input type="text" class="search-input" placeholder="Search...">
-        </div>
-      </div>
-      
-      <!-- Navigation Links -->
+    <!-- Desktop Navigation -->
+    <div class="navbar-desktop">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a href="/about_us" class="nav-link">About us</a>
         </li>
+        
         <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" id="institutionalTradingDropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-dropdown="institutional">
             Institutional Trading
-            <svg class="dropdown-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
-          <div class="dropdown-menu" id="institutionalTradingMenu">
+          <div class="dropdown-menu" data-dropdown-menu="institutional">
             <a href="/institutional_trading/private_brokerage" class="dropdown-link">Private Brokerage</a>
             <a href="/institutional_trading/stablecoins" class="dropdown-link">Stablecoins</a>
           </div>
         </li>
+        
         <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" id="digitalAccessDropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-dropdown="digital-access">
             Digital Access
-            <svg class="dropdown-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
-          <div class="dropdown-menu" id="digitalAccessMenu">
+          <div class="dropdown-menu" data-dropdown-menu="digital-access">
             <a href="/digital_access/convexo_app" class="dropdown-link">Convexo App</a>
             <a href="/digital_access/corporate_treasury" class="dropdown-link">Corporate Treasury</a>
             <a href="/digital_access/point_of_sale" class="dropdown-link">Point of Sale</a>
-            <a href="/digital_access/digital_card" class="dropdown-link">Digital card</a>
+            <a href="/digital_access/digital_card" class="dropdown-link">Digital Card</a>
           </div>
         </li>
+        
         <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" id="digitalFinanceDropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-dropdown="financial-services">
             Digital Financial Services
-            <svg class="dropdown-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
-          <div class="dropdown-menu" id="digitalFinanceMenu">
+          <div class="dropdown-menu" data-dropdown-menu="financial-services">
             <a href="/financial_services/asset-management" class="dropdown-link">Asset Management</a>
             <a href="/financial_services/cross_border" class="dropdown-link">Cross-Border Payments</a>
-            <a href="/financial_services/custody_solutions" class="dropdown-link">Custody-solutions</a>
+            <a href="/financial_services/custody_solutions" class="dropdown-link">Custody Solutions</a>
             <a href="/financial_services/payrrol" class="dropdown-link">Payroll</a>
             <a href="/financial_services/rwa-tokenization" class="dropdown-link">RWA Tokenization</a>
           </div>
         </li>
       </ul>
       
-      <!-- Action Buttons -->
+      <!-- Action Button -->
       <div class="navbar-actions">
-        <a href="https://app.convexo.xyz/" class="btn btn-login" target="_blank">APP</a>
+        <a href="https://app.convexo.xyz/" class="btn btn-app" target="_blank">APP</a>
       </div>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation" data-mobile-toggle>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    
+    <!-- Mobile Navigation -->
+    <div class="navbar-mobile" data-mobile-menu>
+      <ul class="mobile-nav">
+        <li class="mobile-nav-item">
+          <a href="/about_us" class="mobile-nav-link">About us</a>
+        </li>
+        
+        <li class="mobile-nav-item mobile-dropdown">
+          <button class="mobile-nav-link mobile-dropdown-toggle" type="button" data-mobile-dropdown="institutional">
+            Institutional Trading
+            <svg class="mobile-dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-menu" data-mobile-dropdown-menu="institutional">
+            <a href="/institutional_trading/private_brokerage" class="mobile-dropdown-link">Private Brokerage</a>
+            <a href="/institutional_trading/stablecoins" class="mobile-dropdown-link">Stablecoins</a>
+          </div>
+        </li>
+        
+        <li class="mobile-nav-item mobile-dropdown">
+          <button class="mobile-nav-link mobile-dropdown-toggle" type="button" data-mobile-dropdown="digital-access">
+            Digital Access
+            <svg class="mobile-dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-menu" data-mobile-dropdown-menu="digital-access">
+            <a href="/digital_access/convexo_app" class="mobile-dropdown-link">Convexo App</a>
+            <a href="/digital_access/corporate_treasury" class="mobile-dropdown-link">Corporate Treasury</a>
+            <a href="/digital_access/point_of_sale" class="mobile-dropdown-link">Point of Sale</a>
+            <a href="/digital_access/digital_card" class="mobile-dropdown-link">Digital Card</a>
+          </div>
+        </li>
+        
+        <li class="mobile-nav-item mobile-dropdown">
+          <button class="mobile-nav-link mobile-dropdown-toggle" type="button" data-mobile-dropdown="financial-services">
+            Digital Financial Services
+            <svg class="mobile-dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-menu" data-mobile-dropdown-menu="financial-services">
+            <a href="/financial_services/asset-management" class="mobile-dropdown-link">Asset Management</a>
+            <a href="/financial_services/cross_border" class="mobile-dropdown-link">Cross-Border Payments</a>
+            <a href="/financial_services/custody_solutions" class="mobile-dropdown-link">Custody Solutions</a>
+            <a href="/financial_services/payrrol" class="mobile-dropdown-link">Payroll</a>
+            <a href="/financial_services/rwa-tokenization" class="mobile-dropdown-link">RWA Tokenization</a>
+          </div>
+        </li>
+        
+        <li class="mobile-nav-item">
+          <a href="https://app.convexo.xyz/" class="mobile-nav-link mobile-app-link" target="_blank">APP</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
 
-<!-- Navbar JavaScript -->
+<!-- Professional Navbar JavaScript -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.querySelector('.convexo-navbar');
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const navbarMenu = document.getElementById('navbarMenu');
-    const mobileSearchToggle = document.getElementById('mobileSearchToggle');
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    
-    // Mobile menu toggle
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            navbarMenu.classList.toggle('active');
-            document.body.classList.toggle('navbar-open');
-        });
+class ConvexoNavbar {
+    constructor() {
+        this.navbar = document.querySelector('.convexo-navbar');
+        this.mobileMenuBtn = document.querySelector('[data-mobile-toggle]');
+        this.mobileMenu = document.querySelector('[data-mobile-menu]');
+        this.dropdownToggles = document.querySelectorAll('[data-dropdown]');
+        this.mobileDropdownToggles = document.querySelectorAll('[data-mobile-dropdown]');
+        this.isMenuOpen = false;
+        
+        this.init();
     }
     
-    // Mobile search toggle
-    if (mobileSearchToggle) {
-        mobileSearchToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const mobileSearch = document.querySelector('.navbar-search-mobile');
-            if (mobileSearch) {
-                mobileSearch.classList.toggle('active');
+    init() {
+        this.setupDesktopDropdowns();
+        this.setupMobileMenu();
+        this.setupMobileDropdowns();
+        this.setupClickOutside();
+        this.setupScrollEffects();
+        this.highlightCurrentPage();
+        this.setupResize();
+        
+        console.log('✅ Convexo Professional Navbar initialized');
+    }
+    
+    setupDesktopDropdowns() {
+        this.dropdownToggles.forEach(toggle => {
+            const dropdownId = toggle.dataset.dropdown;
+            const dropdownMenu = document.querySelector(`[data-dropdown-menu="${dropdownId}"]`);
+            
+            if (!dropdownMenu) return;
+            
+            // Click to toggle
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.toggleDesktopDropdown(dropdownMenu, toggle);
+            });
+            
+            // Hover to show (desktop only)
+            if (window.innerWidth > 768) {
+                const navItem = toggle.closest('.nav-item');
+                
+                navItem.addEventListener('mouseenter', () => {
+                    this.showDesktopDropdown(dropdownMenu, toggle);
+                });
+                
+                navItem.addEventListener('mouseleave', () => {
+                    this.hideDesktopDropdown(dropdownMenu, toggle);
+                });
             }
         });
     }
     
-    // Dropdown functionality
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
+    toggleDesktopDropdown(menu, toggle) {
+        const isActive = menu.classList.contains('active');
+        
+        // Close all other dropdowns
+        this.closeAllDesktopDropdowns();
+        
+        if (!isActive) {
+            this.showDesktopDropdown(menu, toggle);
+        }
+    }
+    
+    showDesktopDropdown(menu, toggle) {
+        menu.classList.add('active');
+        toggle.classList.add('active');
+        toggle.setAttribute('aria-expanded', 'true');
+        
+        // Animate arrow
+        const arrow = toggle.querySelector('.dropdown-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(180deg)';
+        }
+    }
+    
+    hideDesktopDropdown(menu, toggle) {
+        menu.classList.remove('active');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+        
+        // Animate arrow
+        const arrow = toggle.querySelector('.dropdown-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(0deg)';
+        }
+    }
+    
+    closeAllDesktopDropdowns() {
+        document.querySelectorAll('[data-dropdown-menu]').forEach(menu => {
+            menu.classList.remove('active');
+        });
+        
+        this.dropdownToggles.forEach(toggle => {
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            
+            const arrow = toggle.querySelector('.dropdown-arrow');
+            if (arrow) {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+    
+    setupMobileMenu() {
+        if (!this.mobileMenuBtn || !this.mobileMenu) return;
+        
+        this.mobileMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            
-            const dropdown = this.closest('.dropdown');
-            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-            
-            // Close all other dropdowns
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                if (menu !== dropdownMenu) {
-                    menu.classList.remove('active');
-                }
-            });
-            
-            // Toggle current dropdown
-            dropdownMenu.classList.toggle('active');
+            this.toggleMobileMenu();
         });
-    });
+    }
     
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.classList.remove('active');
+    toggleMobileMenu() {
+        this.isMenuOpen = !this.isMenuOpen;
+        
+        if (this.isMenuOpen) {
+            this.mobileMenu.classList.add('active');
+            this.mobileMenuBtn.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            this.mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        } else {
+            this.mobileMenu.classList.remove('active');
+            this.mobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = '';
+            this.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            this.closeAllMobileDropdowns();
+        }
+    }
+    
+    setupMobileDropdowns() {
+        this.mobileDropdownToggles.forEach(toggle => {
+            const dropdownId = toggle.dataset.mobileDropdown;
+            const dropdownMenu = document.querySelector(`[data-mobile-dropdown-menu="${dropdownId}"]`);
+            
+            if (!dropdownMenu) return;
+            
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.toggleMobileDropdown(dropdownMenu, toggle);
             });
-        }
-    });
+        });
+    }
     
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.convexo-navbar') && !e.target.closest('.mobile-menu-toggle')) {
-            navbarMenu.classList.remove('active');
-            document.body.classList.remove('navbar-open');
-        }
-    });
-    
-    // Close mobile menu on window resize
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            navbarMenu.classList.remove('active');
-            document.body.classList.remove('navbar-open');
-        }
-    });
-    
-    // Navbar scroll effect
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    toggleMobileDropdown(menu, toggle) {
+        const isActive = menu.classList.contains('active');
         
-        if (scrollTop > 100) {
-            navbar.classList.add('scrolled');
+        if (isActive) {
+            this.hideMobileDropdown(menu, toggle);
         } else {
-            navbar.classList.remove('scrolled');
+            this.showMobileDropdown(menu, toggle);
         }
-        
-        // Hide navbar on scroll down, show on scroll up
-        if (scrollTop > lastScrollTop && scrollTop > 200) {
-            navbar.classList.add('navbar-hidden');
-        } else {
-            navbar.classList.remove('navbar-hidden');
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    }
     
-    // Highlight current page
-    function highlightCurrentPage() {
+    showMobileDropdown(menu, toggle) {
+        menu.classList.add('active');
+        toggle.classList.add('active');
+        toggle.setAttribute('aria-expanded', 'true');
+        
+        const arrow = toggle.querySelector('.mobile-dropdown-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(180deg)';
+        }
+    }
+    
+    hideMobileDropdown(menu, toggle) {
+        menu.classList.remove('active');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+        
+        const arrow = toggle.querySelector('.mobile-dropdown-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(0deg)';
+        }
+    }
+    
+    closeAllMobileDropdowns() {
+        document.querySelectorAll('[data-mobile-dropdown-menu]').forEach(menu => {
+            menu.classList.remove('active');
+        });
+        
+        this.mobileDropdownToggles.forEach(toggle => {
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            
+            const arrow = toggle.querySelector('.mobile-dropdown-arrow');
+            if (arrow) {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+    
+    setupClickOutside() {
+        document.addEventListener('click', (e) => {
+            // Close desktop dropdowns when clicking outside
+            if (!e.target.closest('.dropdown') && !e.target.closest('[data-dropdown]')) {
+                this.closeAllDesktopDropdowns();
+            }
+            
+            // Close mobile menu when clicking outside
+            if (!e.target.closest('.convexo-navbar') && this.isMenuOpen) {
+                this.toggleMobileMenu();
+            }
+        });
+    }
+    
+    setupScrollEffects() {
+        let lastScrollTop = 0;
+        let ticking = false;
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    // Add/remove scrolled class
+                    if (scrollTop > 50) {
+                        this.navbar.classList.add('scrolled');
+                    } else {
+                        this.navbar.classList.remove('scrolled');
+                    }
+                    
+                    // Hide/show navbar on scroll
+                    if (scrollTop > lastScrollTop && scrollTop > 200) {
+                        this.navbar.classList.add('navbar-hidden');
+                    } else {
+                        this.navbar.classList.remove('navbar-hidden');
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    }
+    
+    setupResize() {
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && this.isMenuOpen) {
+                this.toggleMobileMenu();
+            }
+            
+            // Reinitialize desktop dropdowns on resize
+            if (window.innerWidth > 768) {
+                this.setupDesktopDropdowns();
+            }
+        });
+    }
+    
+    highlightCurrentPage() {
         const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('.nav-link, .dropdown-link');
+        const allLinks = document.querySelectorAll('.nav-link, .dropdown-link, .mobile-nav-link, .mobile-dropdown-link');
         
-        navLinks.forEach(link => {
-            try {
-                const linkPath = new URL(link.href).pathname;
-                if (linkPath === currentPath) {
-                    link.classList.add('active');
-                    // Also highlight parent dropdown if it's a dropdown link
-                    const parentDropdown = link.closest('.dropdown');
-                    if (parentDropdown) {
-                        parentDropdown.querySelector('.dropdown-toggle').classList.add('active');
+        allLinks.forEach(link => {
+            if (link.tagName === 'A') {
+                try {
+                    const linkPath = new URL(link.href).pathname;
+                    if (linkPath === currentPath || (currentPath !== '/' && currentPath.includes(linkPath) && linkPath !== '/')) {
+                        link.classList.add('active');
+                        
+                        // Highlight parent dropdown
+                        const parentDropdown = link.closest('.dropdown, .mobile-dropdown');
+                        if (parentDropdown) {
+                            const parentToggle = parentDropdown.querySelector('[data-dropdown], [data-mobile-dropdown]');
+                            if (parentToggle) {
+                                parentToggle.classList.add('active-parent');
+                            }
+                        }
+                    }
+                } catch (e) {
+                    // Handle relative URLs
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
                     }
                 }
-            } catch (e) {
-                // Handle relative links
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('active');
-                }
             }
         });
     }
-    
-    // Initialize
-    highlightCurrentPage();
-    
-    console.log('✅ Simplified navbar initialized successfully');
+}
+
+// Initialize navbar when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new ConvexoNavbar();
 });
-</script> 
+</script>
+
+<!-- Professional Navbar CSS -->
+<style>
+/* Reset and base styles */
+.convexo-navbar * {
+    box-sizing: border-box;
+}
+
+.convexo-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.convexo-navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.convexo-navbar.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* Logo */
+.navbar-logo .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar-logo .logo-image {
+    height: 40px;
+    width: auto;
+}
+
+/* Desktop Navigation */
+.navbar-desktop {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.nav-link.active-parent {
+    color: #401777;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+    color: currentColor;
+}
+
+/* Desktop Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-link {
+    display: block;
+    padding: 12px 20px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-link:last-child {
+    border-bottom: none;
+}
+
+.dropdown-link:hover,
+.dropdown-link.active {
+    background: #f8f9fa;
+    color: #401777;
+    padding-left: 25px;
+}
+
+/* App Button */
+.btn-app {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #401777, #081F5C);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-app:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(64, 23, 119, 0.3);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: #2c3e50;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Navigation */
+.navbar-mobile {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.navbar-mobile.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobile-nav {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.mobile-nav-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    color: #401777;
+}
+
+.mobile-app-link {
+    background: linear-gradient(135deg, #401777, #081F5C);
+    color: white !important;
+    border-radius: 6px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.mobile-dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.mobile-dropdown-menu.active {
+    max-height: 300px;
+    padding: 10px 0;
+}
+
+.mobile-dropdown-link {
+    display: block;
+    padding: 10px 20px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-dropdown-link:last-child {
+    border-bottom: none;
+}
+
+.mobile-dropdown-link:hover,
+.mobile-dropdown-link.active {
+    color: #401777;
+    background: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-desktop {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar-mobile,
+    .mobile-menu-btn {
+        display: none;
+    }
+}
+
+/* Active states */
+.nav-link.active,
+.dropdown-link.active,
+.mobile-nav-link.active,
+.mobile-dropdown-link.active {
+    color: #401777;
+    font-weight: 600;
+}
+</style> 
