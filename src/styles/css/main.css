@@ -186,7 +186,7 @@ body {
 .section-header h2 {
     font-size: var(--font-size-3xl);
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(#ffffff);
     margin-bottom: var(--spacing-md);
 }
 

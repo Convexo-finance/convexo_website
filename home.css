@@ -470,6 +470,234 @@
     font-size: 0.8rem;
 }
 
+/* Technology Stack Section */
+.tech-stack-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.tech-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.tech-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.tech-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.tech-card p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Blockchain Networks Section */
+.blockchain-networks-section {
+    padding: 6rem 0;
+    background: #1e293b;
+    color: white;
+}
+
+.blockchain-networks-section .section-header h2 {
+    color: white;
+}
+
+.blockchain-networks-section .section-header p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.networks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.network-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.network-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+}
+
+.network-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+}
+
+.network-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.network-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.network-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.network-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Education Section */
+.education-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.education-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.education-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 2rem auto;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    overflow: hidden;
+}
+
+.education-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.education-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.education-card p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
 /* CTA Section */
 .cta-section {
     padding: 6rem 0;
@@ -583,6 +811,18 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .networks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .cta-actions {
         flex-direction: column;
         gap: 1rem;
@@ -612,6 +852,18 @@
     
     .metrics-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .networks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-card {
+        padding: 2rem;
     }
 }
 

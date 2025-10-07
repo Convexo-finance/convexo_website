@@ -1,56 +1,224 @@
 /**
- * Enhanced Crypto Price Updater
+ * Enhanced Crypto Price Updater with Real API Integration
  * 
- * Provides live price updates, chart visualization, and price change indicators
- * for cryptocurrency cards used in the private brokerage page.
+ * Provides live price updates from CoinGecko API and Google for USD/COP conversion
+ * with clear visual cards and better contrast for the private brokerage page.
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize price data
+    // Initialize price data with real API integration
     const cryptoPrices = {
-        'BTC': { price: 55000, change: 2.5 },
-        'ETH': { price: 3000, change: 1.8 },
-        'SOL': { price: 120, change: 5.2 },
-        'USDT': { price: 1, change: 0.01 },
-        'DOGE': { price: 0.12, change: -3.5 },
-        'XRP': { price: 0.5, change: -1.2 }
+        'BTC': { price: 0, change: 0, symbol: 'BTC', name: 'Bitcoin' },
+        'ETH': { price: 0, change: 0, symbol: 'ETH', name: 'Ethereum' },
+        'SOL': { price: 0, change: 0, symbol: 'SOL', name: 'Solana' },
+        'USDT': { price: 0, change: 0, symbol: 'USDT', name: 'Tether' },
+        'DOGE': { price: 0, change: 0, symbol: 'DOGE', name: 'Dogecoin' },
+        'XRP': { price: 0, change: 0, symbol: 'XRP', name: 'XRP' }
     };
     
     const exchangeRates = {
         'USD': 1,
-        'COP': 3800
+        'COP': 0 // Will be fetched from Google
     };
     
-    // Add mini charts to crypto cards
-    function addMiniCharts() {
-        const priceElements = document.querySelectorAll('.price[data-crypto]');
+    // CoinGecko API mapping
+    const coinGeckoMapping = {
+        'BTC': 'bitcoin',
+        'ETH': 'ethereum', 
+        'SOL': 'solana',
+        'USDT': 'tether',
+        'DOGE': 'dogecoin',
+        'XRP': 'ripple'
+    };
+    
+    // Fetch real crypto prices from CoinGecko API
+    async function fetchCryptoPrices() {
+        try {
+            const coinIds = Object.values(coinGeckoMapping).join(',');
+            const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coinIds}&vs_currencies=usd&include_24hr_change=true&precision=4`);
+            
+            if (!response.ok) {
+                throw new Error('Failed to fetch crypto prices');
+            }
+            
+            const data = await response.json();
+            
+            // Update our crypto prices with real data
+            Object.keys(coinGeckoMapping).forEach(symbol => {
+                const coinId = coinGeckoMapping[symbol];
+                if (data[coinId]) {
+                    cryptoPrices[symbol].price = data[coinId].usd;
+                    cryptoPrices[symbol].change = data[coinId].usd_24h_change || 0;
+                }
+            });
+            
+            console.log('Crypto prices updated:', cryptoPrices);
+            return data;
+        } catch (error) {
+            console.error('Error fetching crypto prices:', error);
+            // Fallback to default prices
+            cryptoPrices.BTC.price = 55000;
+            cryptoPrices.ETH.price = 3000;
+            cryptoPrices.SOL.price = 120;
+            cryptoPrices.USDT.price = 1;
+            cryptoPrices.DOGE.price = 0.12;
+            cryptoPrices.XRP.price = 0.5;
+            return null;
+        }
+    }
+    
+    // Fetch USD/COP exchange rate from Google (using a free API)
+    async function fetchUSDCOP() {
+        try {
+            // Using exchangerate-api.com as a free alternative
+            const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+            
+            if (!response.ok) {
+                throw new Error('Failed to fetch exchange rates');
+            }
+            
+            const data = await response.json();
+            exchangeRates.COP = data.rates.COP;
+            console.log('USD/COP rate updated:', exchangeRates.COP);
+            return data.rates.COP;
+        } catch (error) {
+            console.error('Error fetching USD/COP rate:', error);
+            // Fallback to default rate
+            exchangeRates.COP = 3800;
+            return 3800;
+        }
+    }
+    
+    // Create enhanced crypto price cards with better contrast
+    function createCryptoPriceCards() {
+        const pricingSection = document.querySelector('#pricing');
+        if (!pricingSection) return;
         
-        priceElements.forEach(element => {
-            const crypto = element.getAttribute('data-crypto');
-            const change = cryptoPrices[crypto]?.change || 0;
+        // Remove existing ticker if present
+        const existingTicker = document.querySelector('.live-prices-ticker');
+        if (existingTicker) {
+            existingTicker.remove();
+        }
+        
+        // Create crypto cards container
+        const cardsContainer = document.createElement('div');
+        cardsContainer.className = 'crypto-cards-container';
+        cardsContainer.innerHTML = `
+            <div class="crypto-cards-grid">
+                ${Object.keys(cryptoPrices).map(symbol => `
+                    <div class="crypto-card" data-crypto="${symbol}">
+                        <div class="crypto-card-header">
+                            <div class="crypto-icon">
+                                <img src="https://assets.coingecko.com/coins/images/${getCoinImageId(symbol)}/small/${getCoinImageName(symbol)}.png" 
+                                     alt="${cryptoPrices[symbol].name}" 
+                                     onerror="this.src='https://via.placeholder.com/32x32/401777/ffffff?text=${symbol}'">
+                            </div>
+                            <div class="crypto-info">
+                                <h4 class="crypto-symbol">${symbol}</h4>
+                                <p class="crypto-name">${cryptoPrices[symbol].name}</p>
+                            </div>
+                        </div>
+                        <div class="crypto-price-section">
+                            <div class="price-usd">
+                                <span class="price-label">USD</span>
+                                <span class="price-value" data-currency="USD">$0.00</span>
+                            </div>
+                            <div class="price-cop">
+                                <span class="price-label">COP</span>
+                                <span class="price-value" data-currency="COP">COP 0</span>
+                            </div>
+                        </div>
+                        <div class="crypto-change">
+                            <span class="change-indicator" data-change="0">0.00%</span>
+                        </div>
+                        <div class="crypto-chart">
+                            <div class="mini-chart-line"></div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        
+        // Insert after section header
+        const sectionHeader = pricingSection.querySelector('.section-header');
+        if (sectionHeader) {
+            sectionHeader.insertAdjacentElement('afterend', cardsContainer);
+        }
+    }
+    
+    // Helper function to get coin image IDs
+    function getCoinImageId(symbol) {
+        const imageIds = {
+            'BTC': '1',
+            'ETH': '279', 
+            'SOL': '4128',
+            'USDT': '325',
+            'DOGE': '5',
+            'XRP': '44'
+        };
+        return imageIds[symbol] || '1';
+    }
+    
+    // Helper function to get coin image names
+    function getCoinImageName(symbol) {
+        const imageNames = {
+            'BTC': 'bitcoin',
+            'ETH': 'ethereum',
+            'SOL': 'solana',
+            'USDT': 'Tether',
+            'DOGE': 'dogecoin',
+            'XRP': 'xrp-symbol-white-128'
+        };
+        return imageNames[symbol] || 'bitcoin';
+    }
+    
+    // Update crypto cards with real data
+    function updateCryptoCards() {
+        Object.keys(cryptoPrices).forEach(symbol => {
+            const card = document.querySelector(`.crypto-card[data-crypto="${symbol}"]`);
+            if (!card) return;
             
-            // Add price and change indicator
-            const price = cryptoPrices[crypto]?.price || 0;
-            element.textContent = `$${price.toLocaleString()}`;
+            const priceData = cryptoPrices[symbol];
+            const usdPrice = priceData.price;
+            const copPrice = usdPrice * exchangeRates.COP;
+            const change = priceData.change;
             
-            // Add price change indicator
-            const changeEl = document.createElement('span');
-            changeEl.className = 'price-change ' + (change >= 0 ? 'positive' : 'negative');
-            changeEl.textContent = `${change >= 0 ? '+' : ''}${change}%`;
-            element.appendChild(changeEl);
+            // Update USD price
+            const usdPriceEl = card.querySelector('[data-currency="USD"]');
+            if (usdPriceEl) {
+                usdPriceEl.textContent = `$${usdPrice.toLocaleString('en-US', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: usdPrice < 1 ? 6 : 2
+                })}`;
+            }
             
-            // Add class for price direction
-            element.classList.add(change >= 0 ? 'increase' : 'decrease');
+            // Update COP price
+            const copPriceEl = card.querySelector('[data-currency="COP"]');
+            if (copPriceEl) {
+                copPriceEl.textContent = `COP ${copPrice.toLocaleString('es-CO', {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0
+                })}`;
+            }
             
-            // Add mini chart
-            const miniChart = document.createElement('div');
-            miniChart.className = 'mini-chart';
+            // Update change indicator
+            const changeEl = card.querySelector('.change-indicator');
+            if (changeEl) {
+                changeEl.textContent = `${change >= 0 ? '+' : ''}${change.toFixed(2)}%`;
+                changeEl.className = `change-indicator ${change >= 0 ? 'positive' : 'negative'}`;
+            }
             
-            const chartLine = document.createElement('div');
-            chartLine.className = 'mini-chart-line ' + (change >= 0 ? 'increase' : 'decrease');
+            // Update chart line
+            const chartLine = card.querySelector('.mini-chart-line');
+            if (chartLine) {
+                chartLine.className = `mini-chart-line ${change >= 0 ? 'increase' : 'decrease'}`;
+            }
             
-            miniChart.appendChild(chartLine);
-            element.insertAdjacentElement('afterend', miniChart);
+            // Add animation class
+            card.classList.add('updated');
+            setTimeout(() => {
+                card.classList.remove('updated');
+            }, 1000);
         });
     }
     
@@ -273,14 +441,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Initialize everything
-    function init() {
-        addMiniCharts();
-        setupCalculators();
-        createCryptoTicker();
-        simulatePriceUpdates();
+    // Initialize everything with real API data
+    async function init() {
+        // Create crypto cards first
+        createCryptoPriceCards();
         
-        // Initial calculation update
+        // Fetch real data
+        try {
+            await Promise.all([
+                fetchCryptoPrices(),
+                fetchUSDCOP()
+            ]);
+            
+            // Update cards with real data
+            updateCryptoCards();
+            
+            // Set up periodic updates (every 30 seconds)
+            setInterval(async () => {
+                await fetchCryptoPrices();
+                updateCryptoCards();
+            }, 30000);
+            
+        } catch (error) {
+            console.error('Error initializing crypto prices:', error);
+            // Still show cards with fallback data
+            updateCryptoCards();
+        }
+        
+        setupCalculators();
         updateAllCalculations();
     }
     
